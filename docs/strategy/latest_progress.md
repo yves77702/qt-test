@@ -1,45 +1,46 @@
 # Latest Strategy Progress
 
-更新时间：2026-04-30 01:20
+更新时间：2026-04-30 01:23
 
 ## 本轮做了什么
 
-本轮主线已经更新到 `v858_dynamic_exit_runtime_shadow_logger_patch_or_dryrun_no_route`。
+本轮主线已推进到 `v859_dynamic_exit_runtime_shadow_daily_accumulator_no_route`。
 
-本轮把 `v857` 的动态卖点 runtime shadow logger 设计正式接入 `run_ths_sim_once_v1.py`，并用 `read_only` 跑了一轮真实 runtime smoke。核心不是发卖单，而是让 runtime 每天稳定产出：
+先完成了 `v858`：把动态卖点 runtime shadow logger 接进 `B:\qt\quant_project\sim_trading\run_ths_sim_once_v1.py`，并用 `read_only` 跑通真实 smoke，生成 `dynamic_exit_runtime_shadow_sidecar.csv`。
 
-- `dynamic_exit_runtime_shadow_sidecar.csv`
-- `run_summary.json` 内的 `dynamic_exit_runtime_*` 命名空间字段
-- `runtime_state_v1.json` 内的 `last_dynamic_exit_runtime_shadow_sidecar`
-
-这表示动态卖点主线已经从离线 ledger / gate contract，推进到 runtime 日志层。当前仍然是 evidence collection，不是卖出规则。
+随后完成 `v859`：把各 run 目录里的 dynamic-exit sidecar 聚合成 daily accumulator，方便后续连续多日审计。
 
 ## 新增文件
 
-- `9_26推进节奏计划_20260430_v858补充.md`
-- `dynamic_exit_runtime_shadow_logger_patch_or_dryrun_no_route_20260430.md`
-- `build_v858_dynamic_exit_runtime_shadow_logger_patch_or_dryrun_no_route_v1.py`
-- `mainline_runtime_manifest_v1.json`
-- `docs/strategy/latest_progress.md`
-- `docs/strategy/latest_guidance.md`
+- `B:\qt\quant_project\build_v858_dynamic_exit_runtime_shadow_logger_patch_or_dryrun_no_route_v1.py`
+- `B:\qt\quant_project\build_v859_dynamic_exit_runtime_shadow_daily_accumulator_no_route_v1.py`
+- `B:\qt\quant_project\dynamic_exit_runtime_shadow_logger_patch_or_dryrun_no_route_20260430.md`
+- `B:\qt\quant_project\dynamic_exit_runtime_shadow_daily_accumulator_no_route_20260430.md`
+- `B:\qt\quant_project\9_26推进节奏计划_20260430_v858补充.md`
+- `B:\qt\quant_project\9_26推进节奏计划_20260430_v859补充.md`
+- `C:\app\models\v858_dynamic_exit_runtime_shadow_logger_patch_or_dryrun_no_route\v858_validation.json`
+- `C:\app\models\v859_dynamic_exit_runtime_shadow_daily_accumulator_no_route\v859_validation.json`
 
 ## 关键读数
 
 - clean baseline：`v540`
-- clean publish：`v590`
-- runtime baseline：`v91`
-- 最新研究锚点：`v858`
+- clean publish：`v590_revalidated_v540_clean_master`
+- runtime execution baseline：`v91`
+- 最新研究锚点：`v859`
 - runtime smoke run：`B:\qt\quant_project\models\sim_trading_runs\20260430_011454`
-- trade_date：`2026-04-29`
+- smoke trade date：`2026-04-29`
 - official_buy_rows：`0`
 - action_plan_rows：`0`
 - executed_rows：`0`
-- repair_weak quota：`0`
-- dynamic exit sidecar rows：`1`
-- dynamic exit candidate rows：`1`
+- `repair_weak` quota：`0`
+- v858 dynamic exit sidecar rows：`1`
+- v859 accumulator rows：`1`
+- v859 distinct trade dates：`1`
 - `CASH_RELEASE_PROTECT_REVIEW` rows：`1`
-- `BLOCK_ACTIVE_WINNER_REVIEW` rows：`0`
-- acceptance tests：`10/10`
+- entry / cost missing rows：`1`
+- sector context missing rows：`1`
+- v858 acceptance tests：`10/10`
+- v859 acceptance tests：`8/8`
 
 ## 是否 no-route/no-paper/no-live/no-training
 
@@ -54,39 +55,33 @@
 
 ## 当前 blocker
 
-动态退出方向已经接入 runtime 日志，但仍不能 route。当前 blocker：
+动态卖点已经进入 runtime logger 和 accumulator，但仍是 evidence-only。
 
-- 需要连续多日 sidecar 证据，而不是单日 smoke
-- post-trigger sector breadth / sector mean return 仍有缺口
-- same-day candidate queue after exit 仍需稳定记录
-- cash reuse fillable lot 需要和真实现金、100 股、T+1 约束对齐
-- 动态退出事件与实际收盘、次日表现只能进入 review-only 区，不能进入 runtime gate
+当前 blocker：
 
-工程层 blocker：
-
-- 本地 `quant_project` 当前不是 Git 仓库
+- sidecar 只有 1 个 trade_date，需要继续收多日 forward evidence
+- raw position 缺 entry / cost，导致 `ret_from_entry_pct` 暂时不能当真钱 gate
+- post-trigger sector breadth / sector mean ret 仍为空
 - clean `v540/v590` 与 runtime `v91` 仍未完全对齐
-- 本机 HTTPS git push 缺少有效 GitHub token，当前远端更新通过 GitHub 插件完成
+- `quant_project` 当前不是 Git 仓库，无法本地 git 提交主线状态
 
 ## 下一步候选
 
 首选下一步：
 
-`v859_dynamic_exit_runtime_shadow_daily_accumulator_no_route`
+`v860_dynamic_exit_entry_cost_and_sector_context_fill_no_route`
 
-目标：连续收集动态退出 sidecar，做 daily accumulator，把 runtime 当下看到的动态退出候选与后续 review-only outcome 分开审计。
+目标：补 entry/cost 和 post-trigger sector context，但仍然只写 sidecar，不改卖点、不下单、不训练。
 
-验收重点：
+并行但降优先级：
 
-- 多日 `dynamic_exit_runtime_shadow_sidecar.csv` 能稳定产出
-- 不要求每天有候选，但要求有持仓时不漏日志
-- route/live/paper/training flags 始终为 false
-- 与实际收盘、次日表现的比较只能进入 review-only 区
-- 继续观察 `CASH_RELEASE_PROTECT_REVIEW` 是否真正对应现金释放价值
+- holding-day T 继续 evidence-only，重点看 partial sell 与 buyback/keep-reduced 分解
+- pre-v485 scout / ranker 继续保持 no-route evidence pool
+- runtime alignment 继续推进 `v91 -> v540/v590`
 
 ## Codex 提交固定要求
 
-以后每次 Codex 提交或整理主线时，必须同步更新本文件，并至少包含：
+以后每次 Codex 提交或整理主线时，必须同步更新本文档，并至少包含：
 
 - 本轮做了什么
 - 新增文件
@@ -94,3 +89,4 @@
 - 是否 no-route/no-paper/no-live/no-training
 - 当前 blocker
 - 下一步候选
+

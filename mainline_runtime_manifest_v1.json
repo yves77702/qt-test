@@ -1,16 +1,16 @@
 {
   "manifest_id": "mainline_runtime_manifest_v1",
+  "created_date": "2026-04-29",
   "last_updated_date": "2026-04-30",
-  "source_project_root": "B:\\qt\\quant_project",
-  "github_repository": "yves77702/qt-test",
-  "latest_progress_doc": "docs/strategy/latest_progress.md",
-  "latest_guidance_doc": "docs/strategy/latest_guidance.md",
-  "latest_research_anchor": "v856_dynamic_exit_current_visible_gate_contract_no_route",
+  "latest_progress_doc": "B:\\qt\\quant_project\\docs\\strategy\\latest_progress.md",
+  "latest_guidance_doc": "B:\\qt\\quant_project\\docs\\strategy\\latest_guidance.md",
+  "latest_research_anchor": "v859_dynamic_exit_runtime_shadow_daily_accumulator_no_route",
+  "project_root": "B:\\qt\\quant_project",
+  "repository_status": "not_git_repository",
   "codex_update_contract": {
     "fixed_progress_file": "docs/strategy/latest_progress.md",
     "fixed_guidance_file": "docs/strategy/latest_guidance.md",
     "fixed_manifest_file": "mainline_runtime_manifest_v1.json",
-    "must_update_on_every_codex_commit": true,
     "latest_progress_required_sections": [
       "本轮做了什么",
       "新增文件",
@@ -18,143 +18,2737 @@
       "是否 no-route/no-paper/no-live/no-training",
       "当前 blocker",
       "下一步候选"
-    ]
+    ],
+    "must_update_on_every_codex_commit": true,
+    "current_commit_status": "local_files_prepared_but_not_pushed_because_quant_project_is_not_a_git_repository"
+  },
+  "roadmap": {
+    "id": "9_26_progression_plan_20260430_v859",
+    "report": "B:\\qt\\quant_project\\9_26推进节奏计划_20260430_v859补充.md",
+    "target_weekly_return_pct": 9.26,
+    "current_read": "dynamic exit quality is now connected to runtime logger and daily accumulator; v859 seeds the accumulator, finds one CASH_RELEASE_PROTECT_REVIEW row, and exposes entry/cost plus sector context as the next field-completeness blockers"
   },
   "clean_mainline": {
     "baseline": "v540",
     "publish": "v590_revalidated_v540_clean_master",
-    "role": "only_current_money_contract_baseline"
+    "report": "C:\\app\\models\\v590_revalidated_v540_clean_master_platform\\v590_revalidated_v540_clean_master_platform_report.md",
+    "role": "only_current_money_contract_baseline",
+    "ceiling_audit": {
+      "id": "v732_v540_gap_to_926_ceiling_audit",
+      "target_weekly_return_pct": 9.26,
+      "report": "C:\\app\\models\\v732_v540_gap_to_926_ceiling_audit\\v732_v540_gap_to_926_ceiling_audit_report.md",
+      "status": "diagnostic_only_no_live_or_paper_change",
+      "first_read": "clean v540/v590 is materially below 9.26; full candidate/exit oracle requires thicker forward ledger"
+    },
+    "regret_source_map": {
+      "id": "v733_v540_clean_regret_source_map",
+      "report": "C:\\app\\models\\v733_v540_clean_regret_source_map\\v733_v540_clean_regret_source_map_report.md",
+      "status": "diagnostic_only_no_live_or_paper_change",
+      "first_read": "largest measurable current-file regret is post-hoc loss drag; selection/supply and exit still require forward ledgers"
+    },
+    "alpha_supply_registry": {
+      "id": "v734_v540_clean_alpha_supply_registry",
+      "report": "C:\\app\\models\\v734_v540_clean_alpha_supply_registry\\v734_v540_clean_alpha_supply_registry_report.md",
+      "status": "registry_only_no_live_or_paper_change",
+      "first_read": "only v540/v590 is clean baseline; preserve/family/midmid/recycle sources remain shadow-only and sample-thin"
+    }
   },
   "runtime": {
-    "execution_baseline": "v91",
+    "baseline": "v91",
     "status": "daily_reusable_but_not_clean_aligned",
-    "latest_preview": {
+    "daily_entry": "B:\\qt\\quant_project\\prepare_daily_sim_runtime_v1.ps1",
+    "unified_entry": "B:\\qt\\quant_project\\prepare_daily_unified_model_runtime_v1.ps1",
+    "current_no_order_interpretation": {
       "market_phase": "repair",
       "market_subphase": "repair_weak",
       "rulebook_subphase_total_quota": 0,
-      "official_buy_rows": 0,
       "selection_block_reason": "subphase_total_quota_zero",
-      "interpretation": "strategy_observation_not_execution_failure"
+      "meaning": "strategy_observation_not_execution_failure"
     }
   },
-  "latest_chain": [
-    {
+  "one_minute_buy_timing": {
+    "action_cards": {
+      "id": "v735_v540_1m_buy_action_cards_forward_ledger",
+      "report": "C:\\app\\models\\v735_v540_1m_buy_action_cards_forward_ledger\\v735_v540_1m_buy_action_cards_forward_ledger_report.md",
+      "status": "shadow_only_no_live_or_paper_order",
+      "cards": [
+        "A_STRONG_CONFIRM_PULLBACK_BUY",
+        "B_LOW_RECLAIM_BUY",
+        "C_SPIKE_FADE_NO_BUY"
+      ],
+      "first_read": "buy timing should optimize confirmed cheap entry with controlled MAE/MFE, not lowest-tick prediction"
+    },
+    "intraday_t_elasticity": {
+      "id": "v736_v540_intraday_t_elasticity_ledger",
+      "report": "C:\\app\\models\\v736_v540_intraday_t_elasticity_ledger\\v736_v540_intraday_t_elasticity_ledger_report.md",
+      "status": "shadow_only_manual_case_no_live_or_paper_order",
+      "manual_case": "manual_flat_open_dynamic_t_1p36_from_user_chart",
+      "first_read": "near-flat open can still produce meaningful same-symbol T return when sell and buyback are state-bound"
+    },
+    "one_minute_t_event_extractor": {
+      "id": "v737_v540_1m_t_event_extractor",
+      "report": "C:\\app\\models\\v737_v540_1m_t_event_extractor\\v737_v540_1m_t_event_extractor_report.md",
+      "status": "shadow_only_no_live_or_paper_order",
+      "source_rows": {
+        "one_minute_bars": 8694,
+        "protocol_rows": 40,
+        "event_rows": 40
+      },
+      "first_read": "real 1m proxy extraction finds 9 sell-then-confirmed-buyback rows and 1 keep-reduced row; low-reclaim rows are buyback candidates only when a prior T sell exists"
+    },
+    "one_minute_entry_event_extractor": {
+      "id": "v738_v540_1m_entry_event_extractor",
+      "report": "C:\\app\\models\\v738_v540_1m_entry_event_extractor\\v738_v540_1m_entry_event_extractor_report.md",
+      "status": "shadow_only_no_live_or_paper_order",
+      "source_rows": {
+        "one_minute_bars": 8694,
+        "protocol_rows": 40,
+        "ledger_rows": 40
+      },
+      "first_read": "13 A/B entries are allowed-by-card in shadow, while 13 spike-fade reclaim probes remain not-buy; confirmed entries avoid high chase but are not lowest-tick targets"
+    },
+    "one_minute_next_open_patch": {
+      "id": "v739_v540_1m_next_open_patch",
+      "report": "C:\\app\\models\\v739_v540_1m_next_open_patch\\v739_v540_1m_next_open_patch_report.md",
+      "status": "diagnostic_only_data_coverage_audit",
+      "source_rows": {
+        "t_events": 40,
+        "entry_events": 40,
+        "patch_ledger_rows": 80,
+        "patchable_rows": 0
+      },
+      "first_read": "local v492 minute source has no same-symbol next-session coverage for v737/v738 rows yet; next-open, sell-fly, and overnight conclusions must wait for data expansion"
+    },
+    "next_session_data_expander": {
+      "id": "v740_v540_next_session_data_expander",
+      "report": "C:\\app\\models\\v740_v540_next_session_data_expander\\v740_v540_next_session_data_expander_report.md",
+      "status": "diagnostic_only_local_daily_ohlc_patch",
+      "source_rows": {
+        "event_patch_rows": 80,
+        "symbol_day_rows": 40,
+        "daily_patched_event_rows": 22,
+        "daily_patched_symbol_day_rows": 11
+      },
+      "first_read": "local daily patch raises next-session coverage from 0/80 minute rows to 22/80 daily OHLC rows; T buyback and C-card probe samples remain cautious, not promotion-ready"
+    },
+    "next_session_minute_data_backfill": {
+      "id": "v745_next_session_minute_data_backfill",
+      "report": "C:\\app\\models\\v745_next_session_minute_data_backfill\\v745_next_session_minute_data_backfill_report.md",
+      "status": "diagnostic_only_minute_path_backfill",
+      "source_rows": {
+        "requested_symbol_days": 11,
+        "minute_patched_symbol_days": 11,
+        "patched_event_rows": 22,
+        "minute_patched_event_rows": 22
+      },
+      "first_read": "v745 upgrades v740 daily next-session rows into minute paths; T buyback remains negative to next open/close, B low-reclaim is slightly positive to next open but negative to next close, and C spike-fade probes remain not-buy"
+    },
+    "runtime_entry_visibility_check": {
+      "id": "v741_v91_runtime_entry_visibility_check",
+      "report": "C:\\app\\models\\v741_v91_runtime_entry_visibility_check\\v741_v91_runtime_entry_visibility_check_report.md",
+      "status": "diagnostic_only_runtime_visibility_matrix",
+      "source_rows": {
+        "visibility_fields": 30,
+        "runtime_input_now_fields": 18,
+        "research_only_fields": 7,
+        "future_or_oracle_fields": 3,
+        "position_context_incomplete_fields": 2
+      },
+      "first_read": "v91 sees daily, 09:35 5m, phase/subphase, permission and score fields, but does not yet see 1m action/event cards as runtime inputs"
+    }
+  },
+  "promotion_governance": {
+    "shadow_promotion_gate_table": {
+      "id": "v742_shadow_promotion_gate_table",
+      "report": "C:\\app\\models\\v742_shadow_promotion_gate_table\\v742_shadow_promotion_gate_table_report.md",
+      "status": "diagnostic_only_no_shadow_promotion",
+      "source_rows": {
+        "gate_table_rows": 9,
+        "promote_now_rows": 0
+      },
+      "first_read": "no shadow source passes promotion gates; 1m entry cards and intraday T should next become runtime-readable shadow sidecars, not paper/live contracts"
+    }
+  },
+  "runtime_sidecars": {
+    "one_minute_runtime_shadow_sidecar": {
+      "id": "v743_v91_1m_runtime_shadow_sidecar",
+      "report": "C:\\app\\models\\v743_v91_1m_runtime_shadow_sidecar\\v743_v91_1m_runtime_shadow_sidecar_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\one_minute_runtime_shadow_sidecar_v743.csv",
+      "status": "runtime_readable_shadow_hint_no_order",
+      "source_rows": {
+        "sidecar_rows": 7,
+        "entry_allowed_shadow_rows": 3,
+        "official_buy_rows": 0
+      },
+      "first_read": "current v91 watchlist can now read 1m shadow labels; 3 A-strong confirmations remain review-only under repair_weak quota zero"
+    },
+    "multi_source_combo_shadow_replay": {
+      "id": "v744_v540_multi_source_combo_replay",
+      "report": "C:\\app\\models\\v744_v540_multi_source_combo_replay\\v744_v540_multi_source_combo_replay_report.md",
+      "run_preview": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\multi_source_combo_shadow_preview_v744.csv",
+      "status": "offline_shadow_replay_no_order_no_global_max2",
+      "source_rows": {
+        "current_preview_rows": 7,
+        "combo_orderable_rows": 0,
+        "independent_second_source_rows": 0,
+        "eligibility_ladder_rows": 6
+      },
+      "first_read": "no independent promotable second source today; 1m A-card confirmations are execution overlays on the current watchlist, same-symbol T needs managed position context, and repair_weak quota remains zero"
+    }
+  },
+  "ml_scoring_prep": {
+    "action_score_dataset": {
+      "id": "v746_action_score_dataset",
+      "report": "C:\\app\\models\\v746_action_score_dataset\\v746_action_score_dataset_report.md",
+      "dataset": "C:\\app\\models\\v746_action_score_dataset\\v746_action_score_dataset.csv",
+      "status": "diagnostic_only_dataset_no_model_training",
+      "source_rows": {
+        "dataset_rows": 89,
+        "label_available_rows": 89,
+        "action_types": 11
+      },
+      "first_read": "prepared supervised action-score dataset only; T_BUYBACK_CONFIRMED is negative on risk-adjusted proxy while T_KEEP_REDUCED_COUNTERFACTUAL is positive, and BUY_LOW_RECLAIM_B is not promotion-ready after risk adjustment"
+    }
+  },
+  "position_context": {
+    "same_symbol_position_context_bridge": {
+      "id": "v747_same_symbol_position_context_bridge",
+      "report": "C:\\app\\models\\v747_same_symbol_position_context_bridge\\v747_same_symbol_position_context_bridge_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\same_symbol_position_context_v747.csv",
+      "status": "diagnostic_only_position_bridge_no_t_route",
+      "source_rows": {
+        "normalized_position_rows": 1,
+        "symbol_bound_position_rows": 1,
+        "sellable_position_rows": 1,
+        "current_context_ready_rows": 0,
+        "t_score_context_ready_rows": 0
+      },
+      "first_read": "raw holding 通鼎互联 maps uniquely to 002491.SZ with 600 sellable shares, but account snapshot is hard-expired and the held symbol is not in current watchlist/T score rows; same-symbol T route remains disabled"
+    },
+    "holding_symbol_1m_t_probe": {
+      "id": "v748_holding_symbol_1m_t_probe",
+      "report": "C:\\app\\models\\v748_holding_symbol_1m_t_probe\\v748_holding_symbol_1m_t_probe_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\holding_symbol_t_probe_v748.csv",
+      "status": "diagnostic_only_single_holding_probe_no_route",
+      "source_rows": {
+        "position_rows": 1,
+        "minute_bars": 238,
+        "sell_probe_rows": 1,
+        "buyback_probe_rows": 0
+      },
+      "first_read": "held 002491.SZ had a rolling-high drawdown sell probe, but no buyback probe and the close did not confirm that selling at the probe improved outcome; this argues against mechanical same-symbol T"
+    },
+    "t_arbitration_features": {
+      "id": "v749_t_arbitration_features",
+      "report": "C:\\app\\models\\v749_t_arbitration_features\\v749_t_arbitration_features_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\t_arbitration_features_v749.csv",
+      "status": "diagnostic_only_t_arbitration_no_route",
+      "source_rows": {
+        "feature_rows": 41,
+        "historical_rows": 40,
+        "current_holding_probe_rows": 1,
+        "route_allowed_rows": 0
+      },
+      "first_read": "historical sell-buyback rows mostly prefer keep-reduced over mechanical buyback, while the current holding sell probe is not confirmed; next step is a no-route T arbitration scorecard, not execution"
+    },
+    "t_arbitration_no_route_scorecard": {
+      "id": "v750_t_arbitration_no_route_scorecard",
+      "report": "C:\\app\\models\\v750_t_arbitration_no_route_scorecard\\v750_t_arbitration_no_route_scorecard_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\t_arbitration_scorecard_v750.csv",
+      "status": "diagnostic_only_no_route_scorecard",
+      "source_rows": {
+        "scorecard_rows": 41,
+        "summary_rows": 4,
+        "route_allowed_rows": 0,
+        "aligned_with_future_label_rows": 31,
+        "feature_label_conflict_rows": 10
+      },
+      "first_read": "feature-only scorecard stays no-route; it aligns on no-T/no-prior-sell rows but misses keep-reduced rows, proving that post-sell trend and carry-risk fields are still missing"
+    },
+    "t_keep_reduced_conflict_driver_map": {
+      "id": "v751_t_keep_reduced_conflict_driver_map",
+      "report": "C:\\app\\models\\v751_t_keep_reduced_conflict_driver_map\\v751_t_keep_reduced_conflict_driver_map_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\t_keep_reduced_conflict_driver_map_v751.csv",
+      "status": "diagnostic_only_driver_map_no_route",
+      "source_rows": {
+        "driver_rows": 11,
+        "summary_rows": 4,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v751 splits the missed keep-reduced cases into early-buyback, next-session carry-risk, unresolved, and current-holding second-lift risk drivers; next work should build forward-visible post-sell confirmation fields"
+    },
+    "post_sell_confirmation_shadow_fields": {
+      "id": "v752_post_sell_confirmation_shadow_fields",
+      "report": "C:\\app\\models\\v752_post_sell_confirmation_shadow_fields\\v752_post_sell_confirmation_shadow_fields_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\post_sell_confirmation_shadow_fields_v752.csv",
+      "status": "diagnostic_only_shadow_fields_no_route",
+      "source_rows": {
+        "shadow_field_rows": 11,
+        "minute_available_rows": 11,
+        "summary_rows": 6,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v752 computes concrete 1m post-sell confirmation fields for all v751 focus rows; early buyback and second-lift/carry-risk remain blockers, so the output stays shadow-only"
+    },
+    "post_sell_runtime_parity_gate": {
+      "id": "v753_post_sell_runtime_parity_gate",
+      "report": "C:\\app\\models\\v753_post_sell_runtime_parity_gate\\v753_post_sell_runtime_parity_gate_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\post_sell_runtime_parity_row_gate_v753.csv",
+      "status": "runtime_shadow_parity_gate_no_route",
+      "source_rows": {
+        "field_gate_rows": 13,
+        "row_gate_rows": 11,
+        "runtime_shadow_sidecar_candidate_fields": 9,
+        "runtime_shadow_sidecar_allowed_rows": 7,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v753 allows only delayed current-visible post-sell fields into runtime shadow sidecars; future oracles and second-lift rows remain blocked from route/live/paper"
+    },
+    "post_sell_runtime_shadow_sidecar": {
+      "id": "v754_post_sell_runtime_shadow_sidecar",
+      "report": "C:\\app\\models\\v754_post_sell_runtime_shadow_sidecar\\v754_post_sell_runtime_shadow_sidecar_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\post_sell_allowed_delayed_shadow_sidecar_v754.csv",
+      "current_overlay": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\post_sell_current_runtime_overlay_v754.csv",
+      "status": "runtime_readable_delayed_shadow_sidecar_no_route",
+      "source_rows": {
+        "allowed_delayed_sidecar_rows": 7,
+        "current_overlay_rows": 8,
+        "current_post_sell_shadow_allowed_rows": 0,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v754 publishes v753-allowed delayed post-sell fields as a clean shadow sidecar with oracle columns removed; current runtime overlay has no allowed post-sell T action today"
+    },
+    "post_sell_sidecar_daily_replay_accumulator": {
+      "id": "v755_post_sell_sidecar_daily_replay_accumulator",
+      "report": "C:\\app\\models\\v755_post_sell_sidecar_daily_replay_accumulator\\v755_post_sell_sidecar_daily_replay_accumulator_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\post_sell_accumulated_unique_evidence_v755.csv",
+      "status": "daily_accumulator_sample_thickness_gate_no_route",
+      "source_rows": {
+        "runs_scanned": 1087,
+        "runs_with_v754_sidecar": 1,
+        "unique_evidence_rows": 7,
+        "current_shadow_allowed_rows": 0,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v755 accumulates available v754 sidecars and shows sample thickness is far below model-training or paper/live gates; only the no-route discipline gate passes"
+    },
+    "second_lift_sector_proxy_availability": {
+      "id": "v756_second_lift_sector_proxy_availability",
+      "report": "C:\\app\\models\\v756_second_lift_sector_proxy_availability\\v756_second_lift_sector_proxy_availability_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\second_lift_sector_proxy_table_v756.csv",
+      "status": "sector_proxy_reaudit_after_v757_no_route",
+      "source_rows": {
+        "focus_rows": 4,
+        "sector_proxy_available_rows": 4,
+        "sector_follow_through_present_rows": 2,
+        "sector_follow_through_weak_or_mixed_rows": 2,
+        "route_allowed_rows": 0
+      },
+      "first_read": "after v757 peer min1 expansion, v756 shows sector follow-through proxy is available for all 4 focus rows, but this is still an audit layer with no route/live/paper"
+    },
+    "min1_peer_coverage_expansion_plan": {
+      "id": "v757_min1_peer_coverage_expansion_plan",
+      "report": "C:\\app\\models\\v757_min1_peer_coverage_expansion_plan\\v757_min1_peer_coverage_expansion_plan_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\min1_peer_coverage_after_v757.csv",
+      "status": "peer_min1_data_expansion_no_route",
+      "source_rows": {
+        "plan_rows": 32,
+        "planned_fetch_rows": 16,
+        "fetch_success_rows": 16,
+        "focus_rows_recomputed": 4,
+        "target_met_rows": 4,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v757 fetched or confirmed 16 peer symbol-days and lifted all 4 second-lift focus rows to target peer coverage, enabling a cleaner sector proxy reaudit"
+    },
+    "second_lift_proxy_reclassification_gate": {
+      "id": "v758_second_lift_proxy_reclassification_gate",
+      "report": "C:\\app\\models\\v758_second_lift_proxy_reclassification_gate\\v758_second_lift_proxy_reclassification_gate_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\second_lift_proxy_reclassification_gate_v758.csv",
+      "status": "second_lift_shadow_reclassification_no_route",
+      "source_rows": {
+        "gate_rows": 4,
+        "second_lift_shadow_review_allowed_rows": 2,
+        "sector_weak_or_mixed_blocked_rows": 1,
+        "oracle_conflict_blocked_rows": 1,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v758 reclassifies 2 sector-supported second-lift rows into shadow review while keeping weak/mixed and oracle-conflict rows blocked; no route/live/paper"
+    },
+    "second_lift_shadow_review_sidecar": {
+      "id": "v759_second_lift_shadow_review_sidecar",
+      "report": "C:\\app\\models\\v759_second_lift_shadow_review_sidecar\\v759_second_lift_shadow_review_sidecar_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\second_lift_shadow_review_sidecar_v759.csv",
+      "status": "second_lift_review_sidecar_no_route",
+      "source_rows": {
+        "v758_gate_rows": 4,
+        "review_sidecar_rows": 2,
+        "blocked_audit_rows": 2,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v759 publishes only the 2 sector-supported second-lift rows as review-only sidecar evidence, with oracle fields removed from the sidecar surface and route/live/paper disabled"
+    },
+    "second_lift_review_daily_accumulator": {
+      "id": "v760_second_lift_review_daily_accumulator",
+      "report": "C:\\app\\models\\v760_second_lift_review_daily_accumulator\\v760_second_lift_review_daily_accumulator_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\second_lift_review_accumulated_unique_evidence_v760.csv",
+      "status": "second_lift_review_sample_thickness_gate_no_route",
+      "source_rows": {
+        "runs_scanned": 1087,
+        "runs_with_v759_review_sidecar": 1,
+        "unique_review_evidence_rows": 2,
+        "readiness_gates_passed": 1,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v760 accumulates v759 review sidecars and shows sample thickness is far below scorer or paper/live gates; only the no-route discipline gate passes"
+    },
+    "runtime_theme_family_alignment_audit": {
+      "id": "v761_runtime_theme_family_alignment_audit",
+      "report": "C:\\app\\models\\v761_runtime_theme_family_alignment_audit\\v761_runtime_theme_family_alignment_audit_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\runtime_theme_family_alignment_rows_v761.csv",
+      "status": "runtime_alignment_field_parity_audit_no_route",
+      "source_rows": {
+        "alignment_rows": 7,
+        "field_matrix_rows": 22,
+        "taxonomy_bridge_rows": 7,
+        "clean_route_semantic_missing_or_empty_fields": 6,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v761 shows current v91 rows can be theme/taxonomy-enriched but remain one-family compressed; clean v540 route semantics are missing or empty in current runtime rows"
+    },
+    "repair_echo_family_parity_targets": {
+      "id": "v762_repair_echo_family_parity_targets",
+      "report": "C:\\app\\models\\v762_repair_echo_family_parity_targets\\v762_repair_echo_family_parity_targets_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\repair_echo_family_parity_targets_v762.csv",
+      "status": "repair_echo_family_mapping_review_no_route",
+      "source_rows": {
+        "repair_echo_target_rows": 2,
+        "review_allowed_rows": 2,
+        "non_target_rows": 5,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v762 extracts 600188.SH and 603285.SH as repair-echo parity targets; 603285 has clean neutral-pullback reference while 600188 remains weak-route review-only"
+    },
+    "clean_route_semantic_bridge_spec": {
+      "id": "v763_clean_route_semantic_bridge_spec",
+      "report": "C:\\app\\models\\v763_clean_route_semantic_bridge_spec\\v763_clean_route_semantic_bridge_spec_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\clean_route_semantic_review_sidecar_v763.csv",
+      "status": "clean_route_semantic_review_sidecar_no_route",
+      "source_rows": {
+        "bridge_rows": 7,
+        "runtime_sidecar_allowed_rows": 6,
+        "field_spec_rows": 6,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v763 turns six clean v540 route semantic fields into review-only runtime sidecar specs; 6 current rows can display reference fields but none can route"
+    },
+    "clean_route_semantic_bridge_daily_accumulator": {
+      "id": "v764_clean_route_semantic_bridge_daily_accumulator",
+      "report": "C:\\app\\models\\v764_clean_route_semantic_bridge_daily_accumulator\\v764_clean_route_semantic_bridge_daily_accumulator_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\clean_route_bridge_accumulated_unique_evidence_v764.csv",
+      "status": "clean_route_bridge_sample_thickness_gate_no_route",
+      "source_rows": {
+        "runs_scanned": 1087,
+        "runs_with_v763_sidecar": 1,
+        "unique_bridge_evidence_rows": 7,
+        "readiness_gates_passed": 1,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v764 accumulates v763 bridge sidecars and shows sample thickness is far below scorer or paper/live gates; only route_rows_zero passes"
+    },
+    "clean_route_native_runtime_patch_design": {
+      "id": "v765_clean_route_native_runtime_patch_design",
+      "report": "C:\\app\\models\\v765_clean_route_native_runtime_patch_design\\v765_clean_route_native_runtime_patch_design_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\clean_route_native_runtime_patch_design_v765.csv",
+      "status": "patch_design_only_blocked_by_sample_thickness",
+      "source_rows": {
+        "patch_design_rows": 6,
+        "acceptance_test_rows": 7,
+        "blocker_rows": 4,
+        "readiness_gates_passed": 1,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v765 designs native v91 display-only shadow columns for clean route semantics, but implementation is blocked by v764 sample-thickness gates"
+    },
+    "runtime_alignment_daily_digest_export": {
+      "id": "v766_runtime_alignment_daily_digest_export",
+      "report": "C:\\app\\models\\v766_runtime_alignment_daily_digest_export\\v766_runtime_alignment_daily_digest_export_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\runtime_alignment_daily_digest_rows_v766.csv",
+      "status": "daily_digest_export_no_route",
+      "source_rows": {
+        "digest_rows": 30,
+        "alignment_rows_v761": 7,
+        "readiness_gates_passed_v764": 1,
+        "readiness_gates_total_v764": 5,
+        "native_patch_blockers_v765": 4,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v766 compresses v761-v765 into a daily digest: state is BLOCKED_BY_SAMPLE_THICKNESS_REVIEW_ONLY with official_buy_rows=0 and all route/live/paper flags disabled"
+    },
+    "daily_digest_entry_hook_design": {
+      "id": "v767_daily_digest_entry_hook_design",
+      "report": "C:\\app\\models\\v767_daily_digest_entry_hook_design\\v767_daily_digest_entry_hook_design_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\daily_digest_entry_hook_design_v767.csv",
+      "status": "entry_hook_design_only_no_script_patch",
+      "source_rows": {
+        "blueprint_rows": 4,
+        "acceptance_test_rows": 7,
+        "tests_current_passed": 7,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v767 designs display-only hooks for daily entry scripts to surface the v766 digest; current anchors and all seven guardrail tests pass, but entry scripts remain unchanged"
+    },
+    "daily_digest_entry_hook_patch_candidate": {
+      "id": "v768_daily_digest_entry_hook_patch_candidate",
+      "report": "C:\\app\\models\\v768_daily_digest_entry_hook_patch_candidate\\v768_daily_digest_entry_hook_patch_candidate_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\daily_digest_entry_hook_patch_audit_v768.csv",
+      "status": "display_only_entry_summary_patch_no_execution_change",
+      "source_rows": {
+        "patch_audit_rows": 2,
+        "acceptance_test_rows": 8,
+        "tests_current_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v768 patches daily entry summaries to display v766 digest state only; source digest remains BLOCKED_BY_SAMPLE_THICKNESS_REVIEW_ONLY and route/live/paper flags remain zero"
+    },
+    "daily_digest_hook_smoke_validation": {
+      "id": "v769_daily_digest_hook_smoke_validation",
+      "report": "C:\\app\\models\\v769_daily_digest_hook_smoke_validation\\v769_daily_digest_hook_smoke_validation_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\daily_digest_hook_smoke_checks_v769.csv",
+      "status": "smoke_validation_passed_no_execution_change",
+      "source_rows": {
+        "smoke_rows": 6,
+        "smoke_passed": 6,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v769 confirms the latest unified summary displays the v766 daily digest with blocked/review-only state and zero route/live/paper rows"
+    },
+    "clean_route_bridge_sample_thickness_rollup": {
+      "id": "v770_clean_route_bridge_sample_thickness_rollup",
+      "report": "C:\\app\\models\\v770_clean_route_bridge_sample_thickness_rollup\\v770_clean_route_bridge_sample_thickness_rollup_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\sample_thickness_dashboard_v770.csv",
+      "status": "sample_thickness_rollup_no_promotion",
+      "source_rows": {
+        "summary_rows": 3,
+        "blocker_rows": 15,
+        "action_queue_rows": 3,
+        "ready_for_design_review_rows": 0,
+        "route_allowed_rows": 0
+      },
+      "first_read": "v770 ranks clean_route_bridge and post_sell_t as tied-thickest evidence seeds with 7 rows each; second_lift_review has 2 rows; all remain sample-thin and no-route"
+    },
+    "sample_thickness_collection_targets": {
+      "id": "v771_sample_thickness_collection_targets",
+      "report": "C:\\app\\models\\v771_sample_thickness_collection_targets\\v771_sample_thickness_collection_targets_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\sample_thickness_collection_targets_v771.csv",
+      "status": "daily_collection_targets_ready_no_promotion",
+      "source_rows": {
+        "target_rows": 12,
+        "line_count": 3,
+        "route_allowed_rows": 0,
+        "paper_or_live_allowed_rows": 0
+      },
+      "first_read": "v771 converts v770 blockers into 12 collection targets across clean_route_bridge, post_sell_t, and second_lift_review; targets authorize evidence gathering only"
+    },
+    "collection_target_daily_summary_hook": {
+      "id": "v772_collection_target_daily_summary_hook",
+      "report": "C:\\app\\models\\v772_collection_target_daily_summary_hook\\v772_collection_target_daily_summary_hook_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\collection_focus_cards_v772.csv",
+      "status": "daily_collection_focus_cards_ready_no_promotion",
+      "source_rows": {
+        "summary_rows": 13,
+        "focus_card_rows": 3,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v772 surfaces v771 collection targets as three daily focus cards; clean_route_bridge and post_sell_t remain tied-priority collection lines, second_lift_review trails, and no promotion is allowed"
+    },
+    "daily_evidence_collection_runbook": {
+      "id": "v773_daily_evidence_collection_runbook",
+      "report": "C:\\app\\models\\v773_daily_evidence_collection_runbook\\v773_daily_evidence_collection_runbook_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\daily_evidence_command_runbook_v773.csv",
+      "status": "daily_evidence_collection_runbook_ready_no_execution_change",
+      "source_rows": {
+        "command_rows": 10,
+        "focus_step_rows": 3,
+        "acceptance_test_rows": 6,
+        "acceptance_tests_passed": 6,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v773 converts v772 focus cards into a repeatable daily evidence collection runbook; every command is preview or diagnostic-only, all referenced scripts exist, and no route/live/paper behavior is allowed"
+    },
+    "daily_evidence_collection_status_export": {
+      "id": "v774_daily_evidence_collection_status_export",
+      "report": "C:\\app\\models\\v774_daily_evidence_collection_status_export\\v774_daily_evidence_collection_status_export_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\daily_evidence_line_status_v774.csv",
+      "status": "daily_evidence_status_export_ready_no_execution_change",
+      "source_rows": {
+        "line_status_rows": 3,
+        "operator_action_rows": 18,
+        "acceptance_test_rows": 7,
+        "acceptance_tests_passed": 7,
+        "collect_more_lines": 3,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v774 compresses v770-v773 into a daily status export: clean_route_bridge and post_sell_t each still need 44 total sample-thickness units, second_lift_review needs 34, and all three lines remain collect-more/no-promotion"
+    },
+    "daily_evidence_collection_delta_audit": {
+      "id": "v775_daily_evidence_collection_delta_audit",
+      "report": "C:\\app\\models\\v775_daily_evidence_collection_delta_audit\\v775_daily_evidence_collection_delta_audit_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\daily_evidence_delta_rows_v775.csv",
+      "status": "delta_audit_ready_continue_no_route_collection",
+      "source_rows": {
+        "source_freshness_rows": 7,
+        "fresh_source_rows": 3,
+        "delta_rows": 3,
+        "improved_signal_count": 0,
+        "acceptance_test_rows": 9,
+        "acceptance_tests_passed": 9,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v775 detects the guarded refresh as fresh, but clean_route_bridge, post_sell_t, and second_lift_review all have zero evidence-row and shortage deltas; continue collection, no promotion"
+    },
+    "no_route_collection_refresh_runner": {
+      "id": "v776_no_route_collection_refresh_runner",
+      "report": "C:\\app\\models\\v776_no_route_collection_refresh_runner\\v776_no_route_collection_refresh_runner_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\daily_evidence_refresh_execution_log_v776.csv",
+      "status": "no_route_collection_refresh_completed_rerun_v775_delta_audit",
+      "source_rows": {
+        "plan_rows": 10,
+        "executed_rows": 9,
+        "skipped_rows": 1,
+        "completed_rows": 9,
+        "failed_rows": 0,
+        "acceptance_test_rows": 7,
+        "acceptance_tests_passed": 7,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v776 executes only Python diagnostic collection steps from v773 and skips S1 runtime preview; the same-data refresh completed cleanly but did not add sample thickness"
+    },
+    "evidence_novelty_key_audit": {
+      "id": "v777_evidence_novelty_key_audit",
+      "report": "C:\\app\\models\\v777_evidence_novelty_key_audit\\v777_evidence_novelty_key_audit_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\daily_evidence_novelty_rows_v777.csv",
+      "status": "same_data_refresh_has_no_new_keys_wait_for_new_date_run_or_symbol",
+      "source_rows": {
+        "novelty_rows": 3,
+        "total_current_new_key_rows": 0,
+        "total_current_duplicate_key_rows": 16,
+        "acceptance_test_rows": 6,
+        "acceptance_tests_passed": 6,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v777 explains the v775 zero-delta result: all 16 current sidecar keys are already accumulated, so the blocker is new date/run/symbol arrival, not script execution"
+    },
+    "new_data_arrival_gate_for_collection": {
+      "id": "v778_new_data_arrival_gate_for_collection",
+      "report": "C:\\app\\models\\v778_new_data_arrival_gate_for_collection\\v778_new_data_arrival_gate_for_collection_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\daily_evidence_new_data_gate_rows_v778.csv",
+      "status": "block_collection_rerun_until_new_data_arrives",
+      "source_rows": {
+        "gate_rows": 3,
+        "collection_refresh_allowed_rows": 0,
+        "blocked_rows": 3,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v778 blocks all three collection reruns because the latest runtime run, event days, sidecar symbols, and novelty keys are unchanged; collection should wait for new date/run/symbol evidence"
+    },
+    "new_data_gate_daily_summary_hook": {
+      "id": "v779_new_data_gate_daily_summary_hook",
+      "report": "C:\\app\\models\\v779_new_data_gate_daily_summary_hook\\v779_new_data_gate_daily_summary_hook_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\new_data_gate_daily_summary_smoke_rows_v779.csv",
+      "status": "new_data_gate_daily_summary_hook_display_only_ready",
+      "source_rows": {
+        "patch_audit_rows": 2,
+        "smoke_rows": 2,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "collection_refresh_allowed_rows_sum": 0,
+        "blocked_rows_sum": 6,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v779 patches the unified and sim daily summaries to display the v778 new-data gate only; both smoke summaries show allowed_rows=0, blocked_rows=3, display_only=true, and no route/live/paper rows"
+    },
+    "historical_backfill_candidate_gate": {
+      "id": "v780_historical_backfill_candidate_gate",
+      "report": "C:\\app\\models\\v780_historical_backfill_candidate_gate\\v780_historical_backfill_candidate_gate_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\historical_backfill_line_summary_v780.csv",
+      "status": "no_unaccumulated_historical_sidecars_current_sources_duplicate_only",
+      "source_rows": {
+        "runtime_runs_scanned": 1087,
+        "line_summary_rows": 3,
+        "existing_sidecar_candidate_rows": 3,
+        "raw_source_candidate_rows": 3,
+        "existing_sidecar_new_key_rows": 0,
+        "raw_source_complete_without_sidecar_runs": 0,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v780 scans 1087 runtime runs and finds only the current v763/v754/v759 sidecars; all keys are already accumulated, raw sources are covered by the same sidecars, and no historical backfill or synthetic evidence is allowed"
+    },
+    "minute_forward_ledger_source_inventory": {
+      "id": "v781_minute_forward_ledger_source_inventory",
+      "report": "C:\\app\\models\\v781_minute_forward_ledger_source_inventory\\v781_minute_forward_ledger_source_inventory_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\minute_forward_ledger_source_summary_v781.csv",
+      "status": "minute_files_available_but_need_upstream_event_context",
+      "source_rows": {
+        "minute_file_rows": 74,
+        "distinct_symbol_days": 74,
+        "ledger_connected_rows": 51,
+        "raw_only_no_context_rows": 23,
+        "forward_ledger_expansion_candidate_rows": 0,
+        "candidate_export_rows": 34,
+        "acceptance_test_rows": 9,
+        "acceptance_tests_passed": 9,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v781 inventories 74 local full-day 1-minute symbol-days: 51 already link to v737/v738/v745/v746 context, 23 are raw-only, and zero can become action-score rows without upstream event context"
+    },
+    "raw_only_minute_context_classifier": {
+      "id": "v782_raw_only_minute_context_classifier",
+      "report": "C:\\app\\models\\v782_raw_only_minute_context_classifier\\v782_raw_only_minute_context_classifier_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\raw_only_minute_context_summary_v782.csv",
+      "status": "raw_only_minute_context_mostly_classified_unmapped_review",
+      "source_rows": {
+        "raw_only_rows": 23,
+        "peer_context_rows": 16,
+        "holding_context_rows": 1,
+        "watchlist_context_rows": 0,
+        "unmapped_raw_rows": 6,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v782 classifies the 23 v781 raw-only minute files: 16 are second-lift sector peers, 1 is current holding T-probe context, and only 6 remain unmapped; none may be treated as action labels"
+    },
+    "unmapped_minute_upstream_context_probe": {
+      "id": "v783_unmapped_minute_upstream_context_probe",
+      "report": "C:\\app\\models\\v783_unmapped_minute_upstream_context_probe\\v783_unmapped_minute_upstream_context_probe_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\unmapped_minute_context_summary_v783.csv",
+      "status": "unmapped_minute_prior_day_patch_gaps_found_review_only",
+      "source_rows": {
+        "unmapped_rows": 6,
+        "context_hit_rows": 33,
+        "same_day_context_rows": 0,
+        "prior_day_action_context_rows": 2,
+        "tracked_only_rows": 4,
+        "no_context_rows": 0,
+        "next_session_patch_gap_review_candidates": 2,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v783 splits the six unmapped minute files into two prior-day event gaps needing next-session outcome review and four tracked-symbol-only files with no action context"
+    },
+    "next_session_patch_gap_review": {
+      "id": "v784_next_session_patch_gap_review",
+      "report": "C:\\app\\models\\v784_next_session_patch_gap_review\\v784_next_session_patch_gap_review_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\next_session_patch_gap_summary_v784.csv",
+      "status": "next_session_patch_gap_review_ready_no_dataset_write",
+      "source_rows": {
+        "patch_review_rows": 5,
+        "concrete_price_rows": 3,
+        "context_only_no_price_rows": 2,
+        "outcome_patch_review_allowed_rows": 3,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v784 computes review-only next-session outcome metrics for the two v783 prior-day gaps; 600545 has three concrete price rows while 601699 remains context-only, and no v745/v746 dataset write is allowed"
+    },
+    "next_session_outcome_patch_policy_gate": {
+      "id": "v785_next_session_outcome_patch_policy_gate",
+      "report": "C:\\app\\models\\v785_next_session_outcome_patch_policy_gate\\v785_next_session_outcome_patch_policy_gate_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\next_session_outcome_patch_policy_summary_v785.csv",
+      "status": "ACCUMULATOR_SEED_ONLY_BLOCK_MAIN_DATASET_WRITE",
+      "source_rows": {
+        "policy_rows": 5,
+        "concrete_price_rows": 3,
+        "review_accumulator_seed_allowed_rows": 3,
+        "integration_design_ready": false,
+        "blocker_rows": 4,
+        "blocking_gate_rows": 3,
+        "acceptance_test_rows": 9,
+        "acceptance_tests_passed": 9,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v785 allows the three concrete v784 rows only as review accumulator seeds; v745/v746 writes are blocked by shortages of 17 concrete rows, 4 symbols, and 4 source days"
+    },
+    "next_session_outcome_review_accumulator": {
+      "id": "v786_next_session_outcome_review_accumulator",
+      "report": "C:\\app\\models\\v786_next_session_outcome_review_accumulator\\v786_next_session_outcome_review_accumulator_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\next_session_outcome_review_summary_v786.csv",
+      "status": "BLOCKED_BY_SAMPLE_THICKNESS_ACCUMULATE_MORE",
+      "source_rows": {
+        "unique_outcome_review_rows": 3,
+        "seed_rows_from_v785": 3,
+        "distinct_symbols": 1,
+        "distinct_source_days": 1,
+        "distinct_action_ids": 3,
+        "readiness_gates_passed": 2,
+        "readiness_gate_rows": 5,
+        "acceptance_test_rows": 9,
+        "acceptance_tests_passed": 9,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v786 creates a separate review-only next-session outcome accumulator with three unique rows; it preserves the 600545 T/entry outcome evidence while blocking integration until sample thickness grows"
+    },
+    "next_session_outcome_collection_targets": {
+      "id": "v787_next_session_outcome_collection_targets",
+      "report": "C:\\app\\models\\v787_next_session_outcome_collection_targets\\v787_next_session_outcome_collection_targets_report.md",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\next_session_outcome_collection_targets_v787.csv",
+      "status": "next_session_outcome_collection_targets_ready_no_dataset_write",
+      "source_rows": {
+        "target_rows": 4,
+        "focus_card_rows": 4,
+        "remaining_shortage_total": 25,
+        "acceptance_test_rows": 9,
+        "acceptance_tests_passed": 9,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v787 turns v786 shortages into four daily collection targets: add 17 concrete outcome rows, 4 symbols, and 4 source days while preserving action-id diversity and blocking v745/v746 writes"
+    },
+    "next_session_outcome_daily_status_export": {
+      "id": "v788_next_session_outcome_daily_status_export",
+      "report": "C:\\app\\models\\v788_next_session_outcome_daily_status_export\\v788_next_session_outcome_daily_status_export_report.md",
+      "run_sidecar": "C:\\app\\models\\v788_next_session_outcome_daily_status_export\\v788_daily_status_rows.csv",
+      "operator_actions": "C:\\app\\models\\v788_next_session_outcome_daily_status_export\\v788_operator_action_rows.csv",
+      "status": "COLLECT_MORE_NEXT_SESSION_OUTCOME_NO_DATASET_WRITE",
+      "source_rows": {
+        "status_rows": 5,
+        "target_status_rows": 4,
+        "operator_action_rows": 16,
+        "total_remaining_shortage": 25,
+        "acceptance_test_rows": 9,
+        "acceptance_tests_passed": 9,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v788 compresses v786 readiness and v787 collection targets into a daily status surface: collect 17 more concrete rows, 4 symbols, and 4 source days; it is status-only and grants no v745/v746 write, action label, training, route, live, paper, or repair_weak quota change"
+    },
+    "next_session_outcome_guarded_runbook": {
+      "id": "v789_next_session_outcome_guarded_runbook",
+      "report": "C:\\app\\models\\v789_next_session_outcome_guarded_runbook\\v789_next_session_outcome_guarded_runbook_report.md",
+      "run_sidecar": "C:\\app\\models\\v789_next_session_outcome_guarded_runbook\\v789_guarded_runbook_steps.csv",
+      "guardrail_checklist": "C:\\app\\models\\v789_next_session_outcome_guarded_runbook\\v789_guardrail_checklist.csv",
+      "command_templates": "C:\\app\\models\\v789_next_session_outcome_guarded_runbook\\v789_command_templates.csv",
+      "status": "GUARDED_RUNBOOK_READY_COLLECT_ONLY_NO_EXECUTION",
+      "source_rows": {
+        "runbook_step_rows": 16,
+        "guardrail_rows": 8,
+        "command_template_rows": 6,
+        "total_remaining_shortage": 25,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "execute_now_allowed_rows": 0,
+        "auto_execute_allowed_rows": 0,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v789 turns v788 operator actions into a guarded no-execution runbook with 16 steps, 8 guardrails, and 6 command templates; every template requires new data and remains no-write, no-label, no-training, no-route, no-live, no-paper, and no repair_weak quota change"
+    },
+    "historical_evidence_reconstruction_no_route": {
+      "id": "v790_historical_evidence_reconstruction_no_route",
+      "report": "C:\\app\\models\\v790_historical_evidence_reconstruction_no_route\\v790_historical_evidence_reconstruction_no_route_report.md",
+      "clean_route_evidence": "C:\\app\\models\\v790_historical_evidence_reconstruction_no_route\\v790_clean_route_historical_evidence.csv",
+      "post_sell_t_evidence": "C:\\app\\models\\v790_historical_evidence_reconstruction_no_route\\v790_post_sell_t_historical_evidence.csv",
+      "second_lift_source_gap": "C:\\app\\models\\v790_historical_evidence_reconstruction_no_route\\v790_second_lift_historical_source_gap.csv",
+      "status": "HISTORICAL_EVIDENCE_PARTIALLY_RECONSTRUCTED_CLEAN_ROUTE_AND_POST_SELL_T",
+      "source_rows": {
+        "clean_route_train_exam_rows": 213,
+        "post_sell_t_train_exam_rows": 43,
+        "second_lift_train_exam_rows": 0,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v790 moves beyond display hooks: clean-route historical evidence thickens to 213 train/exam rows and post-sell/T to 43 rows from v540/v590 clean artifacts; second-lift remains blocked by missing historical sector-peer minute sources"
+    },
+    "holding_intraday_t_human_replay_protocol": {
+      "id": "v791_holding_intraday_t_human_replay_protocol",
+      "report": "C:\\app\\models\\v791_holding_intraday_t_human_replay_protocol\\v791_holding_intraday_t_human_replay_protocol_report.md",
+      "manual_seed_cases": "C:\\app\\models\\v791_holding_intraday_t_human_replay_protocol\\v791_manual_t_seed_cases.csv",
+      "action_grammar": "C:\\app\\models\\v791_holding_intraday_t_human_replay_protocol\\v791_holding_t_action_grammar.csv",
+      "machine_human_gap_map": "C:\\app\\models\\v791_holding_intraday_t_human_replay_protocol\\v791_machine_human_gap_map.csv",
+      "status": "HOLDING_INTRADAY_T_HUMAN_PROTOCOL_READY_NO_ROUTE_NO_TRAINING",
+      "source_rows": {
+        "schema_rows": 22,
+        "manual_seed_rows": 1,
+        "action_grammar_rows": 5,
+        "machine_gap_rows": 6,
+        "historical_overlay_summary_rows": 10,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v791 separates existing-position intraday T from cross-day buyback: 002491.SZ becomes a manual label seed with HOLD_CORE/T_PARTIAL_SELL/T_BUYBACK/KEEP_REDUCED/FORBID_T grammar; exact execution prices are not fabricated and no T route or training is enabled"
+    },
+    "candidate_opportunity_lake": {
+      "id": "v792_candidate_opportunity_lake",
+      "report": "C:\\app\\models\\v792_candidate_opportunity_lake\\v792_candidate_opportunity_lake_report.md",
+      "lake": "C:\\app\\models\\v792_candidate_opportunity_lake\\v792_candidate_opportunity_lake.csv",
+      "bucket_summary": "C:\\app\\models\\v792_candidate_opportunity_lake\\v792_bucket_summary.csv",
+      "daily_oracle_preview": "C:\\app\\models\\v792_candidate_opportunity_lake\\v792_daily_oracle_preview.csv",
+      "oracle_bucket_summary": "C:\\app\\models\\v792_candidate_opportunity_lake\\v792_oracle_bucket_summary.csv",
+      "status": "CANDIDATE_OPPORTUNITY_LAKE_READY_REVIEW_ONLY_FINAL_926_CEILING_BLOCKED_BY_HORIZON_NORMALIZATION",
+      "source_rows": {
+        "candidate_lake_rows": 974,
+        "official_selected_rows": 222,
+        "skipped_or_unselected_rows": 752,
+        "unique_dates": 300,
+        "unique_symbols": 679,
+        "v242_skipped_candidate_active_context_rows": 534,
+        "v540_executed_clean_trade_rows": 222,
+        "v191_max1_skipped_slot_outcome_rows": 218,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v792 proves the candidate-pool audit now has row-level material: 974 rows across 300 dates and 679 symbols, including 752 skipped/unselected candidates. Skipped candidates show non-trivial review-only meat, but final 9.26 weekly ceiling remains blocked until candidate and executed outcomes are normalized to the same entry/exit horizon."
+    },
+    "candidate_horizon_normalized_oracle": {
+      "id": "v793_candidate_horizon_normalized_oracle",
+      "report": "C:\\app\\models\\v793_candidate_horizon_normalized_oracle\\v793_candidate_horizon_normalized_oracle_report.md",
+      "gap_rows": "C:\\app\\models\\v793_candidate_horizon_normalized_oracle\\v793_source_normalized_candidate_gap_rows.csv",
+      "bucket_summary": "C:\\app\\models\\v793_candidate_horizon_normalized_oracle\\v793_gap_summary_by_bucket_source.csv",
+      "priority_pockets": "C:\\app\\models\\v793_candidate_horizon_normalized_oracle\\v793_priority_pockets.csv",
+      "status": "SOURCE_NORMALIZED_CANDIDATE_GAP_READY_REVIEW_ONLY_FINAL_926_STILL_BLOCKED",
+      "source_rows": {
+        "source_normalized_gap_rows": 752,
+        "daily_gap_oracle_rows": 115,
+        "priority_pocket_rows": 7,
+        "positive_edge_rows": 440,
+        "mean_candidate_edge_pct": 1.652304348097325,
+        "positive_edge_rate": 0.5851063829787234,
+        "shadow_review_ready_pockets": 0,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v793 removes v792's direct mixed-horizon comparison by using v242/v191 source-provided candidate-vs-active gaps only. The skipped pool has positive review-only edge on average, but no skip/re route pocket passes both cross-bucket sample and direction gates; this points to supply/slot arbitration potential, not a promotable route yet."
+    },
+    "candidate_gap_pocket_refinement": {
+      "id": "v794_candidate_gap_pocket_refinement",
+      "report": "C:\\app\\models\\v794_candidate_gap_pocket_refinement\\v794_candidate_gap_pocket_refinement_report.md",
+      "refined_pockets": "C:\\app\\models\\v794_candidate_gap_pocket_refinement\\v794_refined_candidate_gap_pockets.csv",
+      "shadow_review_candidates": "C:\\app\\models\\v794_candidate_gap_pocket_refinement\\v794_shadow_review_candidates.csv",
+      "status": "REFINED_CURRENT_VISIBLE_CANDIDATE_GAP_POCKETS_READY_FOR_SHADOW_REVIEW_NO_ROUTE",
+      "source_rows": {
+        "input_gap_rows": 752,
+        "refined_pocket_rows": 48,
+        "shadow_review_candidate_rows": 4,
+        "shadow_review_candidate_keys": [
+          "early_intraday|repair_strong",
+          "repair_reversal|repair_strong",
+          "early_intraday",
+          "early_intraday|euphoria"
+        ],
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v794 finds current-visible refined pockets that v793's coarser skip/route grouping hid. The cleanest shadow-review candidates are early_intraday|repair_strong and repair_reversal|repair_strong, but they still need causality, overlap, slot-cost, and portfolio replay before any paper-shadow consideration."
+    },
+    "candidate_gap_shadow_review_replay": {
+      "id": "v795_candidate_gap_shadow_review_replay",
+      "report": "C:\\app\\models\\v795_candidate_gap_shadow_review_replay\\v795_candidate_gap_shadow_review_replay_report.md",
+      "strict_replay_rows": "C:\\app\\models\\v795_candidate_gap_shadow_review_replay\\v795_strict_shadow_replay_rows.csv",
+      "daily_replay": "C:\\app\\models\\v795_candidate_gap_shadow_review_replay\\v795_daily_shadow_replay.csv",
+      "summary": "C:\\app\\models\\v795_candidate_gap_shadow_review_replay\\v795_pocket_replay_summary.csv",
+      "status": "STRICT_SHADOW_REVIEW_REPLAY_ACTIVE_V540_JOIN_GAP_NO_MAX2_NO_ROUTE",
+      "source_rows": {
+        "strict_replay_rows": 394,
+        "daily_replay_rows": 79,
+        "summary_rows": 3,
+        "active_v540_joined_rows": 0,
+        "paper_shadow_ready_rows": 0,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v795 confirms the strict route/subphase pockets have 394 replay rows and 79 daily review rows, but none of the source active references joins back to v540 clean trades. This blocks portfolio replay and proves the next step is an active-reference-to-v540 join bridge, not max2 or route."
+    },
+    "active_reference_v540_join_bridge": {
+      "id": "v796_active_reference_v540_join_bridge",
+      "report": "C:\\app\\models\\v796_active_reference_v540_join_bridge\\v796_active_reference_v540_join_bridge_report.md",
+      "join_attempts": "C:\\app\\models\\v796_active_reference_v540_join_bridge\\v796_join_attempts.csv",
+      "active_reference_inventory": "C:\\app\\models\\v796_active_reference_v540_join_bridge\\v796_active_reference_inventory.csv",
+      "bridge_decision": "C:\\app\\models\\v796_active_reference_v540_join_bridge\\v796_bridge_decision.csv",
+      "status": "ACTIVE_REFERENCE_V540_JOIN_GAP_CONFIRMED_DIFFERENT_REPLAY_UNIVERSE_NO_PORTFOLIO_REPLAY",
+      "source_rows": {
+        "candidate_gap_rows": 752,
+        "strict_replay_rows": 394,
+        "active_reference_rows": 113,
+        "source_universe_rows": 2,
+        "join_attempt_rows": 20,
+        "exact_active_entry_join_rows": 0,
+        "active_symbol_anywhere_rows": 72,
+        "active_trade_date_overlap_rows": 261,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v796 confirms v242/v191 active references are source-internal and do not exact-join to v540 clean executed trades. There is symbol/date overlap, but no exact active-symbol+trade-date or candidate-symbol+trade-date join, so v540 portfolio replay remains blocked until a source-to-v540 mapping or native v540 rejected-candidate ledger exists."
+    },
+    "native_v540_rejected_candidate_ledger_probe": {
+      "id": "v797_native_v540_rejected_candidate_ledger_probe",
+      "report": "C:\\app\\models\\v797_native_v540_rejected_candidate_ledger_probe\\v797_native_v540_rejected_candidate_ledger_probe_report.md",
+      "source_inventory": "C:\\app\\models\\v797_native_v540_rejected_candidate_ledger_probe\\v797_source_inventory.csv",
+      "field_coverage_matrix": "C:\\app\\models\\v797_native_v540_rejected_candidate_ledger_probe\\v797_field_coverage_matrix.csv",
+      "candidate_source_decision": "C:\\app\\models\\v797_native_v540_rejected_candidate_ledger_probe\\v797_candidate_source_decision.csv",
+      "required_native_schema": "C:\\app\\models\\v797_native_v540_rejected_candidate_ledger_probe\\v797_required_native_ledger_schema.csv",
+      "status": "NATIVE_V540_REJECTED_CANDIDATE_LEDGER_NOT_FOUND_BUILD_REQUIRED_NO_ROUTE",
+      "source_rows": {
+        "source_inventory_rows": 20,
+        "native_ready_sources": 0,
+        "best_partial_native_skip_sources": 1,
+        "v532_older_skip_rows": 220,
+        "v539_clean_chain_skip_rows": 6,
+        "v546_v547_shadow_skip_sources": 2,
+        "minute_event_ledger_sources": 3,
+        "mendel_recycle_research_context_sources": 4,
+        "acceptance_test_rows": 9,
+        "acceptance_tests_passed": 9,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v797 scans 20 local v540/v590-adjacent, clean-chain, shadow, minute-event, and recycle-research artifacts. No native v540 rejected-candidate ledger is present. v539 replay skips are the closest clean-chain row-level skip source, but only 6 rows and missing price/rank/outcome/context; v546/v547 are shadow-only, v737/v738 are minute event ledgers, and Mendel contexts are recycle research. True v540 portfolio replay now requires building a native rejected-candidate ledger at replay time or locating a locked candidate source with price/outcome joins."
+    },
+    "native_v540_rejected_candidate_ledger_design": {
+      "id": "v798_native_v540_rejected_candidate_ledger_design",
+      "report": "C:\\app\\models\\v798_native_v540_rejected_candidate_ledger_design\\v798_native_v540_rejected_candidate_ledger_design_report.md",
+      "native_candidate_ledger_dryrun": "C:\\app\\models\\v798_native_v540_rejected_candidate_ledger_design\\v798_native_candidate_ledger_dryrun.csv",
+      "native_rejected_rows": "C:\\app\\models\\v798_native_v540_rejected_candidate_ledger_design\\v798_native_rejected_candidate_rows_enriched.csv",
+      "field_readiness": "C:\\app\\models\\v798_native_v540_rejected_candidate_ledger_design\\v798_field_readiness_summary.csv",
+      "patch_points": "C:\\app\\models\\v798_native_v540_rejected_candidate_ledger_design\\v798_implementation_patch_points.csv",
+      "status": "NATIVE_V539_V540_CANDIDATE_LEDGER_DRYRUN_READY_REJECTED_POOL_TOO_SMALL_FOR_926_SUPPLY_CLAIM",
+      "source_rows": {
+        "native_candidate_ledger_rows": 448,
+        "official_selected_rows": 442,
+        "native_rejected_rows": 6,
+        "unique_symbols": 217,
+        "unique_trade_dates": 229,
+        "rejected_unique_symbols": 3,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v798 reconstructs the native v539/v540 compiled replay candidate ledger from locked v532/v539 inputs without using v242/v191 review pools or synthetic candidates. The clean native universe has 448 candidate rows, 442 selected rows, and only 6 native rejected rows. This creates a concrete ledger foundation, but it also shows the 9.26 gap is unlikely to be solved inside the final v540 rejected pool alone; next work should probe upstream candidate supply rather than max2, quota, route, or scorer training."
+    },
+    "upstream_candidate_supply_gap_probe": {
+      "id": "v799_upstream_candidate_supply_gap_probe",
+      "report": "C:\\app\\models\\v799_upstream_candidate_supply_gap_probe\\v799_upstream_candidate_supply_gap_probe_report.md",
+      "source_inventory": "C:\\app\\models\\v799_upstream_candidate_supply_gap_probe\\v799_upstream_source_inventory.csv",
+      "supply_funnel": "C:\\app\\models\\v799_upstream_candidate_supply_gap_probe\\v799_supply_funnel.csv",
+      "overlap_matrix": "C:\\app\\models\\v799_upstream_candidate_supply_gap_probe\\v799_full_key_overlap_matrix.csv",
+      "decision": "C:\\app\\models\\v799_upstream_candidate_supply_gap_probe\\v799_supply_gap_decision.csv",
+      "status": "NO_BROADER_ROW_LEVEL_SUPPLY_FOUND_IN_V529_V530_V485_AFTER_CLEAN_IDENTITY",
+      "source_rows": {
+        "source_inventory_rows": 8,
+        "funnel_rows": 6,
+        "v529_unique_full_keys": 448,
+        "v798_unique_full_keys": 448,
+        "v529_expands_vs_v798": 0,
+        "v485_skip_rows_signal_symbol_only": 47,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v799 shows v529/v530/v485 do not contain broader row-level clean candidate supply after clean identity is applied. v529 has 976 rows but only 448 unique full clean keys, matching v798; v530 is aggregate policy, not row-level supply; v485 skipped rows have 47 signal/symbol-only virtual-delta exclusions without period/cap/outcome/context. The supply gap must move above v485/v529 into pre-v485 signal generation, watchlist generation, raw candidate rankers, or runtime watchlist history."
+    },
+    "pre_v485_signal_generation_source_inventory": {
+      "id": "v800_pre_v485_signal_generation_source_inventory",
+      "report": "C:\\app\\models\\v800_pre_v485_signal_generation_source_inventory\\v800_pre_v485_signal_generation_source_inventory_report.md",
+      "source_inventory": "C:\\app\\models\\v800_pre_v485_signal_generation_source_inventory\\v800_pre_v485_source_inventory.csv",
+      "bridge_candidate_shortlist": "C:\\app\\models\\v800_pre_v485_signal_generation_source_inventory\\v800_bridge_candidate_shortlist.csv",
+      "date_symbol_overlap": "C:\\app\\models\\v800_pre_v485_signal_generation_source_inventory\\v800_date_symbol_overlap_vs_v798.csv",
+      "runtime_watchlist_inventory": "C:\\app\\models\\v800_pre_v485_signal_generation_source_inventory\\v800_runtime_watchlist_inventory.csv",
+      "status": "PRE_V485_ROW_LEVEL_SUPPLY_FOUND_CLEAN_IDENTITY_BRIDGE_REQUIRED_NO_ROUTE",
+      "source_rows": {
+        "bridge_candidate_sources": 2,
+        "v351_rows": 1035,
+        "v351_date_symbol_keys": 890,
+        "v351_source_only_date_symbol_keys": 660,
+        "v469_rows": 963,
+        "v469_date_symbol_keys": 833,
+        "v469_source_only_date_symbol_keys": 603,
+        "bridge_source_only_date_symbol_keys_sum": 1263,
+        "runtime_watchlist_rows_latest": 105,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v800 finds the first credible broader row-level supply sources above v485/v529: v351 candidate features and v469 micro-feature candidates. v351 has 890 date-symbol keys with 660 source-only vs v798, and v469 has 833 keys with 603 source-only vs v798. Signal-id identity does not join to v798, so this is not a promotion or 9.26 claim; next work must build a date-symbol/period clean-identity bridge while quarantining review-only labels."
+    },
+    "pre_v485_to_clean_identity_bridge_probe": {
+      "id": "v801_pre_v485_to_clean_identity_bridge_probe",
+      "report": "C:\\app\\models\\v801_pre_v485_to_clean_identity_bridge_probe\\v801_pre_v485_to_clean_identity_bridge_probe_report.md",
+      "bridge_rows": "C:\\app\\models\\v801_pre_v485_to_clean_identity_bridge_probe\\v801_pre_v485_clean_bridge_rows.csv",
+      "bridge_summary": "C:\\app\\models\\v801_pre_v485_to_clean_identity_bridge_probe\\v801_bridge_summary.csv",
+      "source_only_review_pockets": "C:\\app\\models\\v801_pre_v485_to_clean_identity_bridge_probe\\v801_source_only_review_pockets.csv",
+      "decision": "C:\\app\\models\\v801_pre_v485_to_clean_identity_bridge_probe\\v801_bridge_decision.csv",
+      "status": "PRE_V485_DATE_SYMBOL_BRIDGE_BUILT_SOURCE_ONLY_REVIEW_POOL_READY_NO_ROUTE",
+      "source_rows": {
+        "bridge_rows": 1998,
+        "date_symbol_overlap_rows": 500,
+        "source_only_rows": 1498,
+        "source_only_unique_date_symbol_keys": 660,
+        "overlap_unique_date_symbol_keys": 230,
+        "same_period_overlap_rows": 500,
+        "source_only_review_pocket_rows": 53,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v801 builds a date-symbol/period bridge from v351/v469 pre-v485 supply to clean v798. There are 1998 bridge rows, 500 date-symbol overlap rows with clean v798, and 1498 source-only rows representing 660 unique date-symbol keys. Review labels are quarantined; this creates a review pool for stability analysis, not an alpha claim, scorer dataset, max2, route, or paper/live permission."
+    },
+    "pre_v485_source_only_pocket_stability_review": {
+      "id": "v802_pre_v485_source_only_pocket_stability_review",
+      "report": "C:\\app\\models\\v802_pre_v485_source_only_pocket_stability_review\\v802_pre_v485_source_only_pocket_stability_review_report.md",
+      "source_only_rows": "C:\\app\\models\\v802_pre_v485_source_only_pocket_stability_review\\v802_source_only_rows.csv",
+      "stability_summary": "C:\\app\\models\\v802_pre_v485_source_only_pocket_stability_review\\v802_source_only_stability_summary.csv",
+      "review_stability_candidates": "C:\\app\\models\\v802_pre_v485_source_only_pocket_stability_review\\v802_review_stability_candidates.csv",
+      "blockers": "C:\\app\\models\\v802_pre_v485_source_only_pocket_stability_review\\v802_stability_blockers.csv",
+      "status": "SOURCE_ONLY_STABILITY_REVIEW_HAS_CANDIDATES_BUT_BLOCKED_BY_CLEAN_IDENTITY_AND_CONTEXT",
+      "source_rows": {
+        "source_only_rows": 1498,
+        "source_only_unique_keys": 660,
+        "stability_summary_rows": 94,
+        "review_stability_candidate_rows": 12,
+        "route_lane_candidate_rows": 4,
+        "full_context_candidate_rows": 4,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v802 reviews the v801 source-only pool and finds 12 recurrent review-stability candidates, including 4 route/lane pockets and 4 full-context pockets. The leading pockets are resonant_core divergence, resonant_core early_group, neutral_strength_or_reclaim divergence, and neutral_pullback early_group. None is promotion-ready because clean signal identity, subphase/context completeness, v351/v469 deduplication, and review-label quarantine remain blockers."
+    },
+    "pre_v485_supply_dedup_and_runtime_field_whitelist": {
+      "id": "v803_pre_v485_supply_dedup_and_runtime_field_whitelist",
+      "report": "C:\\app\\models\\v803_pre_v485_supply_dedup_and_runtime_field_whitelist\\v803_pre_v485_supply_dedup_and_runtime_field_whitelist_report.md",
+      "deduped_supply": "C:\\app\\models\\v803_pre_v485_supply_dedup_and_runtime_field_whitelist\\v803_deduped_source_only_supply.csv",
+      "runtime_field_whitelist": "C:\\app\\models\\v803_pre_v485_supply_dedup_and_runtime_field_whitelist\\v803_runtime_field_whitelist.csv",
+      "candidate_membership": "C:\\app\\models\\v803_pre_v485_supply_dedup_and_runtime_field_whitelist\\v803_deduped_candidate_membership.csv",
+      "decision": "C:\\app\\models\\v803_pre_v485_supply_dedup_and_runtime_field_whitelist\\v803_dedup_whitelist_decision.csv",
+      "status": "DEDUPED_SOURCE_ONLY_SUPPLY_READY_FOR_VISIBILITY_GAP_REVIEW_NO_ROUTE",
+      "source_rows": {
+        "raw_source_only_rows": 1498,
+        "dedup_unique_date_symbol_rows": 660,
+        "duplicate_rows_removed": 838,
+        "keys_with_both_v351_v469": 603,
+        "v469_representative_rows": 603,
+        "v351_only_representative_rows": 57,
+        "route_lane_candidate_dedup_rows": 348,
+        "runtime_symbol_date_complete_rows": 660,
+        "runtime_minimal_complete_rows": 57,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v803 deduplicates the v801/v802 source-only supply from 1498 rows to 660 unique date-symbol rows, removing 838 duplicate rows. 603 keys have both v351 and v469 evidence and use v469 as the representative source; 57 are v351-only. 348 deduped rows remain inside the v802 stable route/lane pockets, but only 57 rows have the minimal runtime-visible family/subphase fields, so the next bottleneck is runtime visibility, not sample count."
+    },
+    "pre_v485_runtime_visibility_gap_patch_design": {
+      "id": "v804_pre_v485_runtime_visibility_gap_patch_design",
+      "report": "C:\\app\\models\\v804_pre_v485_runtime_visibility_gap_patch_design\\v804_pre_v485_runtime_visibility_gap_patch_design_report.md",
+      "field_spec": "C:\\app\\models\\v804_pre_v485_runtime_visibility_gap_patch_design\\v804_shadow_logger_field_spec.csv",
+      "stable_pocket_visibility_gap": "C:\\app\\models\\v804_pre_v485_runtime_visibility_gap_patch_design\\v804_stable_pocket_visibility_gap.csv",
+      "shadow_logger_contract": "C:\\app\\models\\v804_pre_v485_runtime_visibility_gap_patch_design\\v804_shadow_logger_contract.csv",
+      "status": "PRE_V485_VISIBILITY_PATCH_DESIGN_READY_SHADOW_LOGGER_ONLY_NO_ROUTE",
+      "source_rows": {
+        "shadow_logger_fields": 24,
+        "prohibited_review_fields": 4,
+        "stable_pockets_needing_patch": 4,
+        "total_stable_pocket_dedup_rows": 348,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v804 turns the v803 visibility gap into a shadow-logger-only patch design. 24 fields are allowed in the logger, 4 review outcome fields are explicitly prohibited, and the 4 stable route/lane pockets with 348 deduped rows all require visibility patching. The design changes no route, score, quota, paper/live, v745/v746, or training behavior."
+    },
+    "pre_v485_shadow_logger_dryrun_sidecar": {
+      "id": "v805_pre_v485_shadow_logger_dryrun_sidecar",
+      "report": "C:\\app\\models\\v805_pre_v485_shadow_logger_dryrun_sidecar\\v805_pre_v485_shadow_logger_dryrun_sidecar_report.md",
+      "sidecar": "C:\\app\\models\\v805_pre_v485_shadow_logger_dryrun_sidecar\\v805_pre_v485_supply_shadow_sidecar_dryrun.csv",
+      "stable_pocket_focus_sidecar": "C:\\app\\models\\v805_pre_v485_shadow_logger_dryrun_sidecar\\v805_pre_v485_stable_pocket_focus_sidecar.csv",
+      "schema": "C:\\app\\models\\v805_pre_v485_shadow_logger_dryrun_sidecar\\v805_sidecar_schema.csv",
+      "status": "PRE_V485_SHADOW_LOGGER_DRYRUN_SIDECAR_READY_NO_ROUTE",
+      "source_rows": {
+        "sidecar_rows": 660,
+        "stable_pocket_focus_rows": 348,
+        "sidecar_columns": 38,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v805 materializes the v804 shadow logger contract as a dry-run sidecar: 660 deduped source-only rows and 348 stable-pocket focus rows, with review labels excluded and no route/live/paper/training behavior enabled. This gives the next step a concrete sidecar shape for a runtime join probe."
+    },
+    "pre_v485_shadow_sidecar_daily_runtime_join_probe": {
+      "id": "v806_pre_v485_shadow_sidecar_daily_runtime_join_probe",
+      "report": "C:\\app\\models\\v806_pre_v485_shadow_sidecar_daily_runtime_join_probe\\v806_pre_v485_shadow_sidecar_daily_runtime_join_probe_report.md",
+      "join_attempts": "C:\\app\\models\\v806_pre_v485_shadow_sidecar_daily_runtime_join_probe\\v806_join_attempts.csv",
+      "runtime_unmatched_watchlist": "C:\\app\\models\\v806_pre_v485_shadow_sidecar_daily_runtime_join_probe\\v806_runtime_unmatched_watchlist.csv",
+      "decision": "C:\\app\\models\\v806_pre_v485_shadow_sidecar_daily_runtime_join_probe\\v806_runtime_join_decision.csv",
+      "run_decision": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\pre_v485_shadow_sidecar_runtime_join_decision_v806.csv",
+      "status": "NO_EXACT_DAILY_RUNTIME_JOIN_HISTORICAL_SIDECAR_NEEDS_DAILY_GENERATION_OR_ASOF_MAPPING_NO_ROUTE",
+      "source_rows": {
+        "runtime_final_watchlist_rows": 7,
+        "runtime_prebook_rows": 7,
+        "join_attempt_rows": 4,
+        "exact_trade_date_symbol_join_rows_total": 0,
+        "exact_asof_date_symbol_join_rows_total": 0,
+        "symbol_only_join_rows_review_only_total": 6,
+        "runtime_unmatched_exact_rows": 7,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v806 proves the v805 historical sidecar does not exact-join the current 2026-04-29 v91 runtime watchlist by trade_date|symbol or daily_asof_date|symbol. Only 6 symbol-only historical overlaps appear, and they remain stale-history review evidence. The next bottleneck is daily sidecar generation or an explicit as-of mapping, still with no route, score, quota, paper/live, max2, or training change."
+    },
+    "pre_v485_daily_sidecar_generation_asof_mapping": {
+      "id": "v807_pre_v485_daily_sidecar_generation_asof_mapping",
+      "report": "C:\\app\\models\\v807_pre_v485_daily_sidecar_generation_asof_mapping\\v807_pre_v485_daily_sidecar_generation_asof_mapping_report.md",
+      "daily_sidecar": "C:\\app\\models\\v807_pre_v485_daily_sidecar_generation_asof_mapping\\v807_daily_nullsafe_sidecar.csv",
+      "mapping_policy": "C:\\app\\models\\v807_pre_v485_daily_sidecar_generation_asof_mapping\\v807_mapping_policy.csv",
+      "source_gap_summary": "C:\\app\\models\\v807_pre_v485_daily_sidecar_generation_asof_mapping\\v807_source_gap_summary.csv",
+      "decision": "C:\\app\\models\\v807_pre_v485_daily_sidecar_generation_asof_mapping\\v807_daily_generation_decision.csv",
+      "run_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260429_163529\\pre_v485_daily_nullsafe_sidecar_v807.csv",
+      "status": "DAILY_NULL_SAFE_SIDECAR_GENERATED_CURRENT_PRE_V485_CONTEXT_MISSING_NO_ROUTE",
+      "source_rows": {
+        "daily_sidecar_rows": 7,
+        "exact_current_context_rows": 0,
+        "current_pre_v485_context_filled_rows": 0,
+        "stale_history_review_only_rows": 2,
+        "source_gap_rows": 1,
+        "staleness_days_to_runtime_trade_date": 42,
+        "staleness_days_to_runtime_asof_date": 41,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v807 emits one null-safe daily sidecar row for each current v91 final-watchlist row. Exact current pre-v485 context remains zero, while two symbols have stale historical same-symbol review-only records from 2023. Those stale rows are explicitly prohibited as runtime features. The next bottleneck is finding or adding the current pre-v485 source-generation hook."
+    },
+    "current_pre_v485_source_generation_hook_probe": {
+      "id": "v808_current_pre_v485_source_generation_hook_probe",
+      "report": "C:\\app\\models\\v808_current_pre_v485_source_generation_hook_probe\\v808_current_pre_v485_source_generation_hook_probe_report.md",
+      "runtime_signal_field_inventory": "C:\\app\\models\\v808_current_pre_v485_source_generation_hook_probe\\v808_runtime_signal_field_inventory.csv",
+      "historical_source_inventory": "C:\\app\\models\\v808_current_pre_v485_source_generation_hook_probe\\v808_historical_source_inventory.csv",
+      "hook_candidate_matrix": "C:\\app\\models\\v808_current_pre_v485_source_generation_hook_probe\\v808_hook_candidate_matrix.csv",
+      "decision": "C:\\app\\models\\v808_current_pre_v485_source_generation_hook_probe\\v808_hook_probe_decision.csv",
+      "status": "CURRENT_RUNTIME_HOOK_FOUND_PRE_V485_ROUTE_LANE_GENERATOR_NOT_LIVE_READY_NO_ROUTE",
+      "source_rows": {
+        "signal_inventory_rows": 7,
+        "historical_source_rows": 2,
+        "hook_candidate_rows": 4,
+        "current_runtime_prebook_rows": 8,
+        "current_runtime_watchlist_rows": 8,
+        "v698_final_watchlist_rows": 7,
+        "current_runtime_target_context_field_count": 0,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v808 identifies sim_trading/signal_engine_live_v1::build_latest_watchlist as the cleanest current-day log-only insertion point because it already builds prebook, book, final watchlist, and open-5m context. Current runtime rows have primary family/open-5m fields but zero target pre-v485 route/lane fields. Full v351/v469 scripts remain offline generators and must not be called directly in runtime because they depend on historical universes and review labels."
+    },
+    "signal_engine_live_log_only_sidecar_hook_design": {
+      "id": "v809_signal_engine_live_log_only_sidecar_hook_design",
+      "report": "C:\\app\\models\\v809_signal_engine_live_log_only_sidecar_hook_design\\v809_signal_engine_live_log_only_sidecar_hook_design_report.md",
+      "hook_design_spec": "C:\\app\\models\\v809_signal_engine_live_log_only_sidecar_hook_design\\v809_hook_design_spec.csv",
+      "sidecar_schema": "C:\\app\\models\\v809_signal_engine_live_log_only_sidecar_hook_design\\v809_sidecar_schema.csv",
+      "no_route_contract": "C:\\app\\models\\v809_signal_engine_live_log_only_sidecar_hook_design\\v809_no_route_contract.csv",
+      "decision": "C:\\app\\models\\v809_signal_engine_live_log_only_sidecar_hook_design\\v809_hook_design_decision.csv",
+      "status": "SIGNAL_ENGINE_LOG_ONLY_SIDECAR_HOOK_DESIGN_READY_NO_RUNTIME_PATCH_YET",
+      "source_rows": {
+        "design_steps": 4,
+        "schema_fields": 24,
+        "contract_checks": 10,
+        "runtime_source_patched": 0,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v809 converts the v808 hook finding into a concrete patch design for sim_trading/signal_engine_live_v1.py: add a pre_v485 null-safe CSV output path, add a writer function, and call it in both observation and official branches. The schema has 24 fields and the no-route contract has 10 checks. Runtime source is not patched yet."
+    },
+    "signal_engine_live_log_only_sidecar_hook_patch": {
+      "id": "v810_signal_engine_live_log_only_sidecar_hook_patch",
+      "report": "C:\\app\\models\\v810_signal_engine_live_log_only_sidecar_hook_patch\\v810_signal_engine_live_log_only_sidecar_hook_patch_report.md",
+      "patch_validation": "C:\\app\\models\\v810_signal_engine_live_log_only_sidecar_hook_patch\\v810_patch_validation.csv",
+      "smoke_summary": "C:\\app\\models\\v810_signal_engine_live_log_only_sidecar_hook_patch\\v810_smoke_summary.csv",
+      "sidecar_validation": "C:\\app\\models\\v810_signal_engine_live_log_only_sidecar_hook_patch\\v810_sidecar_validation.csv",
+      "acceptance_tests": "C:\\app\\models\\v810_signal_engine_live_log_only_sidecar_hook_patch\\v810_acceptance_tests.csv",
+      "validation": "C:\\app\\models\\v810_signal_engine_live_log_only_sidecar_hook_patch\\v810_validation.json",
+      "runtime_source": "B:\\qt\\quant_project\\sim_trading\\signal_engine_live_v1.py",
+      "smoke_runtime_summary": "B:\\qt\\quant_project\\models\\sim_trading_runs\\v810_smoke_runtime_patch\\signals\\v91_watchlist_20260429_summary.json",
+      "smoke_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\v810_smoke_runtime_patch\\signals\\pre_v485_runtime_nullsafe_sidecar_20260429.csv",
+      "status": "SIGNAL_ENGINE_LOG_ONLY_SIDECAR_HOOK_PATCHED_SMOKE_PASS_NO_ROUTE",
+      "source_rows": {
+        "runtime_source_patched": 1,
+        "patch_items_present": 5,
+        "sidecar_rows": 8,
+        "pre_v485_context_filled_rows": 0,
+        "official_buy_rows": 0,
+        "rulebook_subphase_total_quota": 0,
+        "acceptance_test_rows": 12,
+        "acceptance_tests_passed": 12,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v810 patches signal_engine_live_v1.py with the v809 null-safe pre-v485 sidecar writer and proves it with a 2026-04-29 smoke run: 8 watchlist rows are logged, official_buy_rows remains 0, repair_weak total quota remains 0, route/live/paper/training flags remain false, and current pre-v485 context remains correctly empty. The next bottleneck is an exact current-context generator, not route or promotion."
+    },
+    "pre_v485_exact_current_context_generator_design": {
+      "id": "v811_pre_v485_exact_current_context_generator_design",
+      "report": "C:\\app\\models\\v811_pre_v485_exact_current_context_generator_design\\v811_pre_v485_exact_current_context_generator_design_report.md",
+      "component_design": "C:\\app\\models\\v811_pre_v485_exact_current_context_generator_design\\v811_generator_component_design.csv",
+      "field_readiness": "C:\\app\\models\\v811_pre_v485_exact_current_context_generator_design\\v811_current_field_readiness.csv",
+      "micro_proxy_preview": "C:\\app\\models\\v811_pre_v485_exact_current_context_generator_design\\v811_runtime_micro_proxy_preview.csv",
+      "blockers": "C:\\app\\models\\v811_pre_v485_exact_current_context_generator_design\\v811_generator_blockers.csv",
+      "decision": "C:\\app\\models\\v811_pre_v485_exact_current_context_generator_design\\v811_generator_decision.csv",
+      "validation": "C:\\app\\models\\v811_pre_v485_exact_current_context_generator_design\\v811_validation.json",
+      "status": "PRE_V485_EXACT_CURRENT_CONTEXT_GENERATOR_DESIGN_READY_MICRO_PROXY_PREVIEW_BUILT_ROUTE_LANE_STILL_BLOCKED_NO_ROUTE",
+      "source_rows": {
+        "components": 5,
+        "fields_reviewed": 12,
+        "micro_proxy_rows": 8,
+        "v810_context_filled_rows": 0,
+        "can_fill_v810_target_fields_now": 0,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v811 designs the exact current-context generator after v810 and builds an 8-row label-free 09:35 micro proxy preview from current runtime fields. It explicitly does not fill buy_route_family, acceptance_lane, or route_score because exact route/lane classification is still missing. The next step is a label-free micro context extractor patch/probe, not route, promotion, quota, max2, v745/v746, or scorer training."
+    },
+    "label_free_micro_context_extractor_probe": {
+      "id": "v812_label_free_micro_context_extractor_probe",
+      "report": "C:\\app\\models\\v812_label_free_micro_context_extractor_probe\\v812_label_free_micro_context_extractor_probe_report.md",
+      "micro_context_rows": "C:\\app\\models\\v812_label_free_micro_context_extractor_probe\\v812_label_free_micro_context_rows.csv",
+      "min5_source_coverage": "C:\\app\\models\\v812_label_free_micro_context_extractor_probe\\v812_min5_source_coverage.csv",
+      "coverage_summary": "C:\\app\\models\\v812_label_free_micro_context_extractor_probe\\v812_micro_context_coverage_summary.csv",
+      "exact_vs_proxy_comparison": "C:\\app\\models\\v812_label_free_micro_context_extractor_probe\\v812_exact_vs_proxy_comparison.csv",
+      "decision": "C:\\app\\models\\v812_label_free_micro_context_extractor_probe\\v812_micro_context_decision.csv",
+      "validation": "C:\\app\\models\\v812_label_free_micro_context_extractor_probe\\v812_validation.json",
+      "status": "LABEL_FREE_MICRO_CONTEXT_EXTRACTOR_PROBE_CURRENT_MIN5_COVERAGE_READY_RUNTIME_OPEN5M_ALIGNMENT_GAP_NO_ROUTE",
+      "source_rows": {
+        "micro_context_rows": 16,
+        "symbols": 8,
+        "open5m_0935_available_rows": 8,
+        "entry_0940_available_rows": 8,
+        "entry_0940_min_bars_seen": 2,
+        "proxy_mismatch_rows": 8,
+        "v810_context_filled_rows": 0,
+        "can_fill_micro_context_sidecar_now": 0,
+        "can_use_as_review_micro_probe": 1,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v812 proves current-day min5 data can generate label-free v469-style micro fields for the 8 runtime watchlist names at both 09:35 and 09:40, but it also finds all 8 rows differ from the v811/runtime open5m proxy on at least one common OHLC-derived metric. Therefore this is a review micro probe only; runtime micro sidecar patching is blocked until min5 source alignment is resolved."
+    },
+    "runtime_min5_source_alignment_probe": {
+      "id": "v813_runtime_min5_source_alignment_probe",
+      "report": "C:\\app\\models\\v813_runtime_min5_source_alignment_probe\\v813_runtime_min5_source_alignment_probe_report.md",
+      "runtime_open5m_rows": "C:\\app\\models\\v813_runtime_min5_source_alignment_probe\\v813_runtime_open5m_0935_rows.csv",
+      "tracked_min5_rows": "C:\\app\\models\\v813_runtime_min5_source_alignment_probe\\v813_tracked_min5_0935_rows.csv",
+      "akshare_min5_rows": "C:\\app\\models\\v813_runtime_min5_source_alignment_probe\\v813_akshare_min5_0935_rows.csv",
+      "source_alignment_detail": "C:\\app\\models\\v813_runtime_min5_source_alignment_probe\\v813_source_alignment_detail.csv",
+      "source_alignment_summary": "C:\\app\\models\\v813_runtime_min5_source_alignment_probe\\v813_source_alignment_summary.csv",
+      "decision": "C:\\app\\models\\v813_runtime_min5_source_alignment_probe\\v813_source_alignment_decision.csv",
+      "validation": "C:\\app\\models\\v813_runtime_min5_source_alignment_probe\\v813_validation.json",
+      "status": "RUNTIME_OPEN5M_ALIGNS_WITH_TRACKED_MIN5_PATCH_AK_PATCH_DIVERGES_USE_TRACKED_FOR_MICRO_CONTEXT_NO_ROUTE",
+      "source_rows": {
+        "runtime_open5m_rows": 82,
+        "tracked_source_present_rows": 82,
+        "tracked_ohlc_match_rows": 82,
+        "tracked_ohlc_mismatch_rows": 0,
+        "akshare_source_present_rows": 82,
+        "akshare_ohlc_match_rows": 7,
+        "akshare_ohlc_mismatch_rows": 75,
+        "final_watchlist_tracked_match_rows": 8,
+        "final_watchlist_akshare_mismatch_rows": 8,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v813 resolves the v812 source-alignment blocker: runtime latest_factor_open5m matches the tracked min5 parquet source exactly for all 82 current rows and all 8 final-watchlist names, while the AK patch diverges on 75 of 82 rows. Future micro context must use tracked_min5_patch as the runtime-authoritative source before any log-only sidecar patch."
+    },
+    "tracked_min5_micro_context_probe": {
+      "id": "v814_tracked_min5_micro_context_probe",
+      "report": "C:\\app\\models\\v814_tracked_min5_micro_context_probe\\v814_tracked_min5_micro_context_probe_report.md",
+      "tracked_micro_context_rows": "C:\\app\\models\\v814_tracked_min5_micro_context_probe\\v814_tracked_micro_context_rows.csv",
+      "micro_context_summary": "C:\\app\\models\\v814_tracked_min5_micro_context_probe\\v814_tracked_micro_context_summary.csv",
+      "runtime_common_alignment": "C:\\app\\models\\v814_tracked_min5_micro_context_probe\\v814_runtime_common_field_alignment.csv",
+      "proxy_alignment": "C:\\app\\models\\v814_tracked_min5_micro_context_probe\\v814_v811_proxy_alignment.csv",
+      "decision": "C:\\app\\models\\v814_tracked_min5_micro_context_probe\\v814_tracked_micro_context_decision.csv",
+      "validation": "C:\\app\\models\\v814_tracked_min5_micro_context_probe\\v814_validation.json",
+      "status": "TRACKED_MIN5_MICRO_CONTEXT_MATCHES_RUNTIME_PROXY_READY_FOR_LOG_ONLY_SIDECAR_DESIGN_NO_ROUTE",
+      "source_rows": {
+        "micro_context_rows": 16,
+        "symbols": 8,
+        "open5m_0935_available_rows": 8,
+        "entry_0940_available_rows": 8,
+        "runtime_common_match_rows": 8,
+        "proxy_common_match_rows": 8,
+        "v810_context_filled_rows": 0,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v814 recomputes v469-style label-free micro context from the tracked min5 source that v813 proved runtime-authoritative. The 09:35 common fields match runtime open5m and the v811 proxy for all 8 final-watchlist names, and 09:40 two-bar micro context is available for all 8 rows. This is ready for a log-only sidecar design, but still grants no route/lane/score fill, no paper/live, no scorer training, and no 9.26 claim."
+    },
+    "runtime_tracked_micro_context_log_only_sidecar_design": {
+      "id": "v815_runtime_tracked_micro_context_log_only_sidecar_design",
+      "report": "C:\\app\\models\\v815_runtime_tracked_micro_context_log_only_sidecar_design\\v815_runtime_tracked_micro_context_log_only_sidecar_design_report.md",
+      "sidecar_schema": "C:\\app\\models\\v815_runtime_tracked_micro_context_log_only_sidecar_design\\v815_sidecar_schema.csv",
+      "hook_design_spec": "C:\\app\\models\\v815_runtime_tracked_micro_context_log_only_sidecar_design\\v815_hook_design_spec.csv",
+      "no_route_contract": "C:\\app\\models\\v815_runtime_tracked_micro_context_log_only_sidecar_design\\v815_no_route_contract.csv",
+      "decision": "C:\\app\\models\\v815_runtime_tracked_micro_context_log_only_sidecar_design\\v815_sidecar_design_decision.csv",
+      "validation": "C:\\app\\models\\v815_runtime_tracked_micro_context_log_only_sidecar_design\\v815_validation.json",
+      "status": "RUNTIME_TRACKED_MICRO_CONTEXT_LOG_ONLY_SIDECAR_DESIGN_READY_NO_RUNTIME_PATCH_YET",
+      "source_rows": {
+        "schema_fields": 40,
+        "design_steps": 4,
+        "contract_checks": 10,
+        "v814_micro_context_rows": 16,
+        "runtime_source_patched": 0,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v815 converts the v814 tracked-source micro context into a concrete runtime log-only sidecar design: add one CSV output path, add local label-free micro helpers using already-loaded open_patch, and call the writer in observation and official branches. It is a design artifact only; runtime source is not patched yet, and micro_review_bucket remains diagnostic rather than an action label."
+    },
+    "runtime_tracked_micro_context_log_only_sidecar_patch": {
+      "id": "v816_runtime_tracked_micro_context_log_only_sidecar_patch",
+      "report": "C:\\app\\models\\v816_runtime_tracked_micro_context_log_only_sidecar_patch\\v816_runtime_tracked_micro_context_log_only_sidecar_patch_report.md",
+      "patch_validation": "C:\\app\\models\\v816_runtime_tracked_micro_context_log_only_sidecar_patch\\v816_patch_validation.csv",
+      "smoke_summary": "C:\\app\\models\\v816_runtime_tracked_micro_context_log_only_sidecar_patch\\v816_smoke_summary.csv",
+      "sidecar_validation": "C:\\app\\models\\v816_runtime_tracked_micro_context_log_only_sidecar_patch\\v816_sidecar_validation.csv",
+      "runtime_alignment": "C:\\app\\models\\v816_runtime_tracked_micro_context_log_only_sidecar_patch\\v816_runtime_alignment.csv",
+      "decision": "C:\\app\\models\\v816_runtime_tracked_micro_context_log_only_sidecar_patch\\v816_patch_decision.csv",
+      "validation": "C:\\app\\models\\v816_runtime_tracked_micro_context_log_only_sidecar_patch\\v816_validation.json",
+      "runtime_source": "B:\\qt\\quant_project\\sim_trading\\signal_engine_live_v1.py",
+      "smoke_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\v816_smoke_runtime_patch\\signals\\tracked_micro_context_sidecar_20260429.csv",
+      "status": "RUNTIME_TRACKED_MICRO_CONTEXT_LOG_ONLY_SIDECAR_PATCHED_SMOKE_PASS_NO_ROUTE",
+      "source_rows": {
+        "runtime_source_patched": 1,
+        "patch_items_present": 7,
+        "tracked_micro_context_rows": 16,
+        "tracked_micro_context_available_rows": 16,
+        "runtime_alignment_match_rows": 8,
+        "official_buy_rows": 0,
+        "rulebook_subphase_total_quota": 0,
+        "acceptance_test_rows": 12,
+        "acceptance_tests_passed": 12,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v816 patches signal_engine_live_v1.py to emit tracked micro context as a log-only sidecar. The 2026-04-29 smoke run emits 16 rows, all 16 have current min5 context, 8/8 open5m rows align back to runtime common fields, and official_buy_rows remains 0 under repair_weak quota=0. This creates a daily forward-evidence surface for buy-point/T analysis without granting route, score, paper/live, training, or v745/v746 permissions."
+    },
+    "tracked_micro_forward_evidence_ledger_design": {
+      "id": "v817_tracked_micro_forward_evidence_ledger_design",
+      "report": "C:\\app\\models\\v817_tracked_micro_forward_evidence_ledger_design\\v817_tracked_micro_forward_evidence_ledger_design_report.md",
+      "forward_ledger_schema": "C:\\app\\models\\v817_tracked_micro_forward_evidence_ledger_design\\v817_forward_ledger_schema.csv",
+      "manual_opportunity_intake_schema": "C:\\app\\models\\v817_tracked_micro_forward_evidence_ledger_design\\v817_manual_opportunity_intake_schema.csv",
+      "join_plan": "C:\\app\\models\\v817_tracked_micro_forward_evidence_ledger_design\\v817_join_plan.csv",
+      "validation": "C:\\app\\models\\v817_tracked_micro_forward_evidence_ledger_design\\v817_validation.json",
+      "status": "TRACKED_MICRO_FORWARD_EVIDENCE_LEDGER_DESIGN_READY_WITH_HUMAN_OPPORTUNITY_INTAKE_NO_ROUTE",
+      "source_rows": {
+        "v816_sidecar_rows": 16,
+        "ledger_schema_fields": 61,
+        "manual_intake_schema_fields": 22,
+        "join_plan_steps": 8,
+        "outcome_windows": 5,
+        "contract_checks": 12,
+        "acceptance_test_rows": 16,
+        "acceptance_tests_passed": 16,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v817 designs the forward evidence ledger that can join v816 current-visible tracked micro rows to later MAE/MFE, same-day, next-session, and T spread outcomes. It remains review-only and does not grant route, score, paper/live, training, v745/v746, max2, or repair_weak quota changes."
+    },
+    "tomorrow_dual_stack_runtime_readiness": {
+      "id": "v818_tomorrow_dual_stack_runtime_readiness",
+      "report": "C:\\app\\models\\v818_tomorrow_dual_stack_runtime_readiness\\v818_tomorrow_dual_stack_runtime_readiness_report.md",
+      "readiness_checks": "C:\\app\\models\\v818_tomorrow_dual_stack_runtime_readiness\\v818_readiness_checks.csv",
+      "tomorrow_commands": "C:\\app\\models\\v818_tomorrow_dual_stack_runtime_readiness\\v818_tomorrow_commands.csv",
+      "validation": "C:\\app\\models\\v818_tomorrow_dual_stack_runtime_readiness\\v818_validation.json",
+      "run_script": "B:\\qt\\quant_project\\prepare_20260430_dual_stack_runtime_v1.ps1",
+      "status": "TOMORROW_DUAL_STACK_RUNTIME_READY_V590_CLEAN_V91_EXECUTION_WITH_KNOWN_ALIGNMENT_GAP",
+      "source_rows": {
+        "check_rows": 28,
+        "checks_passed": 28,
+        "hard_check_rows": 18,
+        "hard_checks_passed": 18,
+        "command_rows": 3,
+        "guardrail_rows": 7,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v818 prepares the 2026-04-30 dual-stack run: trade_date=2026-04-30, daily_asof_date=2026-04-29, clean master engine remains v590_revalidated_v540_clean_master, execution remains v91, signal_engine compiles with the v816 tracked micro log-only patch, and all hard readiness checks pass. This is readiness for normal preview operation, not a native v590 runtime conversion."
+    },
+    "tomorrow_preopen_dual_stack_execution_inspection": {
+      "id": "v819_tomorrow_preopen_dual_stack_execution_inspection",
+      "report": "C:\\app\\models\\v819_tomorrow_preopen_dual_stack_execution_inspection\\v819_tomorrow_preopen_dual_stack_execution_inspection_report.md",
+      "pre_run_readiness_checks": "C:\\app\\models\\v819_tomorrow_preopen_dual_stack_execution_inspection\\v819_pre_run_readiness_checks.csv",
+      "post_run_checks": "C:\\app\\models\\v819_tomorrow_preopen_dual_stack_execution_inspection\\v819_post_run_checks.csv",
+      "decision": "C:\\app\\models\\v819_tomorrow_preopen_dual_stack_execution_inspection\\v819_decision.csv",
+      "validation": "C:\\app\\models\\v819_tomorrow_preopen_dual_stack_execution_inspection\\v819_validation.json",
+      "inspect_script": "B:\\qt\\quant_project\\inspect_20260430_dual_stack_runtime_v1.ps1",
+      "status": "V819_PENDING_TOMORROW_PREOPEN_RUN_NOT_FOUND",
+      "source_rows": {
+        "pre_run_check_rows": 4,
+        "pre_run_hard_checks_passed": 4,
+        "post_run_check_rows": 3,
+        "post_run_pending_rows": 3,
+        "unified_summary_rows": 0,
+        "sim_bootstrap_summary_rows": 0,
+        "sim_run_summary_rows": 0,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v819 creates the post-run inspection layer for the 2026-04-30 dual-stack preopen run. Tonight it correctly reports pending because no 2026-04-30 unified, sim bootstrap, or sim run summaries exist yet. After prepare_20260430_dual_stack_runtime_v1.ps1 runs, inspect_20260430_dual_stack_runtime_v1.ps1 will verify dates, v590/v540 clean master, v91 execution, preview mode, quota/official-buy consistency, tracked micro sidecar counts, and no route/live/paper drift."
+    },
+    "tomorrow_preopen_orchestrator": {
+      "id": "v820_tomorrow_preopen_orchestrator",
+      "report": "C:\\app\\models\\v820_tomorrow_preopen_orchestrator\\v820_tomorrow_preopen_orchestrator_report.md",
+      "orchestrator_checks": "C:\\app\\models\\v820_tomorrow_preopen_orchestrator\\v820_orchestrator_checks.csv",
+      "commands": "C:\\app\\models\\v820_tomorrow_preopen_orchestrator\\v820_commands.csv",
+      "decision": "C:\\app\\models\\v820_tomorrow_preopen_orchestrator\\v820_decision.csv",
+      "validation": "C:\\app\\models\\v820_tomorrow_preopen_orchestrator\\v820_validation.json",
+      "orchestrator_script": "B:\\qt\\quant_project\\run_20260430_dual_stack_preopen_and_inspect_v1.ps1",
+      "status": "V820_TOMORROW_PREOPEN_ORCHESTRATOR_READY",
+      "source_rows": {
+        "check_rows": 13,
+        "checks_passed": 13,
+        "hard_check_rows": 12,
+        "hard_checks_passed": 12,
+        "command_rows": 2,
+        "guardrail_rows": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v820 creates the single recommended operator wrapper for 2026-04-30: run the preopen dual-stack prep, immediately run v819 inspection, then run v821 result triage. It is preview-only by default, minute tests require an explicit switch, it now includes a date guard that blocks accidental 2026-04-29 night runs unless -ForceBeforeTradeDate is passed, and it grants no route, live, paper, quota, scorer, max2, or native-v590-runtime permissions."
+    },
+    "tomorrow_runtime_result_triage": {
+      "id": "v821_tomorrow_runtime_result_triage",
+      "report": "C:\\app\\models\\v821_tomorrow_runtime_result_triage\\v821_tomorrow_runtime_result_triage_report.md",
+      "action_matrix": "C:\\app\\models\\v821_tomorrow_runtime_result_triage\\v821_action_matrix.csv",
+      "current_triage": "C:\\app\\models\\v821_tomorrow_runtime_result_triage\\v821_current_triage.csv",
+      "decision": "C:\\app\\models\\v821_tomorrow_runtime_result_triage\\v821_decision.csv",
+      "validation": "C:\\app\\models\\v821_tomorrow_runtime_result_triage\\v821_validation.json",
+      "triage_script": "B:\\qt\\quant_project\\triage_20260430_dual_stack_runtime_v1.ps1",
+      "status": "V821_RUNTIME_RESULT_TRIAGE_READY",
+      "source_rows": {
+        "action_matrix_rows": 11,
+        "current_triage_rows": 1,
+        "acceptance_test_rows": 7,
+        "acceptance_tests_passed": 7,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v821 classifies the v819 inspection result into operator actions. Tonight it correctly classifies as PENDING_PREOPEN_NOT_RUN / not_an_error. Tomorrow it separates normal strategy observation with zero buys from failure modes such as clean engine drift, execution engine drift, quota/official-buy contradiction, missing summaries, expired account snapshot, or missing tracked micro sidecar."
+    },
+    "tomorrow_preopen_date_guard_audit": {
+      "id": "v822_tomorrow_preopen_date_guard_audit",
+      "report": "C:\\app\\models\\v822_tomorrow_preopen_date_guard_audit\\v822_tomorrow_preopen_date_guard_audit_report.md",
+      "date_guard_checks": "C:\\app\\models\\v822_tomorrow_preopen_date_guard_audit\\v822_date_guard_checks.csv",
+      "policy_table": "C:\\app\\models\\v822_tomorrow_preopen_date_guard_audit\\v822_policy_table.csv",
+      "commands": "C:\\app\\models\\v822_tomorrow_preopen_date_guard_audit\\v822_commands.csv",
+      "decision": "C:\\app\\models\\v822_tomorrow_preopen_date_guard_audit\\v822_decision.csv",
+      "validation": "C:\\app\\models\\v822_tomorrow_preopen_date_guard_audit\\v822_validation.json",
+      "orchestrator_script": "B:\\qt\\quant_project\\run_20260430_dual_stack_preopen_and_inspect_v1.ps1",
+      "status": "V822_PREOPEN_DATE_GUARD_READY_BLOCKS_EARLY_RUN",
+      "source_rows": {
+        "check_rows": 12,
+        "checks_passed": 12,
+        "hard_check_rows": 12,
+        "hard_checks_passed": 12,
+        "policy_rows": 3,
+        "command_rows": 2,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v822 audits the v820 date guard. The normal v820 command is blocked before 2026-04-30 unless -ForceBeforeTradeDate is explicitly supplied, preventing accidental future-date preopen execution on 2026-04-29 night. The force flag is documented only for intentional operational dry runs and is not recommended for routine preopen."
+    },
+    "pre_v485_label_free_proxy_context_patch": {
+      "id": "v823_pre_v485_label_free_proxy_context_patch",
+      "report": "C:\\app\\models\\v823_pre_v485_label_free_proxy_context_patch\\v823_pre_v485_label_free_proxy_context_patch_report.md",
+      "patch_matrix": "C:\\app\\models\\v823_pre_v485_label_free_proxy_context_patch\\v823_patch_matrix.csv",
+      "smoke_summary": "C:\\app\\models\\v823_pre_v485_label_free_proxy_context_patch\\v823_smoke_summary.csv",
+      "pre_v485_sidecar_checks": "C:\\app\\models\\v823_pre_v485_label_free_proxy_context_patch\\v823_pre_v485_sidecar_checks.csv",
+      "proxy_distribution": "C:\\app\\models\\v823_pre_v485_label_free_proxy_context_patch\\v823_proxy_distribution.csv",
+      "validation": "C:\\app\\models\\v823_pre_v485_label_free_proxy_context_patch\\v823_validation.json",
+      "runtime_source": "B:\\qt\\quant_project\\sim_trading\\signal_engine_live_v1.py",
+      "smoke_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\v823_pre_v485_proxy_patch_smoke\\signals\\pre_v485_runtime_nullsafe_sidecar_20260429.csv",
+      "status": "V823_PRE_V485_LABEL_FREE_PROXY_CONTEXT_PATCHED_NO_ROUTE",
+      "source_rows": {
+        "pre_v485_sidecar_rows": 8,
+        "tracked_micro_rows": 16,
+        "proxy_context_available_rows": 8,
+        "exact_context_filled_rows": 0,
+        "official_buy_rows": 0,
+        "rulebook_subphase_total_quota": 0,
+        "acceptance_test_rows": 11,
+        "acceptance_tests_passed": 11,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v823 patches signal_engine_live_v1.py so the pre_v485 runtime null-safe sidecar now emits explicit label-free proxy context fields derived from runtime-authoritative tracked min5 micro context. Exact v351/v469 route/lane/score fields remain empty and current_pre_v485_context_filled stays 0, but current_pre_v485_proxy_context_available is filled for 8/8 smoke rows. This is runtime-visible supply semantics, not route, score, paper/live, training, quota, or 9.26 proof."
+    },
+    "holding_intraday_T_replay_current_v540_v590": {
+      "id": "v843_holding_intraday_T_replay_current_v540_v590",
+      "report": "C:\\app\\models\\v843_holding_intraday_T_replay_current_v540_v590\\v843_holding_intraday_T_replay_current_v540_v590_report.md",
+      "project_doc": "B:\\qt\\quant_project\\holding_intraday_T_replay_current_v540_v590_20260430.md",
+      "action_protocol": "C:\\app\\models\\v843_holding_intraday_T_replay_current_v540_v590\\v843_holding_T_action_protocol.csv",
+      "action_rows": "C:\\app\\models\\v843_holding_intraday_T_replay_current_v540_v590\\v843_holding_T_action_rows.csv",
+      "period_summary": "C:\\app\\models\\v843_holding_intraday_T_replay_current_v540_v590\\v843_holding_T_period_summary.csv",
+      "machine_label_summary": "C:\\app\\models\\v843_holding_intraday_T_replay_current_v540_v590\\v843_holding_T_machine_label_summary.csv",
+      "validation": "C:\\app\\models\\v843_holding_intraday_T_replay_current_v540_v590\\v843_validation.json",
+      "status": "HOLDING_INTRADAY_T_HAS_ACTION_FREQUENCY_AND_SMALL_WEEKLY_EDGE_NO_ROUTE",
+      "source_rows": {
+        "holding_day_count_2023_2025": 451,
+        "t_sell_signal_count_2023_2025": 190,
+        "t_completed_count_2023_2025": 108,
+        "t_keep_reduced_count_2023_2025": 82,
+        "mean_t_action_frequency_gap_coverage_pct_2023_2025": 53.6530858639662,
+        "mean_shadow_delta_weekly_pct_2023_2025": 0.06505886193171047,
+        "mean_weekly_gap_coverage_pct_of_target_gap_2023_2025": 1.6620416025066633,
+        "flat_close_t_profit_rows_2023_2025": 11,
+        "good_spread_next_open_risk_rows_2023_2025": 41,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v843 replays existing-position holding-day intraday T under the current v540/v590 clean baseline framing, using v839 machine self-labels as review labels only and v371 t33_live_optional_reentry as a shadow weekly delta reference. It finds 451 holding days in 2023-2025, 190 T sell signals, 108 completed buybacks, and 82 keep-reduced cases. T action frequency covers about 53.65% of the same-edge frequency gap, but the mean shadow weekly delta is only about +0.0651 percentage points, covering about 1.66% of the target weekly gap. This confirms holding-day T is a real action-frequency source and useful execution overlay, but not the standalone 9.26 engine. No route, paper/live, repair_weak quota, max2, scorer training, or final 9.26 claim is allowed."
+    },
+    "holding_T_current_visible_logic_discovery_no_training": {
+      "id": "v844_holding_T_current_visible_logic_discovery_no_training",
+      "report": "C:\\app\\models\\v844_holding_T_current_visible_logic_discovery_no_training\\v844_holding_T_current_visible_logic_discovery_no_training_report.md",
+      "project_doc": "B:\\qt\\quant_project\\holding_T_current_visible_logic_discovery_no_training_20260430.md",
+      "feature_contract": "C:\\app\\models\\v844_holding_T_current_visible_logic_discovery_no_training\\v844_holding_T_logic_feature_contract.csv",
+      "logic_cells": "C:\\app\\models\\v844_holding_T_current_visible_logic_discovery_no_training\\v844_holding_T_logic_cells.csv",
+      "action_label_matrix": "C:\\app\\models\\v844_holding_T_current_visible_logic_discovery_no_training\\v844_holding_T_action_label_matrix.csv",
+      "validation": "C:\\app\\models\\v844_holding_T_current_visible_logic_discovery_no_training\\v844_validation.json",
+      "status": "HOLDING_T_LOGIC_SEPARATORS_FOUND_REVIEW_ONLY_NO_TRAINING",
+      "source_rows": {
+        "logic_cell_rows": 107,
+        "next_open_risk_separator_rows": 6,
+        "keep_reduced_separator_rows": 11,
+        "good_spread_separator_rows": 3,
+        "thin_spread_separator_rows": 10,
+        "good_spread_rows_2023_2025": 30,
+        "good_spread_next_open_risk_rows_2023_2025": 20,
+        "thin_spread_rows_2023_2025": 58,
+        "keep_reduced_rows_2023_2025": 82,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v844 uses v843 holding-day T rows to discover no-training review separators for good-spread buyback, next-open-risk buyback, thin-spread buyback, and keep-reduced. It finds 107 logic cells, including 6 next-open-risk separators, 11 keep-reduced separators, 3 good-spread separators, and 10 thin-spread separators. The key blocker is that next-open risk is still a review label, not a runtime-visible feature, so the next step must be a holding-day T runtime feature gap/logger design rather than rule promotion or model training."
+    },
+    "holding_T_runtime_feature_gap_and_logger_design_no_route": {
+      "id": "v845_holding_T_runtime_feature_gap_and_logger_design_no_route",
+      "report": "C:\\app\\models\\v845_holding_T_runtime_feature_gap_and_logger_design_no_route\\v845_holding_T_runtime_feature_gap_and_logger_design_no_route_report.md",
+      "project_doc": "B:\\qt\\quant_project\\holding_T_runtime_feature_gap_and_logger_design_no_route_20260430.md",
+      "logger_schema": "C:\\app\\models\\v845_holding_T_runtime_feature_gap_and_logger_design_no_route\\v845_holding_T_runtime_logger_schema.csv",
+      "feature_gap_matrix": "C:\\app\\models\\v845_holding_T_runtime_feature_gap_and_logger_design_no_route\\v845_holding_T_feature_gap_matrix.csv",
+      "logger_hook_design": "C:\\app\\models\\v845_holding_T_runtime_feature_gap_and_logger_design_no_route\\v845_holding_T_logger_hook_design.csv",
+      "no_route_contract": "C:\\app\\models\\v845_holding_T_runtime_feature_gap_and_logger_design_no_route\\v845_no_route_contract.csv",
+      "validation": "C:\\app\\models\\v845_holding_T_runtime_feature_gap_and_logger_design_no_route\\v845_validation.json",
+      "status": "HOLDING_T_RUNTIME_LOGGER_DESIGN_READY_NO_PATCH_NO_ROUTE",
+      "source_rows": {
+        "schema_fields": 39,
+        "runtime_visible_allowed_fields": 31,
+        "review_label_only_fields": 3,
+        "feature_gap_rows": 5,
+        "must_fill_runtime_gap_rows": 3,
+        "hook_design_steps": 5,
+        "no_route_contract_checks": 10,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v845 converts the v844 holding-day T blocker into a concrete log-only runtime feature design. It defines 39 sidecar schema fields, keeps 31 current-visible fields eligible for runtime logging, quarantines 3 review-only/future fields, and identifies 3 must-fill runtime gaps before any action scorer or rule promotion: per-symbol position/sellable quantity, sell-probe micro context, and buyback/reclaim context. The hook design is intentionally no-patch/no-route in v845; all route, live, paper, repair_weak quota, max2, training, and final 9.26 claim permissions remain false."
+    },
+    "holding_T_runtime_logger_patch_or_dryrun_sidecar_no_route": {
+      "id": "v846_holding_T_runtime_logger_patch_or_dryrun_sidecar_no_route",
+      "report": "C:\\app\\models\\v846_holding_T_runtime_logger_patch_or_dryrun_sidecar_no_route\\v846_holding_T_runtime_logger_patch_or_dryrun_sidecar_no_route_report.md",
+      "project_doc": "B:\\qt\\quant_project\\holding_T_runtime_logger_patch_or_dryrun_sidecar_no_route_20260430.md",
+      "source_patch_matrix": "C:\\app\\models\\v846_holding_T_runtime_logger_patch_or_dryrun_sidecar_no_route\\v846_source_patch_matrix.csv",
+      "sidecar_validation": "C:\\app\\models\\v846_holding_T_runtime_logger_patch_or_dryrun_sidecar_no_route\\v846_sidecar_validation.csv",
+      "acceptance_tests": "C:\\app\\models\\v846_holding_T_runtime_logger_patch_or_dryrun_sidecar_no_route\\v846_acceptance_tests.csv",
+      "validation": "C:\\app\\models\\v846_holding_T_runtime_logger_patch_or_dryrun_sidecar_no_route\\v846_validation.json",
+      "latest_smoke_run": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260430_002704",
+      "latest_smoke_sidecar": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260430_002704\\holding_t_runtime_feature_sidecar.csv",
+      "status": "HOLDING_T_RUNTIME_LOGGER_PATCHED_LOG_ONLY_NO_ROUTE",
+      "source_rows": {
+        "sidecar_rows": 1,
+        "position_rows_mapped": 1,
+        "micro_available_rows": 1,
+        "t_partial_sell_review_rows": 1,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "official_buy_rows": 0,
+        "action_plan_rows": 0,
+        "executed_rows": 0,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0,
+        "model_training_allowed_rows": 0
+      },
+      "first_read": "v846 patches run_ths_sim_once_v1.py with a log-only holding-day T runtime sidecar. The latest smoke maps the raw account position 通鼎互联 to 002491.SZ through latest_factor_daily, logs current-visible intraday context, and tags the row as T_PARTIAL_SELL review-only because the symbol had high-fade/lost-VWAP structure. The smoke keeps official_buy_rows=0, action_plan_rows=0, executed_rows=0, and all route/live/paper/training permission rows at 0. This makes holding-day T evidence collectable in daily runtime without promoting any T action to trading."
+    },
+    "holding_T_daily_evidence_accumulator_no_training": {
+      "id": "v847_holding_T_daily_evidence_accumulator_no_training",
+      "report": "C:\\app\\models\\v847_holding_T_daily_evidence_accumulator_no_training\\v847_holding_T_daily_evidence_accumulator_no_training_report.md",
+      "project_doc": "B:\\qt\\quant_project\\holding_T_daily_evidence_accumulator_no_training_20260430.md",
+      "run_coverage": "C:\\app\\models\\v847_holding_T_daily_evidence_accumulator_no_training\\v847_run_coverage.csv",
+      "raw_evidence_rows": "C:\\app\\models\\v847_holding_T_daily_evidence_accumulator_no_training\\v847_raw_evidence_rows.csv",
+      "latest_unique_evidence_rows": "C:\\app\\models\\v847_holding_T_daily_evidence_accumulator_no_training\\v847_latest_unique_evidence_rows.csv",
+      "action_summary": "C:\\app\\models\\v847_holding_T_daily_evidence_accumulator_no_training\\v847_action_summary.csv",
+      "validation": "C:\\app\\models\\v847_holding_T_daily_evidence_accumulator_no_training\\v847_validation.json",
+      "status": "HOLDING_T_DAILY_EVIDENCE_ACCUMULATOR_READY_NO_TRAINING",
+      "source_rows": {
+        "runs_scanned": 1094,
+        "sidecar_runs": 3,
+        "zero_row_runs": 1,
+        "raw_evidence_rows": 2,
+        "latest_unique_evidence_rows": 1,
+        "latest_unique_t_partial_sell_rows": 1,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0,
+        "model_training_allowed_rows": 0
+      },
+      "first_read": "v847 accumulates holding_t_runtime_feature_sidecar rows across runtime runs while preserving zero-row runs and stale-account context. It scanned 1094 run summaries, found 3 holding-T sidecar runs, preserved 1 zero-row run, loaded 2 raw evidence rows, and deduped repeated smoke into 1 latest unique symbol-date row: 002491.SZ / 通鼎互联 / T_PARTIAL_SELL review-only. This prevents repeated smoke runs from falsely thickening evidence. No scorer, route, paper/live, quota, max2, or final 9.26 claim is allowed."
+    },
+    "holding_T_probe_outcome_join_review_only_no_training": {
+      "id": "v848_holding_T_probe_outcome_join_review_only_no_training",
+      "report": "C:\\app\\models\\v848_holding_T_probe_outcome_join_review_only_no_training\\v848_holding_T_probe_outcome_join_review_only_no_training_report.md",
+      "project_doc": "B:\\qt\\quant_project\\holding_T_probe_outcome_join_review_only_no_training_20260430.md",
+      "probe_outcome_join_rows": "C:\\app\\models\\v848_holding_T_probe_outcome_join_review_only_no_training\\v848_probe_outcome_join_rows.csv",
+      "outcome_status_summary": "C:\\app\\models\\v848_holding_T_probe_outcome_join_review_only_no_training\\v848_outcome_status_summary.csv",
+      "outcome_label_summary": "C:\\app\\models\\v848_holding_T_probe_outcome_join_review_only_no_training\\v848_outcome_label_summary.csv",
+      "validation": "C:\\app\\models\\v848_holding_T_probe_outcome_join_review_only_no_training\\v848_validation.json",
+      "status": "HOLDING_T_PROBE_OUTCOME_JOIN_REVIEW_ONLY_BLOCKED_BY_LATE_SNAPSHOT_AND_NEXT_DATA",
+      "source_rows": {
+        "input_evidence_rows": 1,
+        "outcome_rows": 1,
+        "late_snapshot_rows": 1,
+        "next_session_available_rows": 0,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0,
+        "model_training_allowed_rows": 0
+      },
+      "first_read": "v848 joins the v847 latest unique holding-T probe to review-only outcome fields without feeding outcomes back into runtime. The current T_PARTIAL_SELL evidence for 002491.SZ is blocked by three review gaps: event_time is a 15:00 end-of-day snapshot rather than an actionable intraday trigger, there are no same-day bars after the event, and local data has no next-session outcome after 2026-04-29. It still quantifies the prior intraday fade from same-day high to event price at about 2.23%, but the next step must be a first-trigger intraday logger rather than a rule or scorer."
+    },
+    "holding_T_intraday_first_trigger_logger_no_route": {
+      "id": "v849_holding_T_intraday_first_trigger_logger_no_route",
+      "report": "C:\\app\\models\\v849_holding_T_intraday_first_trigger_logger_no_route\\v849_holding_T_intraday_first_trigger_logger_no_route_report.md",
+      "project_doc": "B:\\qt\\quant_project\\holding_T_intraday_first_trigger_logger_no_route_20260430.md",
+      "source_patch_matrix": "C:\\app\\models\\v849_holding_T_intraday_first_trigger_logger_no_route\\v849_source_patch_matrix.csv",
+      "latest_first_trigger_sidecar_rows": "C:\\app\\models\\v849_holding_T_intraday_first_trigger_logger_no_route\\v849_latest_first_trigger_sidecar_rows.csv",
+      "sidecar_checks": "C:\\app\\models\\v849_holding_T_intraday_first_trigger_logger_no_route\\v849_sidecar_checks.csv",
+      "validation": "C:\\app\\models\\v849_holding_T_intraday_first_trigger_logger_no_route\\v849_validation.json",
+      "latest_smoke_run": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260430_003747",
+      "status": "HOLDING_T_FIRST_TRIGGER_LOGGER_PATCHED_NO_ROUTE_EARLY_OPEN_NOISE_NEEDS_GATE",
+      "source_rows": {
+        "sidecar_rows": 1,
+        "first_trigger_available_rows": 1,
+        "early_open_first_trigger_rows": 1,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0,
+        "model_training_allowed_rows": 0
+      },
+      "first_read": "v849 upgrades the holding-day T runtime logger from EOD snapshot only to first-trigger diagnostics. The latest smoke for 002491.SZ records a first high-fade/lost-VWAP trigger at 2026-04-29 09:35 with price 16.48, drawdown from rolling high about -1.61%, and VWAP distance about -0.28%. It still keeps action_plan_rows=0, executed_rows=0, and all route/live/paper/training permissions false. The new blocker is early-open noise: the first trigger is too close to the open, so the next step is a no-route maturity gate rather than a sell rule."
+    },
+    "holding_T_first_trigger_maturity_gate_no_route": {
+      "id": "v850_holding_T_first_trigger_maturity_gate_no_route",
+      "report": "C:\\app\\models\\v850_holding_T_first_trigger_maturity_gate_no_route\\v850_holding_T_first_trigger_maturity_gate_no_route_report.md",
+      "project_doc": "B:\\qt\\quant_project\\holding_T_first_trigger_maturity_gate_no_route_20260430.md",
+      "maturity_gate_contract": "C:\\app\\models\\v850_holding_T_first_trigger_maturity_gate_no_route\\v850_maturity_gate_contract.csv",
+      "maturity_gated_rows": "C:\\app\\models\\v850_holding_T_first_trigger_maturity_gate_no_route\\v850_maturity_gated_rows.csv",
+      "maturity_gate_summary": "C:\\app\\models\\v850_holding_T_first_trigger_maturity_gate_no_route\\v850_maturity_gate_summary.csv",
+      "validation": "C:\\app\\models\\v850_holding_T_first_trigger_maturity_gate_no_route\\v850_validation.json",
+      "status": "HOLDING_T_FIRST_TRIGGER_MATURITY_GATE_BLOCKS_OPEN_NOISE_NO_ROUTE",
+      "source_rows": {
+        "input_rows": 1,
+        "gated_rows": 1,
+        "open_noise_rows": 1,
+        "mature_sell_probe_review_rows": 0,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0,
+        "model_training_allowed_rows": 0
+      },
+      "first_read": "v850 adds a no-route maturity gate over the holding-day T first-trigger logger. The current 002491.SZ first-trigger row is classified as OPEN_NOISE_OBSERVE because the first trigger is 2026-04-29 09:35 and lacks mature confirmation, so it cannot become a mature partial-sell probe. This preserves the core holding-T lesson: T frequency exists, but sell/buyback/keep-reduced arbitration needs same-schema historical evidence before any scorer, route, paper, or live change."
+    },
+    "holding_T_historical_same_schema_backfill_no_training": {
+      "id": "v851_holding_T_historical_same_schema_backfill_no_training",
+      "report": "C:\\app\\models\\v851_holding_T_historical_same_schema_backfill_no_training\\v851_holding_T_historical_same_schema_backfill_no_training_report.md",
+      "project_doc": "B:\\qt\\quant_project\\holding_T_historical_same_schema_backfill_no_training_20260430.md",
+      "historical_same_schema_runtime_rows": "C:\\app\\models\\v851_holding_T_historical_same_schema_backfill_no_training\\v851_historical_same_schema_runtime_rows.csv",
+      "review_outcome_quarantine": "C:\\app\\models\\v851_holding_T_historical_same_schema_backfill_no_training\\v851_review_outcome_quarantine.csv",
+      "schema_role_map": "C:\\app\\models\\v851_holding_T_historical_same_schema_backfill_no_training\\v851_schema_role_map.csv",
+      "maturity_gate_summary": "C:\\app\\models\\v851_holding_T_historical_same_schema_backfill_no_training\\v851_maturity_gate_summary.csv",
+      "action_arbitration_review_summary": "C:\\app\\models\\v851_holding_T_historical_same_schema_backfill_no_training\\v851_action_arbitration_review_summary.csv",
+      "validation": "C:\\app\\models\\v851_holding_T_historical_same_schema_backfill_no_training\\v851_validation.json",
+      "status": "HOLDING_T_HISTORICAL_SAME_SCHEMA_BACKFILL_READY_NO_TRAINING",
+      "source_rows": {
+        "source_rows": 461,
+        "same_schema_rows": 461,
+        "train_exam_rows_2023_2025": 451,
+        "frozen_rows_diagnostic_only": 10,
+        "t_partial_sell_rows": 197,
+        "open_noise_rows": 19,
+        "needs_confirmation_rows": 178,
+        "no_trigger_rows": 264,
+        "review_quarantine_rows": 461,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0,
+        "model_training_allowed_rows": 0
+      },
+      "first_read": "v851 backfills historical v843 holding-day T rows into the v846/v849/v850 runtime sidecar shape without training or routing. It produces 461 same-schema rows, including 451 train/exam rows and 197 T_PARTIAL_SELL rows, while quarantining all review-only outcome fields. The first read is that holding-day T has enough evidence for arbitration review, but missing micro context such as VWAP, sellable quantity, slope, and reclaim bars blocks any route promotion. Next step is action decomposition: partial-sell-only vs buyback vs keep-reduced."
+    },
+    "holding_T_sell_buyback_keep_reduced_decomposition_no_training": {
       "id": "v852_holding_T_sell_buyback_keep_reduced_decomposition_no_training",
-      "date": "2026-04-30",
+      "report": "C:\\app\\models\\v852_holding_T_sell_buyback_keep_reduced_decomposition_no_training\\v852_holding_T_sell_buyback_keep_reduced_decomposition_no_training_report.md",
+      "project_doc": "B:\\qt\\quant_project\\holding_T_sell_buyback_keep_reduced_decomposition_no_training_20260430.md",
+      "decomposition_rows": "C:\\app\\models\\v852_holding_T_sell_buyback_keep_reduced_decomposition_no_training\\v852_decomposition_rows.csv",
+      "path_summary": "C:\\app\\models\\v852_holding_T_sell_buyback_keep_reduced_decomposition_no_training\\v852_path_summary.csv",
+      "buyback_quality_summary": "C:\\app\\models\\v852_holding_T_sell_buyback_keep_reduced_decomposition_no_training\\v852_buyback_quality_summary.csv",
+      "overall_findings": "C:\\app\\models\\v852_holding_T_sell_buyback_keep_reduced_decomposition_no_training\\v852_overall_findings.csv",
+      "validation": "C:\\app\\models\\v852_holding_T_sell_buyback_keep_reduced_decomposition_no_training\\v852_validation.json",
       "status": "HOLDING_T_BUYBACK_IS_NOT_DEFAULT_SUCCESS_KEEP_REDUCED_GATE_NEEDED_NO_TRAINING",
-      "key_reads": {
+      "source_rows": {
         "decomposition_rows": 461,
+        "train_exam_rows_2023_2025": 451,
+        "train_exam_t_partial_sell_rows": 190,
         "train_exam_completed_buyback_rows": 108,
         "buyback_confirmed_rows": 24,
         "buyback_counterfactual_keep_reduced_rows": 41,
-        "buyback_thin_spread_rows": 43
+        "buyback_thin_spread_rows": 43,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0,
+        "model_training_allowed_rows": 0
       },
-      "route_allowed": false,
-      "paper_order_allowed": false,
-      "live_order_allowed": false,
-      "model_training_allowed": false
+      "first_read": "v852 decomposes holding-day T into partial sell, buyback, and keep-reduced paths. In 2023-2025 train/exam rows, 108 completed buybacks split into only 24 confirmed buybacks, 41 counterfactual keep-reduced rows, and 43 thin-spread buybacks. This confirms completed buyback cannot be treated as success by default. The next T step is to find current-visible proxies for buyback risk, while dynamic sell/exit quality remains the larger 9.26 gap contributor."
     },
-    {
+    "holding_T_current_visible_buyback_risk_proxy_no_training": {
       "id": "v853_holding_T_current_visible_buyback_risk_proxy_no_training",
-      "date": "2026-04-30",
+      "report": "C:\\app\\models\\v853_holding_T_current_visible_buyback_risk_proxy_no_training\\v853_holding_T_current_visible_buyback_risk_proxy_no_training_report.md",
+      "project_doc": "B:\\qt\\quant_project\\holding_T_current_visible_buyback_risk_proxy_no_training_20260430.md",
+      "proxy_group_audit": "C:\\app\\models\\v853_holding_T_current_visible_buyback_risk_proxy_no_training\\v853_proxy_group_audit.csv",
+      "top_proxy_reads": "C:\\app\\models\\v853_holding_T_current_visible_buyback_risk_proxy_no_training\\v853_top_proxy_reads.csv",
+      "proxy_feature_contract": "C:\\app\\models\\v853_holding_T_current_visible_buyback_risk_proxy_no_training\\v853_proxy_feature_contract.csv",
+      "validation": "C:\\app\\models\\v853_holding_T_current_visible_buyback_risk_proxy_no_training\\v853_validation.json",
       "status": "CURRENT_VISIBLE_BUYBACK_RISK_PROXY_AUDIT_READY_MICRO_CONTEXT_STILL_BLOCKS_ROUTE",
-      "key_reads": {
+      "source_rows": {
+        "decomposition_rows": 461,
+        "train_exam_buyback_rows": 108,
         "proxy_group_rows": 36,
         "risk_proxy_candidate_rows": 3,
         "confirm_proxy_candidate_rows": 2,
-        "missing_micro_context_blockers": 6
+        "missing_micro_context_blockers": 6,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0,
+        "model_training_allowed_rows": 0
       },
-      "route_allowed": false,
-      "paper_order_allowed": false,
-      "live_order_allowed": false,
-      "model_training_allowed": false
+      "first_read": "v853 audits current-visible coarse proxy fields against v852 review-only buyback risk labels. It finds a few risk/confirm proxy candidates, but the contract still blocks route promotion because key micro context is incomplete: VWAP distance, reclaim bars, last-3 amount slope, last-3 low lift, and sector context. This closes the current T sub-loop as evidence-only and pushes the main 9.26 work back toward dynamic sell/exit quality."
     },
-    {
+    "dynamic_exit_quality_reprioritization_audit_no_route": {
       "id": "v854_dynamic_exit_quality_reprioritization_audit_no_route",
-      "date": "2026-04-30",
+      "report": "C:\\app\\models\\v854_dynamic_exit_quality_reprioritization_audit_no_route\\v854_dynamic_exit_quality_reprioritization_audit_no_route_report.md",
+      "project_doc": "B:\\qt\\quant_project\\dynamic_exit_quality_reprioritization_audit_no_route_20260430.md",
+      "weekly_delta_bridge": "C:\\app\\models\\v854_dynamic_exit_quality_reprioritization_audit_no_route\\v854_dynamic_exit_weekly_delta_bridge.csv",
+      "evidence_register": "C:\\app\\models\\v854_dynamic_exit_quality_reprioritization_audit_no_route\\v854_dynamic_exit_evidence_register.csv",
+      "blocker_matrix": "C:\\app\\models\\v854_dynamic_exit_quality_reprioritization_audit_no_route\\v854_dynamic_exit_blocker_matrix.csv",
+      "priority_reallocation": "C:\\app\\models\\v854_dynamic_exit_quality_reprioritization_audit_no_route\\v854_priority_reallocation.csv",
+      "validation": "C:\\app\\models\\v854_dynamic_exit_quality_reprioritization_audit_no_route\\v854_validation.json",
       "status": "DYNAMIC_EXIT_REPRIORITIZED_AS_PRIMARY_GAP_CANDIDATE_NO_ROUTE",
-      "key_reads": {
+      "source_rows": {
+        "bridge_rows": 16,
         "v364_train_exam_mean_weekly_delta_pp": 0.6813449532742913,
         "v462_train_exam_mean_weekly_delta_pp": 0.2451528232567334,
         "evidence_register_rows": 6,
-        "blocker_rows": 6
+        "blocker_rows": 6,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0,
+        "model_training_allowed_rows": 0
       },
-      "route_allowed": false,
-      "paper_order_allowed": false,
-      "live_order_allowed": false,
-      "model_training_allowed": false
+      "first_read": "v854 closes the current T sub-loop as evidence-only and moves the main 9.26 path back to dynamic exit quality. The older v360 dynamic sell suite shows large uplift but needs clean revalidation; the more conservative v364 gated sell averages about +0.6813pp weekly in 2023-2025 at 200k; the more realistic v462 exit-day regret audit averages about +0.2452pp. Next step is an active-winner/cash-release/current-visible exit regret ledger, not route promotion."
     },
-    {
+    "dynamic_exit_active_winner_cash_release_ledger_no_route": {
       "id": "v855_dynamic_exit_active_winner_cash_release_ledger_no_route",
-      "date": "2026-04-30",
+      "report": "C:\\app\\models\\v855_dynamic_exit_active_winner_cash_release_ledger_no_route\\v855_dynamic_exit_active_winner_cash_release_ledger_no_route_report.md",
+      "project_doc": "B:\\qt\\quant_project\\dynamic_exit_active_winner_cash_release_ledger_no_route_20260430.md",
+      "exit_candidate_ledger": "C:\\app\\models\\v855_dynamic_exit_active_winner_cash_release_ledger_no_route\\v855_exit_candidate_ledger.csv",
+      "decision_summary": "C:\\app\\models\\v855_dynamic_exit_active_winner_cash_release_ledger_no_route\\v855_exit_ledger_decision_summary.csv",
+      "cash_release_summary": "C:\\app\\models\\v855_dynamic_exit_active_winner_cash_release_ledger_no_route\\v855_cash_release_summary.csv",
+      "active_winner_summary": "C:\\app\\models\\v855_dynamic_exit_active_winner_cash_release_ledger_no_route\\v855_active_winner_summary.csv",
+      "validation": "C:\\app\\models\\v855_dynamic_exit_active_winner_cash_release_ledger_no_route\\v855_validation.json",
       "status": "DYNAMIC_EXIT_LEDGER_READY_NO_ROUTE_ACTIVE_WINNER_AND_CASH_RELEASE_SEPARATED",
-      "key_reads": {
+      "source_rows": {
         "ledger_rows": 232,
         "dynamic_candidate_rows": 32,
         "train_exam_dynamic_candidate_rows": 28,
         "active_winner_risk_rows": 1,
         "cash_release_review_rows": 18,
-        "protect_weak_or_fade_rows": 28
+        "protect_weak_or_fade_rows": 28,
+        "v854_v462_mean_weekly_delta_pp": 0.2451528232567334,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0,
+        "model_training_allowed_rows": 0
       },
-      "route_allowed": false,
-      "paper_order_allowed": false,
-      "live_order_allowed": false,
-      "model_training_allowed": false
+      "first_read": "v855 turns v462 exit-day dynamic sell evidence into an active-winner/cash-release ledger. At 200k it scans 232 exit rows and finds 32 dynamic candidates, 28 in 2023-2025 train/exam, 18 with a reusable cash window, 28 weak/fade protection rows, and 1 active-winner risk row. This supports dynamic exit as a no-route mainline research direction, but the next step must be a current-visible gate contract, not order emission."
     },
-    {
+    "dynamic_exit_current_visible_gate_contract_no_route": {
       "id": "v856_dynamic_exit_current_visible_gate_contract_no_route",
-      "date": "2026-04-30",
+      "report": "C:\\app\\models\\v856_dynamic_exit_current_visible_gate_contract_no_route\\v856_dynamic_exit_current_visible_gate_contract_no_route_report.md",
+      "project_doc": "B:\\qt\\quant_project\\dynamic_exit_current_visible_gate_contract_no_route_20260430.md",
+      "gate_contract": "C:\\app\\models\\v856_dynamic_exit_current_visible_gate_contract_no_route\\v856_dynamic_exit_gate_contract.csv",
+      "feature_contract": "C:\\app\\models\\v856_dynamic_exit_current_visible_gate_contract_no_route\\v856_dynamic_exit_feature_contract.csv",
+      "gate_application_rows": "C:\\app\\models\\v856_dynamic_exit_current_visible_gate_contract_no_route\\v856_gate_application_rows.csv",
+      "gate_application_summary": "C:\\app\\models\\v856_dynamic_exit_current_visible_gate_contract_no_route\\v856_gate_application_summary.csv",
+      "review_alignment": "C:\\app\\models\\v856_dynamic_exit_current_visible_gate_contract_no_route\\v856_review_alignment.csv",
+      "validation": "C:\\app\\models\\v856_dynamic_exit_current_visible_gate_contract_no_route\\v856_validation.json",
       "status": "DYNAMIC_EXIT_CURRENT_VISIBLE_GATE_CONTRACT_READY_NO_ROUTE",
-      "project_doc": "dynamic_exit_current_visible_gate_contract_no_route_20260430.md",
-      "key_reads": {
+      "source_rows": {
         "application_rows": 232,
         "dynamic_candidate_rows": 32,
         "cash_release_protect_gate_rows": 26,
         "active_winner_block_gate_rows": 6,
         "missing_runtime_context_rows": 6,
-        "acceptance_tests_passed": "10/10"
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0,
+        "model_training_allowed_rows": 0
       },
-      "route_allowed": false,
-      "paper_order_allowed": false,
-      "live_order_allowed": false,
-      "model_training_allowed": false
+      "first_read": "v856 derives a no-route current-visible dynamic-exit gate contract from v855. It deliberately blocks review-only edge fields from the gate. On v855 rows it splits 32 dynamic candidates into 26 CASH_RELEASE_PROTECT_REVIEW rows and 6 BLOCK_ACTIVE_WINNER_REVIEW rows, with 6 missing runtime context blockers still listed. Next step is a runtime shadow logger design that records the missing post-trigger sector/reclaim/cash-queue fields without changing exits."
+    },
+    "dynamic_exit_runtime_shadow_logger_design_no_route": {
+      "id": "v857_dynamic_exit_runtime_shadow_logger_design_no_route",
+      "report": "C:\\app\\models\\v857_dynamic_exit_runtime_shadow_logger_design_no_route\\v857_dynamic_exit_runtime_shadow_logger_design_no_route_report.md",
+      "project_doc": "B:\\qt\\quant_project\\dynamic_exit_runtime_shadow_logger_design_no_route_20260430.md",
+      "runtime_shadow_logger_schema": "C:\\app\\models\\v857_dynamic_exit_runtime_shadow_logger_design_no_route\\v857_runtime_shadow_logger_schema.csv",
+      "runtime_hook_plan": "C:\\app\\models\\v857_dynamic_exit_runtime_shadow_logger_design_no_route\\v857_runtime_hook_plan.csv",
+      "runtime_data_source_plan": "C:\\app\\models\\v857_dynamic_exit_runtime_shadow_logger_design_no_route\\v857_runtime_data_source_plan.csv",
+      "permission_contract": "C:\\app\\models\\v857_dynamic_exit_runtime_shadow_logger_design_no_route\\v857_permission_contract.csv",
+      "missing_context_gap_map": "C:\\app\\models\\v857_dynamic_exit_runtime_shadow_logger_design_no_route\\v857_missing_context_gap_map.csv",
+      "validation": "C:\\app\\models\\v857_dynamic_exit_runtime_shadow_logger_design_no_route\\v857_validation.json",
+      "status": "DYNAMIC_EXIT_RUNTIME_SHADOW_LOGGER_DESIGN_READY_NO_PATCH_NO_ROUTE",
+      "source_rows": {
+        "schema_columns": 33,
+        "hook_points": 6,
+        "hook_points_found": 6,
+        "missing_context_fields_mapped": 6,
+        "permission_contract_rows": 10,
+        "v856_cash_release_protect_gate_rows": 26,
+        "v856_active_winner_block_gate_rows": 6,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0,
+        "model_training_allowed_rows": 0
+      },
+      "first_read": "v857 designs a log-only runtime shadow logger for dynamic exit. It is position-driven, maps all six v856 missing runtime contexts to planned sources, finds all six intended hook points in run_ths_sim_once_v1.py, and keeps a 10-row permission contract blocking action_plan, sell_plan, buy_plan, official_buy, repair_weak quota, max2, paper/live orders, and training."
+    },
+    "dynamic_exit_runtime_shadow_logger_patch_or_dryrun_no_route": {
+      "id": "v858_dynamic_exit_runtime_shadow_logger_patch_or_dryrun_no_route",
+      "report": "C:\\app\\models\\v858_dynamic_exit_runtime_shadow_logger_patch_or_dryrun_no_route\\v858_dynamic_exit_runtime_shadow_logger_patch_or_dryrun_no_route_report.md",
+      "project_doc": "B:\\qt\\quant_project\\dynamic_exit_runtime_shadow_logger_patch_or_dryrun_no_route_20260430.md",
+      "patch_matrix": "C:\\app\\models\\v858_dynamic_exit_runtime_shadow_logger_patch_or_dryrun_no_route\\v858_patch_matrix.csv",
+      "sidecar_checks": "C:\\app\\models\\v858_dynamic_exit_runtime_shadow_logger_patch_or_dryrun_no_route\\v858_sidecar_checks.csv",
+      "runtime_smoke_sidecar_copy": "C:\\app\\models\\v858_dynamic_exit_runtime_shadow_logger_patch_or_dryrun_no_route\\v858_runtime_smoke_sidecar_copy.csv",
+      "validation": "C:\\app\\models\\v858_dynamic_exit_runtime_shadow_logger_patch_or_dryrun_no_route\\v858_validation.json",
+      "status": "DYNAMIC_EXIT_RUNTIME_SHADOW_LOGGER_PATCHED_AND_SMOKE_VALIDATED_NO_ROUTE",
+      "source_rows": {
+        "runtime_smoke_run_dir": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260430_011454",
+        "sidecar_rows": 1,
+        "candidate_rows": 1,
+        "cash_release_protect_rows": 1,
+        "active_winner_block_rows": 0,
+        "official_buy_rows": 0,
+        "action_plan_rows": 0,
+        "executed_rows": 0,
+        "rulebook_subphase_total_quota": 0,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0,
+        "model_training_allowed_rows": 0
+      },
+      "first_read": "v858 patches run_ths_sim_once_v1.py with a position-driven dynamic-exit runtime shadow logger and smoke-validates it in read_only mode. The smoke produced one dynamic_exit_runtime_shadow_sidecar row for 002491.SZ with CASH_RELEASE_PROTECT_REVIEW, while official_buy_rows, action_plan_rows, executed_rows, repair_weak quota, route, paper, live, and training all stayed at zero/false."
+    },
+    "dynamic_exit_runtime_shadow_daily_accumulator_no_route": {
+      "id": "v859_dynamic_exit_runtime_shadow_daily_accumulator_no_route",
+      "report": "C:\\app\\models\\v859_dynamic_exit_runtime_shadow_daily_accumulator_no_route\\v859_dynamic_exit_runtime_shadow_daily_accumulator_no_route_report.md",
+      "project_doc": "B:\\qt\\quant_project\\dynamic_exit_runtime_shadow_daily_accumulator_no_route_20260430.md",
+      "accumulator": "C:\\app\\models\\v859_dynamic_exit_runtime_shadow_daily_accumulator_no_route\\v859_dynamic_exit_runtime_accumulator.csv",
+      "daily_summary": "C:\\app\\models\\v859_dynamic_exit_runtime_shadow_daily_accumulator_no_route\\v859_dynamic_exit_runtime_daily_summary.csv",
+      "blocker_register": "C:\\app\\models\\v859_dynamic_exit_runtime_shadow_daily_accumulator_no_route\\v859_blocker_register.csv",
+      "validation": "C:\\app\\models\\v859_dynamic_exit_runtime_shadow_daily_accumulator_no_route\\v859_validation.json",
+      "status": "DYNAMIC_EXIT_RUNTIME_ACCUMULATOR_SEEDED_NO_ROUTE_WAIT_FOR_MORE_DAYS",
+      "source_rows": {
+        "sidecar_rows": 1,
+        "run_count": 1,
+        "distinct_trade_dates": 1,
+        "candidate_rows": 1,
+        "cash_release_protect_rows": 1,
+        "active_winner_block_rows": 0,
+        "entry_price_missing_rows": 1,
+        "sector_context_missing_rows": 1,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0,
+        "model_training_allowed_rows": 0
+      },
+      "first_read": "v859 seeds the daily accumulator for dynamic_exit_runtime_shadow_sidecar rows. It confirms the no-route logger can be collected, but only one distinct trade date exists so far. The next blockers are field completeness: raw held positions currently lack entry/cost context, and the seed row lacks post-trigger sector context."
     }
-  ],
-  "current_blockers": {
-    "dynamic_exit_missing_runtime_context": [
-      "post_trigger_sector_breadth",
-      "post_trigger_sector_mean_ret",
-      "post_trigger_reclaim_count",
-      "post_trigger_vwap_reclaim_hold_bars",
-      "same_day_candidate_queue_after_exit",
-      "cash_reuse_fillable_lot"
-    ],
-    "holding_T_missing_micro_context": [
-      "vwap_distance",
-      "reclaim_bars",
-      "last3_amount_slope",
-      "last3_low_lift",
-      "sector_context",
-      "sellable_quantity_and_cash_reuse_context"
-    ],
-    "engineering": [
-      "local_quant_project_is_not_a_git_repository",
-      "runtime_v91_not_yet_clean_aligned_to_v540_v590"
-    ]
   },
   "next_recommended_step": {
-    "id": "v857_dynamic_exit_runtime_shadow_logger_design_no_route",
+    "id": "v860_dynamic_exit_entry_cost_and_sector_context_fill_no_route",
     "status": "planned_no_route",
-    "purpose": "design a log-only runtime shadow logger for dynamic exit that records post-trigger sector breadth, mean return, reclaim behavior, and same-day cash reuse queue without changing exits"
+    "purpose": "fill entry/cost context and post-trigger sector context for dynamic-exit runtime shadow rows without changing exits or orders",
+    "parallel_track": "holding-day T remains evidence-only until missing micro context is filled; candidate supply remains no-route scout/ranker evidence only",
+    "hard_constraints": [
+      "no live order",
+      "no paper order",
+      "no repair_weak quota change",
+      "no global max2",
+      "no same-day replacement promotion",
+      "no action scorer or ranker training",
+      "no next-open or future outcome as runtime feature",
+      "no final 9.26 claim from T review outputs",
+      "historical outcome labels must remain review-only and quarantined from runtime feature surface",
+      "action decomposition must not treat completed buyback as success by default",
+      "dynamic exit runtime shadow logger must write logs only and must not emit exit orders"
+    ]
   },
   "hard_guardrails": {
-    "no_route": true,
-    "no_paper": true,
-    "no_live": true,
-    "no_training": true,
     "do_not_open_repair_weak_quota": true,
-    "do_not_open_global_max2": true,
-    "do_not_use_review_only_fields_as_runtime_features": true,
+    "do_not_promote_research_only_to_live": true,
+    "do_not_replace_main_engine_with_backtrader_now": true,
+    "do_not_use_rl_or_deep_learning_as_main_strategy_now": true,
     "frozen_2026_is_diagnostic_only": true
+  },
+  "priority_order": [
+    {
+      "rank": 1,
+      "name": "runtime_alignment",
+      "allowed_work": [
+        "taxonomy_theme_bridge",
+        "family_mapping_alignment",
+        "runtime_digest",
+        "shadow_parity_check"
+      ],
+      "disallowed_work": [
+        "global_quota_open",
+        "direct_live_routing_change"
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "shadow_promotion_gates",
+      "required_checks": [
+        "current_visible_causality",
+        "train_2023_2024_support",
+        "exam_2025_support",
+        "frozen_2026_diagnostic_only",
+        "sample_thickness",
+        "runtime_field_availability",
+        "state_machine_compatibility"
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "one_minute_forward_ledger",
+      "focus": [
+        "spike_fade",
+        "vwap_reclaim",
+        "low_reclaim",
+        "trend_acceptance",
+        "sell_fly_rate",
+        "buyback_success",
+        "rotate_vs_buyback_opportunity_cost"
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "ml_scoring_layer",
+      "preferred_models": [
+        "LightGBM",
+        "XGBoost",
+        "scikit-learn baselines"
+      ],
+      "role": "score_actions_and_factors_not_replace_state_machine"
+    },
+    {
+      "rank": 5,
+      "name": "engineering_governance",
+      "focus": [
+        "mainline_manifest",
+        "script_archive_index",
+        "single_daily_entry",
+        "stable_sidecar_outputs"
+      ]
+    }
+  ],
+  "shadow_assets": {
+    "platform_sidecars": [
+      "clean_shadow_mapping",
+      "midmid_shadow_adjunct",
+      "causal_recycle_guard",
+      "late_recycle_shadow",
+      "recycle_soft_risk_registry",
+      "recycle_risk_digest",
+      "shadow_summary_hierarchy",
+      "v625_branch_maturity",
+      "v625_branch_attention"
+    ],
+    "research_only_recent": [
+      "v728_active_basin_overextension_two_step_bridge",
+      "v729_active_basin_overextension_stress_split_recurrence",
+      "v730_active_basin_overextension_date_shape",
+      "v731_active_basin_overextension_date_shape_monitor"
+    ],
+    "recent_research_policy": "monitor_only_no_live_gate_no_quota_change"
+  },
+  "promotion_levels": [
+    "research_only",
+    "shadow_monitor",
+    "platform_sidecar",
+    "paper_shadow_candidate",
+    "paper_contract_candidate",
+    "clean_contract_candidate"
+  ],
+  "daily_entrypoints": {
+    "unified_preopen_bootstrap": "powershell -NoProfile -ExecutionPolicy Bypass -File \"B:\\qt\\quant_project\\prepare_daily_unified_model_runtime_v1.ps1\" -Profile dual_stack_daily -Workflow preopen_bootstrap",
+    "minute_tests": "powershell -NoProfile -ExecutionPolicy Bypass -File \"B:\\qt\\quant_project\\prepare_daily_unified_model_runtime_v1.ps1\" -Profile dual_stack_daily -Workflow minute_tests",
+    "sim_runtime": "powershell -NoProfile -ExecutionPolicy Bypass -File \"B:\\qt\\quant_project\\prepare_daily_sim_runtime_v1.ps1\""
+  },
+  "candidate_supply_ceiling": {
+    "candidate_common_horizon_oracle_v2": {
+      "id": "v824_candidate_common_horizon_oracle_v2",
+      "report": "C:\\app\\models\\v824_candidate_common_horizon_oracle_v2\\v824_candidate_common_horizon_oracle_v2_report.md",
+      "common_horizon_rows": "C:\\app\\models\\v824_candidate_common_horizon_oracle_v2\\v824_common_horizon_rows.csv",
+      "source_scope_summary": "C:\\app\\models\\v824_candidate_common_horizon_oracle_v2\\v824_source_scope_summary.csv",
+      "daily_best_oracle": "C:\\app\\models\\v824_candidate_common_horizon_oracle_v2\\v824_daily_best_common_horizon_oracle.csv",
+      "pocket_stability": "C:\\app\\models\\v824_candidate_common_horizon_oracle_v2\\v824_pocket_cross_year_stability.csv",
+      "validation": "C:\\app\\models\\v824_candidate_common_horizon_oracle_v2\\v824_validation.json",
+      "status": "COMMON_3D_HORIZON_CANDIDATE_SUPPLY_ORACLE_READY_REVIEW_ONLY_NO_ROUTE",
+      "source_rows": {
+        "input_candidate_rows": 1412,
+        "common_horizon_complete_rows": 898,
+        "daily_best_rows": 220,
+        "common_horizon_shadow_review_ready_pockets": 5,
+        "independent_second_source_candidate_pockets": 0,
+        "acceptance_test_rows": 11,
+        "acceptance_tests_passed": 11,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v824 recomputes skipped/source-only candidate supply against active references using the same samples_short_v2 09:40 entry plus 3-trading-day close exit horizon. The skipped-candidate gap remains positive and has 5 shadow-review-ready pockets, but raw pre-v485 source-only supply is negative across train/valid/frozen common-horizon summaries and no independent second-source pocket is ready. This is a supply ceiling diagnostic only, not route, max2, scorer training, quota, paper/live, or a final 9.26 claim."
+    },
+    "candidate_actionability_ladder": {
+      "id": "v825_candidate_actionability_ladder",
+      "report": "C:\\app\\models\\v825_candidate_actionability_ladder\\v825_candidate_actionability_ladder_report.md",
+      "scope_ladder": "C:\\app\\models\\v825_candidate_actionability_ladder\\v825_scope_actionability_ladder.csv",
+      "ready_pocket_ladder": "C:\\app\\models\\v825_candidate_actionability_ladder\\v825_ready_pocket_actionability_ladder.csv",
+      "blocked_oracles": "C:\\app\\models\\v825_candidate_actionability_ladder\\v825_blocked_oracles.csv",
+      "next_task_queue": "C:\\app\\models\\v825_candidate_actionability_ladder\\v825_next_task_queue.csv",
+      "validation": "C:\\app\\models\\v825_candidate_actionability_ladder\\v825_validation.json",
+      "status": "V825_ACTIONABILITY_LADDER_BUILT_NO_ROUTE",
+      "source_rows": {
+        "scope_ladder_rows": 6,
+        "ready_pocket_actionability_rows": 5,
+        "independent_second_source_candidate_rows": 0,
+        "skipped_candidate_replay_needed_rows": 5,
+        "raw_source_only_blocked_rows": 3,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v825 converts v824 evidence into actionability. Skipped-candidate common-horizon pockets have replay-worthy edge but need slot/replacement replay and active route overlap; raw pre-v485 source-only supply is blocked as direct supply because common-horizon edge is negative across train/valid/frozen. No independent second-source pocket, max2, route, paper/live, quota, or scorer training is allowed. Parallel evidence path is holding intraday T human-label batch."
+    },
+    "skipped_candidate_slot_replacement_replay": {
+      "id": "v826_skipped_candidate_slot_replacement_replay",
+      "report": "C:\\app\\models\\v826_skipped_candidate_slot_replacement_replay\\v826_skipped_candidate_slot_replacement_replay_report.md",
+      "eligible_rows": "C:\\app\\models\\v826_skipped_candidate_slot_replacement_replay\\v826_eligible_ready_skipped_rows.csv",
+      "replay_rows": "C:\\app\\models\\v826_skipped_candidate_slot_replacement_replay\\v826_replacement_replay_rows.csv",
+      "summary": "C:\\app\\models\\v826_skipped_candidate_slot_replacement_replay\\v826_replacement_replay_summary.csv",
+      "validation": "C:\\app\\models\\v826_skipped_candidate_slot_replacement_replay\\v826_validation.json",
+      "status": "RANK_FIRST_REPLACEMENT_EDGE_POSITIVE_REPLAY_READY_FOR_CONFLICT_AUDIT_NO_ROUTE",
+      "source_rows": {
+        "eligible_rows": 170,
+        "eligible_dates": 41,
+        "rank_first_train_edge_pct": 3.950852481268111,
+        "rank_first_valid_edge_pct": 1.9309336614736865,
+        "rank_first_frozen_edge_pct": 2.8137698786780247,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v826 tests v825 ready skipped-candidate pockets under max1 replacement, not max2. Rank-first replacement is positive in train/valid/frozen common-horizon buckets, while oracle-best is much higher. This is the first stronger supply/actionability signal after v824, but it remains no-route because active route overlap, conflict replay, cash/slot mechanics, and promotion gates are not yet complete."
+    },
+    "active_route_overlap_bridge_for_v793": {
+      "id": "v827_active_route_overlap_bridge_for_v793",
+      "report": "C:\\app\\models\\v827_active_route_overlap_bridge_for_v793\\v827_active_route_overlap_bridge_for_v793_report.md",
+      "bridge_rows": "C:\\app\\models\\v827_active_route_overlap_bridge_for_v793\\v827_active_route_overlap_rows.csv",
+      "conflict_summary": "C:\\app\\models\\v827_active_route_overlap_bridge_for_v793\\v827_conflict_summary.csv",
+      "daily_conflict_replay": "C:\\app\\models\\v827_active_route_overlap_bridge_for_v793\\v827_daily_conflict_replay_summary.csv",
+      "validation": "C:\\app\\models\\v827_active_route_overlap_bridge_for_v793\\v827_validation.json",
+      "status": "REPLACEMENT_EDGE_CONFLICT_HEAVY_OR_UNSTABLE_NO_ROUTE",
+      "source_rows": {
+        "bridge_rows": 170,
+        "active_book_join_rate": 1.0,
+        "lower_conflict_rows": 76,
+        "lower_conflict_mean_edge_pct": 3.6080560397827894,
+        "lower_conflict_positive_rate": 0.7236842105263158,
+        "daily_lower_conflict_rows": 41,
+        "daily_lower_conflict_mean_edge_pct": 0.5566652654487696,
+        "daily_lower_conflict_positive_rate": 0.21951219512195122,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v827 joins v826 ready skipped-candidate rows to daily_priority_book/buy_signal active route proxies after preserving active_trade_date through v824. Active book proxy coverage is now 100%, and lower-conflict row-level edge is positive, but rank-first lower-conflict daily replay remains weak/unstable. The strong v826 edge appears conflict-heavy or active-route-dependent, so no route, paper/live, max2, quota, scorer, or promotion is allowed."
+    },
+    "active_route_proxy_source_native_backfill": {
+      "id": "v828_active_route_proxy_source_native_backfill",
+      "report": "C:\\app\\models\\v828_active_route_proxy_source_native_backfill\\v828_active_route_proxy_source_native_backfill_report.md",
+      "backfilled_rows": "C:\\app\\models\\v828_active_route_proxy_source_native_backfill\\v828_active_route_proxy_backfilled_rows.csv",
+      "route_overlap_summary": "C:\\app\\models\\v828_active_route_proxy_source_native_backfill\\v828_route_overlap_summary.csv",
+      "conflict_summary": "C:\\app\\models\\v828_active_route_proxy_source_native_backfill\\v828_conflict_summary.csv",
+      "daily_replay_summary": "C:\\app\\models\\v828_active_route_proxy_source_native_backfill\\v828_daily_replay_summary.csv",
+      "validation": "C:\\app\\models\\v828_active_route_proxy_source_native_backfill\\v828_validation.json",
+      "status": "SOURCE_NATIVE_ACTIVE_PROXY_COVERAGE_OK_LOWER_CONFLICT_DAILY_WEAK_NO_ROUTE",
+      "source_rows": {
+        "bridge_rows": 170,
+        "active_route_proxy_available_rate_v828": 1.0,
+        "lower_conflict_rows_v828": 76,
+        "lower_conflict_mean_edge_pct_v828": 3.6080560397827894,
+        "lower_conflict_positive_rate_v828": 0.7236842105263158,
+        "daily_lower_conflict_buckets": 3,
+        "daily_lower_conflict_all_buckets_nonnegative": false,
+        "daily_lower_conflict_mean_positive_rate": 0.2284313725490196,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v828 uses source-native active_family/active_subphase backfill to keep active-route proxy coverage at 100%. It confirms the coverage issue is solved, but daily lower-conflict replay is still weak, so the candidate replacement edge is not yet a clean low-conflict independent second source. Next work should either collect holding intraday T human labels or filter the lower-conflict pocket further; no route, paper/live, max2, quota, scorer training, or final 9.26 claim is allowed."
+    },
+    "holding_intraday_t_human_label_batch": {
+      "id": "v829_holding_intraday_t_human_label_batch",
+      "report": "C:\\app\\models\\v829_holding_intraday_t_human_label_batch\\v829_holding_intraday_t_human_label_batch_report.md",
+      "manual_batch_path": "B:\\qt\\quant_project\\manual_t_labels\\holding_intraday_t_manual_label_batch_v1.csv",
+      "batch_status": "C:\\app\\models\\v829_holding_intraday_t_human_label_batch\\v829_batch_status.csv",
+      "manual_t_label_validation": "C:\\app\\models\\v829_holding_intraday_t_human_label_batch\\v829_manual_t_label_validation.csv",
+      "auto_enrichment_contract": "C:\\app\\models\\v829_holding_intraday_t_human_label_batch\\v829_auto_enrichment_contract.csv",
+      "seed_day_micro_context_preview": "C:\\app\\models\\v829_holding_intraday_t_human_label_batch\\v829_seed_day_micro_context_preview.csv",
+      "validation": "C:\\app\\models\\v829_holding_intraday_t_human_label_batch\\v829_validation.json",
+      "status": "HOLDING_INTRADAY_T_LABEL_BATCH_READY_COLLECT_20_NO_ROUTE",
+      "source_rows": {
+        "batch_rows": 20,
+        "completed_label_rows": 0,
+        "remaining_completed_labels_needed": 20,
+        "seed_pending_exact_execution_rows": 1,
+        "empty_template_rows": 19,
+        "ready_for_minute_enrichment_rows": 0,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v829 turns the user's existing-position intraday T idea into a batchable human label ledger and minute-enrichment protocol. It creates a 20-row manual label template with the 002491.SZ case as a pending seed, keeps exact sell/buyback prices blank instead of inferring them from screenshots, links the v748 seed-day micro context, and blocks T scorer/rule design until at least 20 completed broker-label rows exist. No route, paper/live, same-symbol T route, quota, max2, scorer training, or final 9.26 claim is allowed."
+    },
+    "lower_conflict_replacement_filter": {
+      "id": "v830_lower_conflict_replacement_filter",
+      "report": "C:\\app\\models\\v830_lower_conflict_replacement_filter\\v830_lower_conflict_replacement_filter_report.md",
+      "filter_candidate_summary": "C:\\app\\models\\v830_lower_conflict_replacement_filter\\v830_filter_candidate_summary.csv",
+      "filter_daily_replay_rows": "C:\\app\\models\\v830_lower_conflict_replacement_filter\\v830_filter_daily_replay_rows.csv",
+      "lower_conflict_drag_summary": "C:\\app\\models\\v830_lower_conflict_replacement_filter\\v830_lower_conflict_drag_summary.csv",
+      "validation": "C:\\app\\models\\v830_lower_conflict_replacement_filter\\v830_validation.json",
+      "status": "THIN_LOW_CONFLICT_FILTER_REVIEW_READY_NO_ROUTE",
+      "source_rows": {
+        "lower_conflict_rows": 76,
+        "filter_specs_tested": 49,
+        "review_ready_filter_rows": 10,
+        "base_train_all_date_mean_edge_pct": 1.6842913694164023,
+        "base_valid_all_date_mean_edge_pct": -0.38284146722648404,
+        "base_frozen_all_date_mean_edge_pct": 0.4617879869625973,
+        "base_valid_chosen_rate": 0.3,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v830 diagnoses why lower-conflict replacement looks strong row-by-row but weak in daily replay. The unfiltered lower-conflict daily replay is still negative in 2025 valid, mainly because most days have no lower-conflict candidate and selected negative days are large. Current-visible/proxy filters produce 10 thin review-ready filters, led by v194_dynamic_two_slot_reserve / v198_r010 style filters, but these are not promotion-ready until cash/slot mechanics, manual review, and promotion gates pass. Selection remains rank-first within filters and does not sort by future edge; no route, paper/live, max2, quota, scorer training, or final 9.26 claim is allowed."
+    },
+    "replacement_cash_slot_mechanics": {
+      "id": "v831_replacement_cash_slot_mechanics",
+      "report": "C:\\app\\models\\v831_replacement_cash_slot_mechanics\\v831_replacement_cash_slot_mechanics_report.md",
+      "mechanics_daily_replay_rows": "C:\\app\\models\\v831_replacement_cash_slot_mechanics\\v831_mechanics_daily_replay_rows.csv",
+      "mechanics_summary": "C:\\app\\models\\v831_replacement_cash_slot_mechanics\\v831_mechanics_summary.csv",
+      "cash_slot_blocker_summary": "C:\\app\\models\\v831_replacement_cash_slot_mechanics\\v831_cash_slot_blocker_summary.csv",
+      "validation": "C:\\app\\models\\v831_replacement_cash_slot_mechanics\\v831_validation.json",
+      "status": "BROAD_LOT_CASH_OK_BUT_STRICT_SAME_DAY_NOT_READY_NO_ROUTE",
+      "source_rows": {
+        "lower_conflict_rows": 76,
+        "same_active_trade_date_rate": 0.7368421052631579,
+        "mechanic_summary_rows": 30,
+        "broad_review_ready_rows": 10,
+        "strict_same_day_positive_rows": 0,
+        "strict_review_ready_rows": 0,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v831 applies 100-share lot, cash floor, slot, and same-day active replacement mechanics to the v830 review-ready filters. The lot/cash floor is not the main blocker, but strict same-day max1 replacement is not ready: no strict scenario passes train/valid after mechanics, and the broad positive edge partly depends on prior-holding rotation timing. This blocks promotion of v826/v830 replacement edge and points the next mainline toward trade-frequency elasticity and temporal/rotation anatomy. No route, paper/live, max2, quota, scorer training, or final 9.26 claim is allowed."
+    },
+    "trade_frequency_elasticity_audit": {
+      "id": "v832_trade_frequency_elasticity_audit",
+      "report": "C:\\app\\models\\v832_trade_frequency_elasticity_audit\\v832_trade_frequency_elasticity_audit_report.md",
+      "frequency_target_table": "C:\\app\\models\\v832_trade_frequency_elasticity_audit\\v832_frequency_target_table.csv",
+      "supply_layer_inventory": "C:\\app\\models\\v832_trade_frequency_elasticity_audit\\v832_supply_layer_inventory.csv",
+      "elasticity_summary": "C:\\app\\models\\v832_trade_frequency_elasticity_audit\\v832_elasticity_summary.csv",
+      "next_task_queue": "C:\\app\\models\\v832_trade_frequency_elasticity_audit\\v832_next_task_queue.csv",
+      "validation": "C:\\app\\models\\v832_trade_frequency_elasticity_audit\\v832_validation.json",
+      "status": "TRADE_FREQUENCY_SUPPLY_BOTTLENECK_CONFIRMED_NO_ROUTE",
+      "source_rows": {
+        "target_weekly_return_pct": 9.26,
+        "main_capital": 200000.0,
+        "current_trades_per_week_mean_2023_2025": 1.3705271826022267,
+        "required_trades_per_week_same_edge_mean_2023_2025": 4.028027672078057,
+        "required_trade_count_same_edge_mean_2023_2025": 208.49452948487965,
+        "pre_v485_source_only_total_keys": 660,
+        "holding_T_signal_total_rows": 392,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v832 confirms that trade frequency and candidate supply are major bottlenecks. In 2023-2025 at the 200k clean baseline, current frequency averages about 1.37 trades/week; keeping current per-trade edge would require about 4.03 trades/week on average to approach 9.26. v540 final rejected rows are too few to solve this, while pre-v485 source-only supply has 660 date-symbol keys and is the only large enough new-symbol supply layer. Holding-day T has meaningful action frequency, but needs human broker labels before rules/scoring. No route, paper/live, repair_weak quota, max2, model training, or final 9.26 claim is allowed."
+    },
+    "pre_v485_common_horizon_scout_slot_replay": {
+      "id": "v833_pre_v485_common_horizon_scout_slot_replay",
+      "report": "C:\\app\\models\\v833_pre_v485_common_horizon_scout_slot_replay\\v833_pre_v485_common_horizon_scout_slot_replay_report.md",
+      "scout_chosen_rows": "C:\\app\\models\\v833_pre_v485_common_horizon_scout_slot_replay\\v833_scout_chosen_rows.csv",
+      "scout_scenario_summary": "C:\\app\\models\\v833_pre_v485_common_horizon_scout_slot_replay\\v833_scout_scenario_summary.csv",
+      "scout_cross_bucket_summary": "C:\\app\\models\\v833_pre_v485_common_horizon_scout_slot_replay\\v833_scout_cross_bucket_summary.csv",
+      "scout_frequency_fit": "C:\\app\\models\\v833_pre_v485_common_horizon_scout_slot_replay\\v833_scout_frequency_fit.csv",
+      "validation": "C:\\app\\models\\v833_pre_v485_common_horizon_scout_slot_replay\\v833_validation.json",
+      "status": "PRE_V485_SCOUT_SUPPLY_HAS_STANDALONE_EDGE_BUT_NOT_REPLACEMENT_NO_ROUTE",
+      "source_rows": {
+        "scenario_rows": 7,
+        "scout_ready_scenarios": 4,
+        "replacement_ready_scenarios": 0,
+        "best_scout_scenario": "S1_v802_review_rank_first",
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v833 tests pre-v485 source-only/review pockets under the same common 09:40 plus 3 trading-day horizon and a scout-slot interpretation. Four scenarios have standalone scout edge across train/valid/frozen, led by S1_v802_review_rank_first, but zero scenarios have positive replacement edge versus the active clean trade. Therefore pre-v485 can continue as scout-slot supply research, not max1 replacement, max2, or route. Rank-first one-per-day chosen dates still do not cover the full trade-frequency gap by themselves, so the next step is a current-plus-scout frequency/return proxy combined later with holding intraday T and exit-speed work. No route, paper/live, repair_weak quota, max2, model training, or final 9.26 claim is allowed."
+    },
+    "replacement_mechanics_matrix": {
+      "id": "v834_replacement_mechanics_matrix",
+      "report": "C:\\app\\models\\v834_replacement_mechanics_matrix\\v834_replacement_mechanics_matrix_report.md",
+      "replacement_daily_replay_rows": "C:\\app\\models\\v834_replacement_mechanics_matrix\\v834_replacement_daily_replay_rows.csv",
+      "replacement_replay_summary": "C:\\app\\models\\v834_replacement_mechanics_matrix\\v834_replacement_replay_summary.csv",
+      "summary_by_conflict_type": "C:\\app\\models\\v834_replacement_mechanics_matrix\\v834_summary_by_conflict_type.csv",
+      "summary_by_active_winner_state": "C:\\app\\models\\v834_replacement_mechanics_matrix\\v834_summary_by_active_winner_state.csv",
+      "summary_by_replacement_rank": "C:\\app\\models\\v834_replacement_mechanics_matrix\\v834_summary_by_replacement_rank.csv",
+      "validation": "C:\\app\\models\\v834_replacement_mechanics_matrix\\v834_validation.json",
+      "status": "STRICT_REPLACEMENT_NOT_READY_BROAD_SCOUT_OR_ROTATION_ONLY_NO_ROUTE",
+      "source_rows": {
+        "strict_train_valid_replay_pass": false,
+        "best_broad_replay_id": "A_rank_first_replacement",
+        "best_broad_eval_bucket": "train_2023_2024",
+        "best_broad_all_date_mean_edge": 3.950852481268111,
+        "strict_train_all_date_positive_rate": 0.35294117647058826,
+        "strict_valid_all_date_positive_rate": 0.3,
+        "strict_train_cum_edge_drawdown_proxy": -33.27770127760054,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v834 completes the A/B/C/D replacement mechanics matrix requested by the latest guidance: rank-first, filter-first, rank-then-filter-veto, and active-weakness replacement, each under broad lot, strict same-day, and notional-neutral mechanics. Strict same-day replacement is not promotable: even when mean edge is positive, train/valid all-date positive rates are only about 35% and 30%, tail loss is large, and train replaces active winners too often. Broad edge remains scout/rotation research only. No route, paper/live, repair_weak quota, max2, scorer training, or final 9.26 claim is allowed."
+    },
+    "low_conflict_negative_day_active_winner_anatomy": {
+      "id": "v835_low_conflict_negative_day_active_winner_anatomy",
+      "report": "C:\\app\\models\\v835_low_conflict_negative_day_active_winner_anatomy\\v835_low_conflict_negative_day_active_winner_anatomy_report.md",
+      "negative_day_anatomy_rows": "C:\\app\\models\\v835_low_conflict_negative_day_active_winner_anatomy\\v835_negative_day_anatomy_rows.csv",
+      "summary_by_drag_class": "C:\\app\\models\\v835_low_conflict_negative_day_active_winner_anatomy\\v835_summary_by_drag_class.csv",
+      "summary_by_replay_and_drag": "C:\\app\\models\\v835_low_conflict_negative_day_active_winner_anatomy\\v835_summary_by_replay_and_drag.csv",
+      "summary_by_conflict_and_drag": "C:\\app\\models\\v835_low_conflict_negative_day_active_winner_anatomy\\v835_summary_by_conflict_and_drag.csv",
+      "validation": "C:\\app\\models\\v835_low_conflict_negative_day_active_winner_anatomy\\v835_validation.json",
+      "status": "NEGATIVE_REPLACEMENT_DRIVERS_MAPPED_NO_ROUTE",
+      "source_rows": {
+        "strict_train_valid_negative_rows": 28,
+        "top_negative_driver": "CANDIDATE_SOURCE_BAD",
+        "rank_first_wrong_rows": 8,
+        "candidate_source_bad_rows": 24,
+        "active_original_stronger_rows": 24,
+        "timing_or_action_mismatch_rows": 4,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v835 splits negative replacement days into candidate-source, rank-first, active-original-stronger, and timing/action drivers. In strict same-day train/valid rows, the main blocker is not merely low-conflict filtering: many negative rows are bad candidates and many also replace active winners, while rank-first mistakes are present but not the only issue. This points next toward scout gate/ranker input design and active-strength veto design, not route or max2. Same-horizon realized returns remain review labels only; no route, paper/live, repair_weak quota, max2, scorer training, or final 9.26 claim is allowed."
+    },
+    "ranker_or_scout_gate_design_no_training": {
+      "id": "v836_ranker_or_scout_gate_design_no_training",
+      "report": "C:\\app\\models\\v836_ranker_or_scout_gate_design_no_training\\v836_ranker_or_scout_gate_design_no_training_report.md",
+      "feature_gate_contract": "C:\\app\\models\\v836_ranker_or_scout_gate_design_no_training\\v836_feature_gate_contract.csv",
+      "scout_gate_matrix": "C:\\app\\models\\v836_ranker_or_scout_gate_design_no_training\\v836_scout_gate_matrix.csv",
+      "action_protocol": "C:\\app\\models\\v836_ranker_or_scout_gate_design_no_training\\v836_action_protocol.csv",
+      "training_readiness_gate": "C:\\app\\models\\v836_ranker_or_scout_gate_design_no_training\\v836_training_readiness_gate.csv",
+      "validation": "C:\\app\\models\\v836_ranker_or_scout_gate_design_no_training\\v836_validation.json",
+      "status": "SCOUT_GATE_RANKER_INPUT_DESIGN_READY_NO_TRAINING_NO_ROUTE",
+      "source_rows": {
+        "feature_contract_rows": 42,
+        "runtime_allowed_feature_rows": 31,
+        "review_label_only_rows": 11,
+        "scout_gate_matrix_rows": 41,
+        "source_or_active_veto_proposal_rows": 7,
+        "ranker_required_proposal_rows": 13,
+        "scout_keep_review_rows": 12,
+        "acceptance_test_rows": 9,
+        "acceptance_tests_passed": 9,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v836 converts v834/v835 replacement failures into a no-training scout gate and ranker input contract. It whitelists 31 current-visible/proxy fields, locks 11 realized/oracle fields as review-only labels, and maps 41 scout-gate cells into source/active veto, ranker-required, scout-keep, or observe-more buckets. The main blocker remains replacement safety: bad candidates, rank-first mistakes, and replacing active winners are all present, so the next step is a no-training scout-gate shadow replay rather than route, max2, paper/live, quota change, or model training."
+    },
+    "scout_gate_shadow_replay_no_training": {
+      "id": "v837_scout_gate_shadow_replay_no_training",
+      "report": "C:\\app\\models\\v837_scout_gate_shadow_replay_no_training\\v837_scout_gate_shadow_replay_no_training_report.md",
+      "gated_candidate_rows": "C:\\app\\models\\v837_scout_gate_shadow_replay_no_training\\v837_gated_candidate_rows.csv",
+      "shadow_replay_rows": "C:\\app\\models\\v837_scout_gate_shadow_replay_no_training\\v837_shadow_replay_rows.csv",
+      "shadow_replay_summary": "C:\\app\\models\\v837_scout_gate_shadow_replay_no_training\\v837_shadow_replay_summary.csv",
+      "cross_bucket_summary": "C:\\app\\models\\v837_scout_gate_shadow_replay_no_training\\v837_cross_bucket_summary.csv",
+      "gate_hit_summary": "C:\\app\\models\\v837_scout_gate_shadow_replay_no_training\\v837_gate_hit_summary.csv",
+      "validation": "C:\\app\\models\\v837_scout_gate_shadow_replay_no_training\\v837_validation.json",
+      "status": "REFERENCE_SCOUT_READY_BUT_V836_GATED_SCENARIOS_NOT_CROSS_BUCKET_READY_NO_ROUTE",
+      "source_rows": {
+        "scenario_rows": 3,
+        "scout_shadow_ready_scenarios": 1,
+        "v836_gated_scout_shadow_ready_scenarios": 0,
+        "replacement_ready_scenarios": 0,
+        "source_bad_veto_rows": 35,
+        "active_strength_veto_rows": 16,
+        "acceptance_test_rows": 9,
+        "acceptance_tests_passed": 9,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v837 applies the v836 no-training scout gate to v828 pre-v485 candidate rows using rank-first selection after gate, never future-edge sorting. The ungated rank-first reference scenario is cross-bucket positive as scout shadow, but the actual v836 gated scenarios fail cross-bucket readiness because the 2026 frozen candidate leg is negative. This means pre-v485 supply still deserves a current-plus-scout frequency proxy, but the v836 gate is not yet a收益增强器 and replacement remains blocked. No route, paper/live, repair_weak quota, max2, scorer training, or final 9.26 claim is allowed."
+    },
+    "current_plus_scout_shadow_frequency_return_proxy_no_route": {
+      "id": "v838_current_plus_scout_shadow_frequency_return_proxy_no_route",
+      "report": "C:\\app\\models\\v838_current_plus_scout_shadow_frequency_return_proxy_no_route\\v838_current_plus_scout_shadow_frequency_return_proxy_no_route_report.md",
+      "scout_period_summary": "C:\\app\\models\\v838_current_plus_scout_shadow_frequency_return_proxy_no_route\\v838_scout_period_summary.csv",
+      "frequency_proxy": "C:\\app\\models\\v838_current_plus_scout_shadow_frequency_return_proxy_no_route\\v838_current_plus_scout_frequency_proxy.csv",
+      "cross_scenario_frequency_coverage": "C:\\app\\models\\v838_current_plus_scout_shadow_frequency_return_proxy_no_route\\v838_cross_scenario_frequency_coverage.csv",
+      "validation": "C:\\app\\models\\v838_current_plus_scout_shadow_frequency_return_proxy_no_route\\v838_validation.json",
+      "status": "SCOUT_REFERENCE_EDGE_POSITIVE_BUT_FREQUENCY_GAP_COVERAGE_THIN_NO_ROUTE",
+      "source_rows": {
+        "scenario_rows": 3,
+        "period_proxy_rows": 12,
+        "material_frequency_scenarios": 0,
+        "positive_but_thin_scenarios": 3,
+        "best_mean_frequency_gap_coverage_pct_2023_2025": 6.011172199713944,
+        "best_total_scout_dates_2023_2025": 18,
+        "acceptance_test_rows": 9,
+        "acceptance_tests_passed": 9,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v838 combines the current clean frequency target table with v837 scout shadow rows as a no-route frequency proxy. The best scout reference scenario has positive review returns across 2023-2025, but only adds 18 scout dates and covers about 6.01% of the frequency gap on average. This confirms pre-v485 scout supply is directionally useful but far too thin to be the 9.26 engine by itself; next work should expand scout supply safely or bridge holding-day intraday T action frequency after human labels. No return claim, replacement, max2, route, paper/live, repair_weak quota, model training, or final 9.26 claim is allowed."
+    },
+    "expand_scout_supply_or_add_holding_T_frequency_bridge_no_route": {
+      "id": "v839_expand_scout_supply_or_add_holding_T_frequency_bridge_no_route",
+      "report": "C:\\app\\models\\v839_expand_scout_supply_or_add_holding_T_frequency_bridge_no_route\\v839_expand_scout_supply_or_add_holding_T_frequency_bridge_no_route_report.md",
+      "wider_scout_period_summary": "C:\\app\\models\\v839_expand_scout_supply_or_add_holding_T_frequency_bridge_no_route\\v839_wider_scout_period_summary.csv",
+      "wider_scout_cross_summary": "C:\\app\\models\\v839_expand_scout_supply_or_add_holding_T_frequency_bridge_no_route\\v839_wider_scout_cross_summary.csv",
+      "machine_T_self_label_rows": "C:\\app\\models\\v839_expand_scout_supply_or_add_holding_T_frequency_bridge_no_route\\v839_machine_T_self_label_rows.csv",
+      "machine_T_self_label_summary": "C:\\app\\models\\v839_expand_scout_supply_or_add_holding_T_frequency_bridge_no_route\\v839_machine_T_self_label_summary.csv",
+      "holding_T_frequency_bridge": "C:\\app\\models\\v839_expand_scout_supply_or_add_holding_T_frequency_bridge_no_route\\v839_holding_T_frequency_bridge.csv",
+      "expansion_option_matrix": "C:\\app\\models\\v839_expand_scout_supply_or_add_holding_T_frequency_bridge_no_route\\v839_expansion_option_matrix.csv",
+      "validation": "C:\\app\\models\\v839_expand_scout_supply_or_add_holding_T_frequency_bridge_no_route\\v839_validation.json",
+      "status": "WIDER_PRE_V485_SUPPLY_CAN_COVER_FREQUENCY_BUT_EDGE_QUALITY_AND_RUNTIME_GATE_BLOCK_ROUTE",
+      "source_rows": {
+        "large_supply_scenarios": 1,
+        "best_supply_frequency_gap_coverage_pct": 108.94916989929779,
+        "best_supply_total_dates_2023_2025": 388,
+        "v802_review_supply_dates_2023_2025": 216,
+        "v802_review_supply_gap_coverage_pct": 62.410871,
+        "machine_T_sell_label_rows": 197,
+        "machine_T_action_gap_coverage_pct_2023_2025": 53.653086,
+        "acceptance_test_rows": 9,
+        "acceptance_tests_passed": 9,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v839 expands the v838 scout reference into wider pre-v485 source-only supply and replaces the prior human-label T blocker with machine self-labels from v369 holding-day T rows, per the latest instruction. Wide pre-v485 rank-first supply can cover the frequency gap on date count, but edge quality is thin: all-source rank-first has 388 main-period scout dates and about 108.95% gap coverage, yet only about 1.14% mean review return and about 51.8% positive rate; the v802 review subset is cleaner but smaller, with 216 dates and about 62.41% gap coverage. Machine T self-labels add 197 sell-label rows, with 190 actions in 2023-2025 and about 53.65% action-frequency coverage; good-spread and next-open-risk labels are now available for logic discovery. No route, paper/live, repair_weak quota, max2, model training, or final 9.26 claim is allowed."
+    },
+    "active_winner_protection_gate": {
+      "id": "v840_active_winner_protection_gate",
+      "report": "C:\\app\\models\\v840_active_winner_protection_gate\\v840_active_winner_protection_gate_report.md",
+      "project_doc": "B:\\qt\\quant_project\\active_winner_protection_gate_20260429.md",
+      "feature_contract": "C:\\app\\models\\v840_active_winner_protection_gate\\v840_active_feature_contract.csv",
+      "active_winner_gate_cells": "C:\\app\\models\\v840_active_winner_protection_gate\\v840_active_winner_gate_cells.csv",
+      "active_winner_gate_replay_rows": "C:\\app\\models\\v840_active_winner_protection_gate\\v840_active_winner_gate_replay_rows.csv",
+      "active_winner_gate_replay_summary": "C:\\app\\models\\v840_active_winner_protection_gate\\v840_active_winner_gate_replay_summary.csv",
+      "validation": "C:\\app\\models\\v840_active_winner_protection_gate\\v840_validation.json",
+      "status": "ACTIVE_WINNER_PROTECTION_GATE_DESIGNED_NO_ROUTE",
+      "source_rows": {
+        "feature_contract_rows": 40,
+        "runtime_allowed_feature_rows": 23,
+        "review_label_only_rows": 17,
+        "active_winner_gate_cell_rows": 54,
+        "protect_active_cell_rows": 14,
+        "block_replacement_cell_rows": 3,
+        "allow_replacement_review_cell_rows": 7,
+        "strict_replay_rows": 84,
+        "strict_train_valid_rows": 76,
+        "protected_train_valid_rows": 28,
+        "allowed_replacement_review_train_valid_rows": 0,
+        "protected_active_original_stronger_rows": 24,
+        "total_active_original_stronger_rows": 24,
+        "allowed_source_bad_rows": 0,
+        "acceptance_test_rows": 9,
+        "acceptance_tests_passed": 9,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v840 answers the active-winner part of the v835 failure map before any new replacement attempt. Using only current-visible/proxy active context as gate inputs and keeping realized/oracle fields as review labels, it catches all 24 train/valid active_original_stronger rows inside 28 protected strict same-day rows. It leaves zero train/valid rows as replacement-allowed after conservative conflict resolution, so pre-v485 remains scout/review only. Next step is v841 candidate source hygiene, because active protection alone does not clean source pollution or rank-first mistakes. No route, paper/live, repair_weak quota, max2, scorer training, or final 9.26 claim is allowed."
+    },
+    "pre_v485_candidate_source_hygiene_gate": {
+      "id": "v841_pre_v485_candidate_source_hygiene_gate",
+      "report": "C:\\app\\models\\v841_pre_v485_candidate_source_hygiene_gate\\v841_pre_v485_candidate_source_hygiene_gate_report.md",
+      "project_doc": "B:\\qt\\quant_project\\pre_v485_candidate_source_hygiene_gate_20260429.md",
+      "feature_contract": "C:\\app\\models\\v841_pre_v485_candidate_source_hygiene_gate\\v841_candidate_source_hygiene_contract.csv",
+      "hygiene_cells": "C:\\app\\models\\v841_pre_v485_candidate_source_hygiene_gate\\v841_candidate_source_hygiene_cells.csv",
+      "hygiene_replay_rows": "C:\\app\\models\\v841_pre_v485_candidate_source_hygiene_gate\\v841_candidate_source_hygiene_replay_rows.csv",
+      "scenario_chosen_rows": "C:\\app\\models\\v841_pre_v485_candidate_source_hygiene_gate\\v841_hygiene_scenario_chosen_rows.csv",
+      "scenario_period_summary": "C:\\app\\models\\v841_pre_v485_candidate_source_hygiene_gate\\v841_hygiene_scenario_period_summary.csv",
+      "scenario_cross_summary": "C:\\app\\models\\v841_pre_v485_candidate_source_hygiene_gate\\v841_hygiene_scenario_cross_summary.csv",
+      "validation": "C:\\app\\models\\v841_pre_v485_candidate_source_hygiene_gate\\v841_validation.json",
+      "status": "CANDIDATE_SOURCE_HYGIENE_IDENTIFIES_CLEANER_SCOUT_POCKETS_NO_ROUTE",
+      "source_rows": {
+        "feature_contract_rows": 38,
+        "runtime_allowed_feature_rows": 26,
+        "review_label_only_rows": 12,
+        "hygiene_cell_rows": 178,
+        "block_source_bad_cell_rows": 24,
+        "keep_source_review_cell_rows": 10,
+        "ranker_required_cell_rows": 30,
+        "chosen_scenario_rows": 1034,
+        "best_review_scenario": "H1_block_source_bad_cells",
+        "best_mean_scout_ret_review_only_2023_2025": 2.2243951159786,
+        "best_frequency_gap_coverage_pct_2023_2025": 38.241180381906,
+        "best_positive_rate_2023_2025": 0.5973486830629687,
+        "all_source_frequency_gap_coverage_pct_2023_2025": 108.94916989929779,
+        "all_source_mean_scout_ret_review_only_2023_2025": 1.135827033742533,
+        "all_source_positive_rate_2023_2025": 0.517949573121852,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v841 treats the v835 candidate_source_bad driver as source hygiene, not another replacement filter. It creates 178 no-route hygiene cells from current-visible pre-v485 source/micro/context fields, with 24 block-source-bad cells and 10 keep-source-review cells. After hygiene, rank-first scout coverage falls from about 108.95% of the 2023-2025 frequency gap to about 38.24%, but review mean return improves from about 1.14% to about 2.22% and positive rate improves from about 51.8% to about 59.7%. This is cleaner scout evidence, not a route/paper/live permission. Next step is v842 pairwise ranker input audit, because hygiene does not solve rank-first mistakes or replacement arbitration."
+    },
+    "pairwise_ranker_input_audit_no_training": {
+      "id": "v842_pairwise_ranker_input_audit_no_training",
+      "report": "C:\\app\\models\\v842_pairwise_ranker_input_audit_no_training\\v842_pairwise_ranker_input_audit_no_training_report.md",
+      "project_doc": "B:\\qt\\quant_project\\pairwise_ranker_input_audit_no_training_20260429.md",
+      "feature_contract": "C:\\app\\models\\v842_pairwise_ranker_input_audit_no_training\\v842_pairwise_feature_contract.csv",
+      "pairwise_rows": "C:\\app\\models\\v842_pairwise_ranker_input_audit_no_training\\v842_pairwise_rows.csv",
+      "feature_separation_summary": "C:\\app\\models\\v842_pairwise_ranker_input_audit_no_training\\v842_pairwise_feature_separation_summary.csv",
+      "training_readiness": "C:\\app\\models\\v842_pairwise_ranker_input_audit_no_training\\v842_pairwise_training_readiness.csv",
+      "validation": "C:\\app\\models\\v842_pairwise_ranker_input_audit_no_training\\v842_validation.json",
+      "status": "PAIRWISE_RANKER_INPUT_AUDIT_READY_NO_TRAINING",
+      "source_rows": {
+        "feature_contract_rows": 26,
+        "runtime_allowed_future_ranker_input_rows": 17,
+        "review_label_only_rows": 9,
+        "pairwise_rows": 407,
+        "distinct_trade_dates": 190,
+        "active_vs_replacement_pair_rows": 84,
+        "rank_first_vs_actual_best_rows": 85,
+        "rank_first_vs_each_candidate_rows": 238,
+        "source_bad_separator_rows": 29,
+        "active_winner_separator_rows": 2,
+        "rank_first_wrong_separator_rows": 2,
+        "positive_pairwise_signal_rows": 12,
+        "acceptance_test_rows": 10,
+        "acceptance_tests_passed": 10,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0
+      },
+      "first_read": "v842 converts the replacement/scout problem into a no-training pairwise audit set. It builds 407 pairwise rows over 190 trade dates: 84 active-vs-replacement strict same-day rows, 85 rank-first-vs-actual-best source rows, and 238 rank-first-vs-each-candidate rows. Current-visible fields from v840 active protection and v841 source hygiene show useful separators for source-bad, active-winner, rank-first-wrong, and positive pairwise pockets, but this is audit-only; no scorer/ranker is trained and no route/paper/live permission is granted. Next step moves to v843 holding-day intraday T replay under current v540/v590 semantics."
+    }
   }
 }
