@@ -1,0 +1,160 @@
+{
+  "manifest_id": "mainline_runtime_manifest_v1",
+  "last_updated_date": "2026-04-30",
+  "source_project_root": "B:\\qt\\quant_project",
+  "github_repository": "yves77702/qt-test",
+  "latest_progress_doc": "docs/strategy/latest_progress.md",
+  "latest_guidance_doc": "docs/strategy/latest_guidance.md",
+  "latest_research_anchor": "v856_dynamic_exit_current_visible_gate_contract_no_route",
+  "codex_update_contract": {
+    "fixed_progress_file": "docs/strategy/latest_progress.md",
+    "fixed_guidance_file": "docs/strategy/latest_guidance.md",
+    "fixed_manifest_file": "mainline_runtime_manifest_v1.json",
+    "must_update_on_every_codex_commit": true,
+    "latest_progress_required_sections": [
+      "本轮做了什么",
+      "新增文件",
+      "关键读数",
+      "是否 no-route/no-paper/no-live/no-training",
+      "当前 blocker",
+      "下一步候选"
+    ]
+  },
+  "clean_mainline": {
+    "baseline": "v540",
+    "publish": "v590_revalidated_v540_clean_master",
+    "role": "only_current_money_contract_baseline"
+  },
+  "runtime": {
+    "execution_baseline": "v91",
+    "status": "daily_reusable_but_not_clean_aligned",
+    "latest_preview": {
+      "market_phase": "repair",
+      "market_subphase": "repair_weak",
+      "rulebook_subphase_total_quota": 0,
+      "official_buy_rows": 0,
+      "selection_block_reason": "subphase_total_quota_zero",
+      "interpretation": "strategy_observation_not_execution_failure"
+    }
+  },
+  "latest_chain": [
+    {
+      "id": "v852_holding_T_sell_buyback_keep_reduced_decomposition_no_training",
+      "date": "2026-04-30",
+      "status": "HOLDING_T_BUYBACK_IS_NOT_DEFAULT_SUCCESS_KEEP_REDUCED_GATE_NEEDED_NO_TRAINING",
+      "key_reads": {
+        "decomposition_rows": 461,
+        "train_exam_completed_buyback_rows": 108,
+        "buyback_confirmed_rows": 24,
+        "buyback_counterfactual_keep_reduced_rows": 41,
+        "buyback_thin_spread_rows": 43
+      },
+      "route_allowed": false,
+      "paper_order_allowed": false,
+      "live_order_allowed": false,
+      "model_training_allowed": false
+    },
+    {
+      "id": "v853_holding_T_current_visible_buyback_risk_proxy_no_training",
+      "date": "2026-04-30",
+      "status": "CURRENT_VISIBLE_BUYBACK_RISK_PROXY_AUDIT_READY_MICRO_CONTEXT_STILL_BLOCKS_ROUTE",
+      "key_reads": {
+        "proxy_group_rows": 36,
+        "risk_proxy_candidate_rows": 3,
+        "confirm_proxy_candidate_rows": 2,
+        "missing_micro_context_blockers": 6
+      },
+      "route_allowed": false,
+      "paper_order_allowed": false,
+      "live_order_allowed": false,
+      "model_training_allowed": false
+    },
+    {
+      "id": "v854_dynamic_exit_quality_reprioritization_audit_no_route",
+      "date": "2026-04-30",
+      "status": "DYNAMIC_EXIT_REPRIORITIZED_AS_PRIMARY_GAP_CANDIDATE_NO_ROUTE",
+      "key_reads": {
+        "v364_train_exam_mean_weekly_delta_pp": 0.6813449532742913,
+        "v462_train_exam_mean_weekly_delta_pp": 0.2451528232567334,
+        "evidence_register_rows": 6,
+        "blocker_rows": 6
+      },
+      "route_allowed": false,
+      "paper_order_allowed": false,
+      "live_order_allowed": false,
+      "model_training_allowed": false
+    },
+    {
+      "id": "v855_dynamic_exit_active_winner_cash_release_ledger_no_route",
+      "date": "2026-04-30",
+      "status": "DYNAMIC_EXIT_LEDGER_READY_NO_ROUTE_ACTIVE_WINNER_AND_CASH_RELEASE_SEPARATED",
+      "key_reads": {
+        "ledger_rows": 232,
+        "dynamic_candidate_rows": 32,
+        "train_exam_dynamic_candidate_rows": 28,
+        "active_winner_risk_rows": 1,
+        "cash_release_review_rows": 18,
+        "protect_weak_or_fade_rows": 28
+      },
+      "route_allowed": false,
+      "paper_order_allowed": false,
+      "live_order_allowed": false,
+      "model_training_allowed": false
+    },
+    {
+      "id": "v856_dynamic_exit_current_visible_gate_contract_no_route",
+      "date": "2026-04-30",
+      "status": "DYNAMIC_EXIT_CURRENT_VISIBLE_GATE_CONTRACT_READY_NO_ROUTE",
+      "project_doc": "dynamic_exit_current_visible_gate_contract_no_route_20260430.md",
+      "key_reads": {
+        "application_rows": 232,
+        "dynamic_candidate_rows": 32,
+        "cash_release_protect_gate_rows": 26,
+        "active_winner_block_gate_rows": 6,
+        "missing_runtime_context_rows": 6,
+        "acceptance_tests_passed": "10/10"
+      },
+      "route_allowed": false,
+      "paper_order_allowed": false,
+      "live_order_allowed": false,
+      "model_training_allowed": false
+    }
+  ],
+  "current_blockers": {
+    "dynamic_exit_missing_runtime_context": [
+      "post_trigger_sector_breadth",
+      "post_trigger_sector_mean_ret",
+      "post_trigger_reclaim_count",
+      "post_trigger_vwap_reclaim_hold_bars",
+      "same_day_candidate_queue_after_exit",
+      "cash_reuse_fillable_lot"
+    ],
+    "holding_T_missing_micro_context": [
+      "vwap_distance",
+      "reclaim_bars",
+      "last3_amount_slope",
+      "last3_low_lift",
+      "sector_context",
+      "sellable_quantity_and_cash_reuse_context"
+    ],
+    "engineering": [
+      "local_quant_project_is_not_a_git_repository",
+      "runtime_v91_not_yet_clean_aligned_to_v540_v590"
+    ]
+  },
+  "next_recommended_step": {
+    "id": "v857_dynamic_exit_runtime_shadow_logger_design_no_route",
+    "status": "planned_no_route",
+    "purpose": "design a log-only runtime shadow logger for dynamic exit that records post-trigger sector breadth, mean return, reclaim behavior, and same-day cash reuse queue without changing exits"
+  },
+  "hard_guardrails": {
+    "no_route": true,
+    "no_paper": true,
+    "no_live": true,
+    "no_training": true,
+    "do_not_open_repair_weak_quota": true,
+    "do_not_open_global_max2": true,
+    "do_not_use_review_only_fields_as_runtime_features": true,
+    "frozen_2026_is_diagnostic_only": true
+  }
+}
