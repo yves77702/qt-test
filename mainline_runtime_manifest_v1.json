@@ -20,7 +20,7 @@
       "下一步候选"
     ],
     "must_update_on_every_codex_commit": true,
-    "current_commit_status": "local_files_prepared_but_not_pushed_because_quant_project_is_not_a_git_repository"
+    "current_commit_status": "publish_via_qt_test_mirror_repo_only_because_quant_project_is_not_a_git_repository"
   },
   "roadmap": {
     "id": "9_26_progression_plan_20260430_v859",
