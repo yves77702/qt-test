@@ -1,20 +1,20 @@
 # Latest Strategy Guidance
 
-更新时间：2026-04-30
+更新时间：2026-04-30 01:20
 
 ## 当前判断
 
 当前主线不是继续堆新策略，而是把已有证据收成可运行、可审计、可晋级的状态机。
 
-最新方向已经从持仓日内 T 暂时转回动态退出质量。理由很明确：holding-day T 有动作频率，但当前 weekly delta 小；动态退出虽然也不能 route，但在 v364/v462/v855/v856 上显示出更像主缺口的结构。
+最新方向已经从离线动态退出 ledger，推进到 runtime shadow logger。`v858` 已经能在真实 runtime smoke 中为当前持仓写出 `dynamic_exit_runtime_shadow_sidecar.csv`，但它仍然只是日志层，不改变买入、卖出、paper、live、quota 或训练。
 
 ## 优先级
 
-1. runtime alignment  
-   继续缩小 `v91` execution runtime 与 `v540/v590` clean baseline 的差距。
+1. dynamic exit runtime accumulator  
+   基于 `v858` 每日收集 sidecar，进入 `v859_dynamic_exit_runtime_shadow_daily_accumulator_no_route`。
 
-2. dynamic exit runtime shadow logger  
-   按 `v856` 的 gate contract 设计 log-only 记录器，补 post-trigger sector、reclaim、cash queue 字段。
+2. runtime alignment  
+   继续缩小 `v91` execution runtime 与 `v540/v590` clean baseline 的差距。
 
 3. holding-day T evidence only  
    不把完成 buyback 当成功；先补 VWAP、reclaim、last3 slope、low lift、sector context。
@@ -35,6 +35,7 @@
 - 不为了增加交易频率替换 active winner
 - 不从 2026 frozen 反向调参
 - 不把 no-route 研究文件提升成 paper/live 合同
+- dynamic exit logger 只能记录，不得 emit order
 
 ## 晋级条件
 
@@ -58,9 +59,9 @@
 
 ## 最新推荐路线
 
-先做 `v857_dynamic_exit_runtime_shadow_logger_design_no_route`。
+先做 `v859_dynamic_exit_runtime_shadow_daily_accumulator_no_route`。
 
-不要先写卖出规则。先让 runtime 记录：
+不要先写卖出规则。先让 runtime 连续记录：
 
 - 动态退出触发后板块是否扩散或转弱
 - 触发后个股是否重新 reclaim VWAP
