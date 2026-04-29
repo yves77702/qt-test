@@ -4,7 +4,7 @@
   "last_updated_date": "2026-04-30",
   "latest_progress_doc": "B:\\qt\\quant_project\\docs\\strategy\\latest_progress.md",
   "latest_guidance_doc": "B:\\qt\\quant_project\\docs\\strategy\\latest_guidance.md",
-  "latest_research_anchor": "v859_dynamic_exit_runtime_shadow_daily_accumulator_no_route",
+  "latest_research_anchor": "v860_dynamic_exit_entry_cost_and_sector_context_fill_no_route",
   "project_root": "B:\\qt\\quant_project",
   "repository_status": "not_git_repository",
   "codex_update_contract": {
@@ -23,10 +23,10 @@
     "current_commit_status": "publish_via_qt_test_mirror_repo_only_because_quant_project_is_not_a_git_repository"
   },
   "roadmap": {
-    "id": "9_26_progression_plan_20260430_v859",
-    "report": "B:\\qt\\quant_project\\9_26推进节奏计划_20260430_v859补充.md",
+    "id": "9_26_progression_plan_20260430_v860",
+    "report": "B:\\qt\\quant_project\\9_26推进节奏计划_20260430_v860补充.md",
     "target_weekly_return_pct": 9.26,
-    "current_read": "dynamic exit quality is now connected to runtime logger and daily accumulator; v859 seeds the accumulator, finds one CASH_RELEASE_PROTECT_REVIEW row, and exposes entry/cost plus sector context as the next field-completeness blockers"
+    "current_read": "dynamic exit quality is now connected to runtime logger, accumulator, and field-completeness diagnostics; v860 fills sector context from bounded top24 same-industry minute peers while keeping entry/cost blocked when no trusted cost source exists"
   },
   "clean_mainline": {
     "baseline": "v540",
@@ -2138,12 +2138,38 @@
         "model_training_allowed_rows": 0
       },
       "first_read": "v859 seeds the daily accumulator for dynamic_exit_runtime_shadow_sidecar rows. It confirms the no-route logger can be collected, but only one distinct trade date exists so far. The next blockers are field completeness: raw held positions currently lack entry/cost context, and the seed row lacks post-trigger sector context."
+    },
+    "dynamic_exit_entry_cost_and_sector_context_fill_no_route": {
+      "id": "v860_dynamic_exit_entry_cost_and_sector_context_fill_no_route",
+      "report": "C:\\app\\models\\v860_dynamic_exit_entry_cost_and_sector_context_fill_no_route\\v860_dynamic_exit_entry_cost_and_sector_context_fill_no_route_report.md",
+      "project_doc": "B:\\qt\\quant_project\\dynamic_exit_entry_cost_and_sector_context_fill_no_route_20260430.md",
+      "field_completeness": "C:\\app\\models\\v860_dynamic_exit_entry_cost_and_sector_context_fill_no_route\\v860_field_completeness.csv",
+      "runtime_smoke_sidecar_copy": "C:\\app\\models\\v860_dynamic_exit_entry_cost_and_sector_context_fill_no_route\\v860_runtime_smoke_sidecar_copy.csv",
+      "validation": "C:\\app\\models\\v860_dynamic_exit_entry_cost_and_sector_context_fill_no_route\\v860_validation.json",
+      "status": "DYNAMIC_EXIT_SECTOR_CONTEXT_FILLED_ENTRY_COST_TRUST_BLOCKED_NO_ROUTE",
+      "source_rows": {
+        "runtime_smoke_run_dir": "B:\\qt\\quant_project\\models\\sim_trading_runs\\20260430_013011",
+        "sidecar_rows": 1,
+        "sector_context_available_rows": 1,
+        "entry_price_available_rows": 0,
+        "official_buy_rows": 0,
+        "action_plan_rows": 0,
+        "executed_rows": 0,
+        "rulebook_subphase_total_quota": 0,
+        "acceptance_test_rows": 8,
+        "acceptance_tests_passed": 8,
+        "route_allowed_rows": 0,
+        "live_order_allowed_rows": 0,
+        "paper_order_allowed_rows": 0,
+        "model_training_allowed_rows": 0
+      },
+      "first_read": "v860 fills post-trigger sector context for dynamic exit from bounded top24 same-industry minute peers. The smoke row for 002491.SZ has sector context available, but entry/cost remains explicitly blocked because the account snapshot exposes only name, amount, and sellable amount; historical partial order records are not trusted as current 600-share cost basis."
     }
   },
   "next_recommended_step": {
-    "id": "v860_dynamic_exit_entry_cost_and_sector_context_fill_no_route",
+    "id": "v861_dynamic_exit_runtime_perf_cache_and_cost_source_contract_no_route",
     "status": "planned_no_route",
-    "purpose": "fill entry/cost context and post-trigger sector context for dynamic-exit runtime shadow rows without changing exits or orders",
+    "purpose": "add a runtime performance/cache contract for dynamic-exit sector peer context and define trusted entry/cost sources without changing exits or orders",
     "parallel_track": "holding-day T remains evidence-only until missing micro context is filled; candidate supply remains no-route scout/ranker evidence only",
     "hard_constraints": [
       "no live order",
